@@ -1,0 +1,2 @@
+# Checkout Entity plugins with CRLF line endings, since this is a Windows app.
+*.ENT text eol=crlf
