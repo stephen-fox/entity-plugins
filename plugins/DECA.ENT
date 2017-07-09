@@ -1,0 +1,52 @@
+<plugin class="DECA" author="Grimdoomer" version="0.99" headersize="172">
+  <bitmask16 name="Flags" offset="0" visible="True">
+    <option name="Geometry_Inherited_By_Next_Decal" value="0" />
+    <option name="Interpolate_Colour" value="1" />
+    <option name="More_Colour" value="2" />
+    <option name="No_Random_Rotation" value="3" />
+    <option name="unused" value="4" />
+    <option name="Water_Effect" value="5" />
+    <option name="Special-EF-Snap_To_Axis" value="6" />
+    <option name="Special-EF-Incremental_Counter" value="7" />
+    <option name="unused" value="8" />
+    <option name="Preserve_Aspect" value="9" />
+    <option name="unused" value="10" />
+  </bitmask16>
+  <enum16 name="Type" offset="2" visible="True">
+    <option name="Scratch" value="0" />
+    <option name="Splatter" value="1" />
+    <option name="Burn" value="2" />
+    <option name="Painted_Sign" value="3" />
+  </enum16>
+  <enum16 name="Layer" offset="4" visible="True">
+    <option name="Lit_Alpha_Blend_Prelight" value="0" />
+    <option name="Lit_Alpha_Blend" value="1" />
+    <option name="Double_Multiply" value="2" />
+    <option name="Multiply" value="3" />
+    <option name="Max" value="4" />
+    <option name="Add" value="5" />
+    <option name="Error" value="6" />
+  </enum16>
+  <short name="Max Overlapping Count" offset="6" visible="True" />
+  <tag name="Next_Decal_In_Chain" offset="8" visible="True" />
+  <id name="Next_Decal_In_Chain" offset="12" visible="True" />
+  <float name="Radius" offset="16" visible="True" />
+  <float name="^To(World Units)" offset="20" visible="True" />
+  <float name="Radius Overlapping Rejection" offset="24" visible="True" />
+  <float name="Color Lower Bound R" offset="28" visible="True" />
+  <float name="Color Lower Bound G" offset="32" visible="True" />
+  <float name="Color Lower Bound B" offset="36" visible="True" />
+  <float name="Color Upper Bound R" offset="40" visible="True" />
+  <float name="Color Upper Bound G" offset="44" visible="True" />
+  <float name="Color Upper Bound B" offset="48" visible="True" />
+  <float name="Lifetime" offset="52" visible="True" />
+  <float name="^To(Seconds)" offset="56" visible="True" />
+  <float name="Decay Time" offset="60" visible="True" />
+  <float name="^To(Seconds)" offset="64" visible="True" />
+  <unused offset="68" size="68" />
+  <tag name="Bitmap" offset="136" visible="True" />
+  <id name="Bitmap" offset="140" visible="True" />
+  <unused offset="144" size="20" />
+  <float name="Maximun Sprite Extent(pixels)" offset="164" visible="True" />
+  <unused offset="168" size="4" />
+</plugin>

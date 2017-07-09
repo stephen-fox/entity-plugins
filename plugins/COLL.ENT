@@ -1,0 +1,134 @@
+<plugin class="COLL" author="Grimdoomer" version="0.99" headersize="52">
+  <unused offset="0" size="20" />
+  <struct name="Materials" offset="20" visible="true" size="4" label="">
+    <stringid name="Name" offset="0" visible="True" />
+  </struct>
+  <struct name="Regions" offset="28" visible="true" size="12" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <struct name="Premutations" offset="4" visible="true" size="20" label="">
+      <stringid name="Name" offset="0" visible="True" />
+      <struct name="BSP" offset="4" visible="true" size="68" label="">
+        <int name="Root Node Index" offset="0" visible="True" />
+        <struct name="3D Nodes" offset="4" visible="true" size="8" label="">
+          <short name="Plane" offset="0" visible="True" />
+          <short name="First Child" offset="2" visible="True" />
+          <byte name="Unknown" offset="4" visible="True" />
+          <short name="Second Child" offset="5" visible="True" />
+          <byte name="Unknown" offset="7" visible="True" />
+        </struct>
+        <struct name="Planes" offset="12" visible="true" size="16" label="">
+          <float name="i" offset="0" visible="True" />
+          <float name="I" offset="4" visible="True" />
+          <float name="k" offset="8" visible="True" />
+          <float name="d" offset="12" visible="True" />
+        </struct>
+        <struct name="Leaves" offset="20" visible="true" size="4" label="">
+          <bitmask8 name="Flags" offset="0" visible="True">
+            <option name="Contains_Double_Sided_Surfaces" value="0" />
+          </bitmask8>
+          <byte name="2D Reference COunt" offset="1" visible="True" />
+          <short name="First 2D Reference" offset="2" visible="True" />
+        </struct>
+        <struct name="2D Refrences" offset="28" visible="true" size="4" label="">
+          <short name="Plane" offset="0" visible="True" />
+          <short name="Node" offset="2" visible="True" />
+        </struct>
+        <struct name="2D Nodes" offset="36" visible="true" size="16" label="">
+          <float name="Plane i" offset="0" visible="True" />
+          <float name="Plane j" offset="4" visible="True" />
+          <float name="Plane k" offset="8" visible="True" />
+          <short name="Left Child" offset="12" visible="True" />
+          <short name="Right Child" offset="14" visible="True" />
+        </struct>
+        <struct name="Surfaces" offset="44" visible="true" size="8" label="">
+          <short name="Plane" offset="0" visible="True" />
+          <short name="First Edge" offset="2" visible="True" />
+          <bitmask8 name="Flags" offset="4" visible="True">
+            <option name="Two-Sided" value="0" />
+            <option name="Invisible" value="1" />
+            <option name="Climbable" value="2" />
+            <option name="Breakable" value="3" />
+            <option name="Invalid" value="4" />
+            <option name="Conveyor" value="5" />
+          </bitmask8>
+          <byte name="Breakable Surface" offset="5" visible="True" />
+          <short name="Material" offset="6" visible="True" />
+        </struct>
+        <struct name="Edges" offset="52" visible="true" size="12" label="">
+          <short name="Start Vertex" offset="0" visible="True" />
+          <short name="End Vertex" offset="2" visible="True" />
+          <short name="Forward Edge" offset="4" visible="True" />
+          <short name="Reverse Edge" offset="6" visible="True" />
+          <short name="Left Surface" offset="8" visible="True" />
+          <short name="Right Surface" offset="10" visible="True" />
+        </struct>
+        <struct name="Vertices" offset="60" visible="true" size="16" label="">
+          <float name="x" offset="0" visible="True" />
+          <float name="y" offset="4" visible="True" />
+          <float name="z" offset="8" visible="True" />
+          <int name="First Edge" offset="12" visible="True" />
+        </struct>
+      </struct>
+      <struct name="BSP Physics" offset="12" visible="true" size="112" label="">
+        <short name="Unknown" offset="0" visible="True" />
+        <short name="Unknown" offset="2" visible="True" />
+        <short name="Unknown" offset="4" visible="True" />
+        <short name="Unknown" offset="6" visible="True" />
+        <unused offset="8" size="4" />
+        <byte name="Unknown" offset="12" visible="True" />
+        <byte name="Unknown" offset="13" visible="True" />
+        <short name="Unknown" offset="14" visible="True" />
+        <int name="Unknown" offset="16" visible="True" />
+        <int name="Unknown" offset="20" visible="True" />
+        <int name="Unknown" offset="24" visible="True" />
+        <unused offset="28" size="4" />
+        <int name="Unknown" offset="32" visible="True" />
+        <int name="Unknown" offset="36" visible="True" />
+        <int name="Unknown" offset="40" visible="True" />
+        <unused offset="44" size="4" />
+        <id name="Object_Properties" offset="48" visible="True" />
+        <unused offset="52" size="12" />
+        <short name="Unknown" offset="64" visible="True" />
+        <short name="Unknown" offset="66" visible="True" />
+        <short name="Unknown" offset="68" visible="True" />
+        <short name="Unknown" offset="70" visible="True" />
+        <unused offset="72" size="4" />
+        <short name="Unknown" offset="76" visible="True" />
+        <short name="Unknown" offset="78" visible="True" />
+        <short name="Unknown" offset="80" visible="True" />
+        <short name="Unknown" offset="82" visible="True" />
+        <short name="Unknown" offset="84" visible="True" />
+        <short name="Unknown" offset="86" visible="True" />
+        <unused offset="88" size="4" />
+        <short name="Unknown" offset="92" visible="True" />
+        <short name="Unknown" offset="94" visible="True" />
+        <byte name="Unknown" offset="96" visible="True" />
+        <byte name="Unknown" offset="97" visible="True" />
+        <short name="Unknown" offset="98" visible="True" />
+        <struct name="MOPP Code" offset="100" visible="true" size="1" label="">
+          <byte name="Data" offset="0" visible="True" />
+        </struct>
+        <unused offset="108" size="4" />
+      </struct>
+    </struct>
+  </struct>
+  <struct name="Path Finding Spheres" offset="36" visible="true" size="20" label="">
+    <short name="Node Index" offset="0" visible="True" />
+    <bitmask16 name="Flags" offset="2" visible="True">
+      <option name="Remains_When_Open" value="0" />
+      <option name="Vehicle_Only" value="1" />
+      <option name="With_Sectors" value="2" />
+    </bitmask16>
+    <float name="Center Point X" offset="4" visible="True" />
+    <float name="Center Point Y" offset="8" visible="True" />
+    <float name="Center Point Z" offset="12" visible="True" />
+    <float name="Radius" offset="16" visible="True" />
+  </struct>
+  <struct name="Nodes" offset="44" visible="true" size="12" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <short name="Parent" offset="4" visible="True" />
+    <short name="Child" offset="6" visible="True" />
+    <short name="Next Sibling" offset="8" visible="True" />
+    <short name="First Child Node" offset="10" visible="True" />
+  </struct>
+</plugin>

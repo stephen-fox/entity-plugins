@@ -1,0 +1,125 @@
+<plugin class="SKY_" author="Grimdoomer" version="0.99" headersize="172">
+  <tag name="Render_Model" offset="0" visible="True" />
+  <id name="Render_Model" offset="4" visible="True" />
+  <tag name="Animation_Graph" offset="8" visible="True" />
+  <id name="Animation_Graph" offset="12" visible="True" />
+  <bitmask32 name="Flags" offset="16" visible="True">
+    <option name="Fixed_In_World_Space" value="0" />
+    <option name="Depreciated" value="1" />
+    <option name="Sky_Casts_Light_From_Below" value="2" />
+    <option name="Disable_Sky_In_Lightmaps" value="3" />
+    <option name="Fog_Only_Affects_Containing_Cluster" value="4" />
+    <option name="Use_Clear_Color" value="5" />
+  </bitmask32>
+  <float name="Render Model Scale" offset="20" visible="True" />
+  <float name="Movement Scale" offset="24" visible="True" />
+  <struct name="Cube Map" offset="28" visible="true" size="12" label="">
+    <tag name="Cube_Map" offset="0" visible="True" />
+    <id name="Cube_Map" offset="4" visible="True" />
+    <float name="Power Scale" offset="8" visible="True" />
+  </struct>
+  <float name="Indoor Ambient Light Color R" offset="36" visible="True" />
+  <float name="Indoor Ambient Light Color G" offset="40" visible="True" />
+  <float name="Indoor Ambient Light Color B" offset="44" visible="True" />
+  <float name="Indoor Ambient Light Color A" offset="48" visible="True" />
+  <float name="Outdoor Ambient Light Color R" offset="52" visible="True" />
+  <float name="Outdoor Ambient Light Color G" offset="56" visible="True" />
+  <float name="Outdoor Ambient Light Color B" offset="60" visible="True" />
+  <float name="Outdoor Ambient Light Color A" offset="64" visible="True" />
+  <float name="Fog Spread Distance" offset="68" visible="True" />
+  <struct name="Atmospheric Fog" offset="72" visible="true" size="24" label="">
+    <float name="Color R" offset="0" visible="True" />
+    <float name="Color G" offset="4" visible="True" />
+    <float name="Color B" offset="8" visible="True" />
+    <float name="Maximum Density" offset="12" visible="True" />
+    <float name="Start Distance" offset="16" visible="True" />
+    <float name="Opaque Distnace" offset="20" visible="True" />
+  </struct>
+  <struct name="Secondary Fog" offset="80" visible="true" size="24" label="">
+    <float name="Color R" offset="0" visible="True" />
+    <float name="Color G" offset="4" visible="True" />
+    <float name="Color B" offset="8" visible="True" />
+    <float name="Color A" offset="12" visible="True" />
+    <float name="Maximum Density" offset="16" visible="True" />
+    <float name="Opaque Distnace" offset="20" visible="True" />
+  </struct>
+  <struct name="Sky Fog" offset="88" visible="true" size="16" label="">
+    <float name="Color R" offset="0" visible="True" />
+    <float name="Color G" offset="4" visible="True" />
+    <float name="Color B" offset="8" visible="True" />
+    <float name="Color A" offset="12" visible="True" />
+  </struct>
+  <struct name="Patchy Fog" offset="96" visible="true" size="80" label="">
+    <float name="Color R" offset="0" visible="True" />
+    <float name="Color G" offset="4" visible="True" />
+    <float name="Color B" offset="8" visible="True" />
+    <float name="Color A" offset="12" visible="True" />
+    <unused offset="16" size="8" />
+    <float name="Density Lower" offset="24" visible="True" />
+    <float name="Density Upper" offset="28" visible="True" />
+    <float name="Distance Lower" offset="32" visible="True" />
+    <float name="Distance Upper" offset="36" visible="True" />
+    <unused offset="40" size="32" />
+    <tag name="Patch_Fog" offset="72" visible="True" />
+    <id name="Patch_Fog" offset="76" visible="True" />
+  </struct>
+  <float name="Bloom Override Amount" offset="104" visible="True" />
+  <float name="Bloom Override Threshold" offset="108" visible="True" />
+  <float name="Bloom Override Brightness" offset="112" visible="True" />
+  <float name="Bloom Override Gamma Power" offset="116" visible="True" />
+  <struct name="Lights" offset="120" visible="true" size="52" label="">
+    <float name="Direction Vector i" offset="0" visible="True" />
+    <float name="Direction Vector j" offset="4" visible="True" />
+    <float name="Direction Vector k" offset="8" visible="True" />
+    <float name="Direction Y" offset="12" visible="True" />
+    <float name="Direction P" offset="16" visible="True" />
+    <tag name="Lens_Flare" offset="20" visible="True" />
+    <id name="Lens_Flare" offset="24" visible="True" />
+    <struct name="Fog" offset="28" visible="true" size="44" label="">
+      <float name="Color R" offset="0" visible="True" />
+      <float name="Color G" offset="4" visible="True" />
+      <float name="Color B" offset="8" visible="True" />
+      <float name="Color A" offset="12" visible="True" />
+      <float name="Maximum Density" offset="16" visible="True" />
+      <float name="Opaque Distnace" offset="20" visible="True" />
+      <float name="Cone Lower" offset="24" visible="True" />
+      <float name="Cone Upper" offset="28" visible="True" />
+      <float name="Atmospheroc Fog Influence" offset="32" visible="True" />
+      <float name="Secondary Fog Influence" offset="36" visible="True" />
+      <float name="Sky Fog Influence" offset="40" visible="True" />
+    </struct>
+    <struct name="Fog Opposite" offset="36" visible="true" size="44" label="">
+      <float name="Color R" offset="0" visible="True" />
+      <float name="Color G" offset="4" visible="True" />
+      <float name="Color B" offset="8" visible="True" />
+      <float name="Color A" offset="12" visible="True" />
+      <float name="Maximum Density" offset="16" visible="True" />
+      <float name="Opaque Distnace" offset="20" visible="True" />
+      <float name="Cone Lower" offset="24" visible="True" />
+      <float name="Cone Upper" offset="28" visible="True" />
+      <float name="Atmospheroc Fog Influence" offset="32" visible="True" />
+      <float name="Secondary Fog Influence" offset="36" visible="True" />
+      <float name="Sky Fog Influence" offset="40" visible="True" />
+    </struct>
+    <struct name="Radiosity" offset="44" visible="true" size="40" label="">
+      <bitmask32 name="Flags" offset="0" visible="True">
+        <option name="Affects_Interiors" value="0" />
+        <option name="Affects_Exteriors" value="1" />
+        <option name="Direct_Illumunation_In_Lightmaps" value="2" />
+        <option name="Indirect_Illumunation_In_Lightmaps" value="3" />
+      </bitmask32>
+      <float name="Color R" offset="4" visible="True" />
+      <float name="Color G" offset="8" visible="True" />
+      <float name="Color B" offset="12" visible="True" />
+      <float name="Power" offset="16" visible="True" />
+      <float name="Test Distance" offset="20" visible="True" />
+      <unused offset="24" size="12" />
+      <float name="Diameter" offset="36" visible="True" />
+    </struct>
+  </struct>
+  <float name="Global Sky Rotation" offset="128" visible="True" />
+  <unused offset="132" size="28" />
+  <float name="Clear Color R" offset="160" visible="True" />
+  <float name="Clear Color G" offset="164" visible="True" />
+  <float name="Clear Color B" offset="168" visible="True" />
+</plugin>

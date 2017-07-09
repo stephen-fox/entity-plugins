@@ -1,0 +1,131 @@
+<plugin class="WEAT" author="Grimdoomer" version="0.99" headersize="176">
+  <struct name="Particle System" offset="0" visible="true" size="140" label="">
+    <tag name="Sprites" offset="0" visible="True" />
+    <id name="Sprites" offset="4" visible="True" />
+    <float name="View Box Width" offset="8" visible="True" />
+    <float name="View Box Height" offset="12" visible="True" />
+    <float name="View Box Depth" offset="16" visible="True" />
+    <float name="Exclusion Radius" offset="20" visible="True" />
+    <float name="Max Velocity" offset="24" visible="True" />
+    <float name="Min Mass" offset="28" visible="True" />
+    <float name="Max Mass" offset="32" visible="True" />
+    <float name="Min Size" offset="36" visible="True" />
+    <float name="Max Size" offset="40" visible="True" />
+    <int name="Maximum Number Of Particles" offset="44" visible="True" />
+    <float name="Initial Velocity i" offset="48" visible="True" />
+    <float name="Initial Velocity j" offset="52" visible="True" />
+    <float name="Initial Velocity k" offset="56" visible="True" />
+    <unused offset="60" size="4" />
+    <uint name="Block Offset" offset="64" visible="True" />
+    <uint name="Block Size" offset="68" visible="True" />
+    <uint name="Section Data Size" offset="72" visible="True" />
+    <uint name="Resource Data Size" offset="76" visible="True" />
+    <struct name="Resources" offset="80" visible="true" size="16" label="">
+      <enum32 name="Type" offset="0" visible="True">
+      </enum32>
+      <short name="Primary Locator" offset="4" visible="True" />
+      <short name="Secondary Locator" offset="6" visible="True" />
+      <uint name="Resource Data Size" offset="8" visible="True" />
+      <uint name="Resource Data Offset" offset="12" visible="True" />
+    </struct>
+    <id name="Owner Tag Section Offset" offset="88" visible="True" />
+    <uint name="Unknown" offset="92" visible="True" />
+    <unused offset="96" size="12" />
+    <enum32 name="Type" offset="108" visible="True">
+      <option name="Generic" value="0" />
+      <option name="Snow" value="1" />
+      <option name="Rain" value="2" />
+      <option name="Rain_Splash" value="3" />
+      <option name="Bugs" value="4" />
+      <option name="Sand_Storm" value="5" />
+      <option name="Debris" value="6" />
+      <option name="Bubbles" value="7" />
+    </enum32>
+    <float name="Minimum Opacity" offset="112" visible="True" />
+    <float name="Maximum Opacity" offset="116" visible="True" />
+    <float name="Rain Streak Scale" offset="120" visible="True" />
+    <float name="Rain Line Width" offset="124" visible="True" />
+    <unused offset="128" size="12" />
+  </struct>
+  <struct name="Background Plates" offset="8" visible="true" size="936" label="">
+    <tag name="Texture_0" offset="0" visible="True" />
+    <id name="Texture_0" offset="4" visible="True" />
+    <tag name="Texture_1" offset="8" visible="True" />
+    <id name="Texture_1" offset="12" visible="True" />
+    <tag name="Texture_2" offset="16" visible="True" />
+    <id name="Texture_2" offset="20" visible="True" />
+    <float name="Plate Position 0" offset="24" visible="True" />
+    <float name="Plate Position 1" offset="28" visible="True" />
+    <float name="Plate Position 2" offset="32" visible="True" />
+    <float name="Move Speed 0 i" offset="36" visible="True" />
+    <float name="Move Speed 0 j" offset="40" visible="True" />
+    <float name="Move Speed 0 k" offset="44" visible="True" />
+    <float name="Move Speed 1 i" offset="48" visible="True" />
+    <float name="Move Speed 1 j" offset="52" visible="True" />
+    <float name="Move Speed 1 k" offset="56" visible="True" />
+    <float name="Move Speed 2 i" offset="60" visible="True" />
+    <float name="Move Speed 2 j" offset="64" visible="True" />
+    <float name="Move Speed 2 k" offset="68" visible="True" />
+    <float name="Texture Scale 0" offset="72" visible="True" />
+    <float name="Texture Scale 1" offset="76" visible="True" />
+    <float name="Texture Scale 2" offset="80" visible="True" />
+    <float name="Jitter 0 i" offset="84" visible="True" />
+    <float name="Jitter 0 j" offset="88" visible="True" />
+    <float name="Jitter 0 k" offset="92" visible="True" />
+    <float name="Jitter 1 i" offset="96" visible="True" />
+    <float name="Jitter 1 j" offset="100" visible="True" />
+    <float name="Jitter 1 k" offset="104" visible="True" />
+    <float name="Jitter 2 i" offset="108" visible="True" />
+    <float name="Jitter 2 j" offset="112" visible="True" />
+    <float name="Jitter 2 k" offset="116" visible="True" />
+    <float name="Plate Z Near" offset="120" visible="True" />
+    <float name="Plate Z Far" offset="124" visible="True" />
+    <float name="Depth Blend Z Near" offset="128" visible="True" />
+    <float name="Depth Blend Z Far" offset="132" visible="True" />
+    <float name="Opacity 0" offset="136" visible="True" />
+    <float name="Opacity 1" offset="140" visible="True" />
+    <float name="Opacity 2" offset="144" visible="True" />
+    <bitmask32 name="Flags" offset="148" visible="True">
+      <option name="Forward" value="0" />
+      <option name="Auto_Position_Planes" value="1" />
+      <option name="Auto_Scale_Planesauto_Update_Spe" value="2" />
+    </bitmask32>
+    <float name="Tint Color 0 R" offset="152" visible="True" />
+    <float name="Tint Color 0 G" offset="156" visible="True" />
+    <float name="Tint Color 0 B" offset="160" visible="True" />
+    <float name="Tint Color 1 R" offset="164" visible="True" />
+    <float name="Tint Color 1 G" offset="168" visible="True" />
+    <float name="Tint Color 1 B" offset="172" visible="True" />
+    <float name="Tint Color 2 R" offset="176" visible="True" />
+    <float name="Tint Color 2 G" offset="180" visible="True" />
+    <float name="Tint Color 2 B" offset="184" visible="True" />
+    <float name="Mass 1" offset="188" visible="True" />
+    <float name="Mass 2" offset="192" visible="True" />
+    <float name="Mass 3" offset="196" visible="True" />
+    <unused offset="200" size="736" />
+  </struct>
+  <float name="Wind Tiling Scale" offset="16" visible="True" />
+  <unused offset="20" size="36" />
+  <float name="Wind Primary Heading i" offset="56" visible="True" />
+  <float name="Wind Primary Heading j" offset="60" visible="True" />
+  <float name="Wind Primary Heading k" offset="64" visible="True" />
+  <unused offset="68" size="8" />
+  <float name="Primary Rate Of Change" offset="76" visible="True" />
+  <float name="Primary Min Strength" offset="80" visible="True" />
+  <unused offset="84" size="4" />
+  <float name="Wind Gusting Heading i" offset="88" visible="True" />
+  <float name="Wind Gusting Heading j" offset="92" visible="True" />
+  <float name="Wind Gusting Heading k" offset="96" visible="True" />
+  <unused offset="100" size="12" />
+  <float name="Gust Directional Rate Of Change" offset="112" visible="True" />
+  <float name="Gust Strength Rate Of Change" offset="116" visible="True" />
+  <float name="Gust Cone Angle" offset="120" visible="True" />
+  <unused offset="124" size="16" />
+  <float name="Turbulance Rate Of Change" offset="140" visible="True" />
+  <float name="Turbulence Scale x,y,z i" offset="144" visible="True" />
+  <float name="Turbulence Scale x,y,z j" offset="148" visible="True" />
+  <float name="Turbulence Scale x,y,z k" offset="152" visible="True" />
+  <float name="Gravity Constant" offset="156" visible="True" />
+  <unused offset="160" size="12" />
+  <float name="Fade Radius" offset="172" visible="True" />
+</plugin>

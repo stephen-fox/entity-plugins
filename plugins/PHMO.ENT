@@ -1,0 +1,707 @@
+<plugin class="PHMO" author="Grimdoomer" version="0.99" headersize="272">
+  <float name="flags (unused)" offset="0" visible="True" />
+  <float name="mass" offset="4" visible="True" />
+  <float name="low freq. desactivation scale" offset="8" visible="True" />
+  <float name="high freq. desactivation scale" offset="12" visible="True" />
+  <float name="Unused" offset="16" visible="True" />
+  <float name="Unused" offset="20" visible="True" />
+  <float name="Unused" offset="24" visible="True" />
+  <float name="Unused" offset="28" visible="True" />
+  <float name="Unused" offset="32" visible="True" />
+  <float name="Unused" offset="36" visible="True" />
+  <struct name="Phantom types (Lift)" offset="40" visible="true" size="60" label="">
+    <bitmask32 name="Flags: type?" offset="0" visible="True">
+      <option name="generates_effect" value="0" />
+      <option name="use_acc_as_force" value="1" />
+      <option name="negates_gravity" value="2" />
+      <option name="ignores_players" value="3" />
+      <option name="Oignores_nonplayers" value="4" />
+      <option name="ignores_bipeds" value="5" />
+      <option name="ignores_vehicles" value="6" />
+      <option name="ignores_weapons" value="7" />
+      <option name="ignores_equipement" value="8" />
+      <option name="ignores_garbage" value="9" />
+      <option name="ignores_projectiles" value="10" />
+      <option name="ignores_scenery" value="11" />
+      <option name="ignores_machines" value="12" />
+      <option name="ignores_controls" value="13" />
+      <option name="ignores_light_fixtures" value="14" />
+      <option name="ignores_sound_scenery" value="15" />
+      <option name="ignores_crates" value="16" />
+      <option name="ignores_creatures" value="17" />
+      <option name="localizes_physics" value="18" />
+      <option name="disable_linear_damping" value="19" />
+      <option name="disable_angular_damping" value="20" />
+      <option name="ignores_dead_bipeds" value="21" />
+    </bitmask32>
+    <enum16 name="minimum size" offset="4" visible="True">
+      <option name="default" value="0" />
+      <option name="tiny" value="1" />
+      <option name="small" value="2" />
+      <option name="medium" value="3" />
+      <option name="large" value="4" />
+      <option name="huge" value="5" />
+      <option name="extra_huge" value="6" />
+    </enum16>
+    <enum16 name="maximum size" offset="6" visible="True">
+      <option name="default" value="0" />
+      <option name="tiny" value="1" />
+      <option name="small" value="2" />
+      <option name="medium" value="3" />
+      <option name="large" value="4" />
+      <option name="huge" value="5" />
+      <option name="extra_huge" value="6" />
+    </enum16>
+    <stringid name="Marker name" offset="8" visible="True" />
+    <stringid name="alignment marker name" offset="12" visible="True" />
+    <float name="hookes law e" offset="16" visible="True" />
+    <float name="linear radius" offset="20" visible="True" />
+    <float name="center acc" offset="24" visible="True" />
+    <float name="center max vel" offset="28" visible="True" />
+    <float name="axis acc" offset="32" visible="True" />
+    <float name="axis max vel" offset="36" visible="True" />
+    <float name="direction acc" offset="40" visible="True" />
+    <float name="direction max vel" offset="44" visible="True" />
+    <float name="alignement hookes law e" offset="48" visible="True" />
+    <float name="alignement acc" offset="52" visible="True" />
+    <float name="alignement max vel" offset="56" visible="True" />
+  </struct>
+  <struct name="Node Edges" offset="48" visible="true" size="24" label="">
+    <stringid name="Node A Index" offset="0" visible="True" />
+    <stringid name="Node B Index" offset="4" visible="True" />
+    <struct name="Constriants" offset="8" visible="true" size="12" label="">
+      <enum16 name="Type" offset="0" visible="True">
+      </enum16>
+      <enum16 name="Index" offset="2" visible="True">
+        <option name="None" value="0" />
+      </enum16>
+      <bitmask32 name="Flags" offset="4" visible="True">
+        <option name="Is_Rigid" value="0" />
+        <option name="Disable_Effects" value="1" />
+      </bitmask32>
+      <float name="Friction" offset="8" visible="True" />
+    </struct>
+    <stringid name="Node A Material" offset="16" visible="True" />
+    <stringid name="Node B Material" offset="20" visible="True" />
+  </struct>
+  <struct name="Rigid Bodies" offset="56" visible="true" size="144" label="">
+    <short name="Node Index" offset="0" visible="True" />
+    <short name="Region Index" offset="2" visible="True" />
+    <enum16 name="Permutation" offset="4" visible="True">
+      <option name="None" value="0" />
+    </enum16>
+    <short name="unused" offset="6" visible="True" />
+    <float name="Bounding Sphere Offset X" offset="8" visible="True" />
+    <float name="Bounding Sphere Offset Y" offset="12" visible="True" />
+    <float name="Bounding Sphere Offset Z" offset="16" visible="True" />
+    <float name="Bounding Sphere Radius" offset="20" visible="True" />
+    <bitmask16 name="Flags" offset="24" visible="True">
+      <option name="No_Collisions_w/_Self" value="0" />
+      <option name="Only_Collide_w/_environment" value="1" />
+      <option name="Disable_Effects" value="2" />
+      <option name="Does_not_Interact_w/_Environment" value="3" />
+      <option name="Best_Early_Mover_Body" value="4" />
+      <option name="Has_no_Phantom_Power_Version" value="5" />
+    </bitmask16>
+    <enum16 name="Motion Type" offset="26" visible="True">
+    </enum16>
+    <short name="unused" offset="28" visible="True" />
+    <short name="No Phantom Power Alt Index" offset="30" visible="True" />
+    <float name="size?" offset="32" visible="True" />
+    <enum32 name="minimum size" offset="36" visible="True">
+      <option name="default" value="0" />
+      <option name="tiny" value="1" />
+      <option name="small" value="2" />
+      <option name="medium" value="3" />
+      <option name="large" value="4" />
+      <option name="huge" value="5" />
+      <option name="extra_huge" value="6" />
+    </enum32>
+    <float name="size" offset="40" visible="True" />
+    <float name="Unknown" offset="44" visible="True" />
+    <float name="Unused" offset="48" visible="True" />
+    <float name="Unknown" offset="52" visible="True" />
+    <float name="Inertia Tensor Scale" offset="56" visible="True" />
+    <float name="Linear Damping" offset="60" visible="True" />
+    <float name="Angular Damping" offset="64" visible="True" />
+    <float name="Center of Mass Offset (I)" offset="68" visible="True" />
+    <float name="Center of Mass Offset (J)" offset="72" visible="True" />
+    <float name="Center of Mass Offset (K)" offset="76" visible="True" />
+    <byte name="shape type enum" offset="80" visible="True" />
+    <byte name="shape type enum" offset="81" visible="True" />
+    <short name="unused" offset="82" visible="True" />
+    <byte name="shape enum" offset="84" visible="True" />
+    <byte name="shape type enum" offset="85" visible="True" />
+    <short name="unused" offset="86" visible="True" />
+    <float name="Mass kg" offset="88" visible="True" />
+    <float name="Center of Mass (I)" offset="92" visible="True" />
+    <float name="Center of Mass (J)" offset="96" visible="True" />
+    <float name="Center of Mass (K)" offset="100" visible="True" />
+    <float name="Intertia Tensor X (I)" offset="104" visible="True" />
+    <float name="Intertia Tensor X (J)" offset="108" visible="True" />
+    <float name="Intertia Tensor X (K)" offset="112" visible="True" />
+    <float name="Intertia Tensor Y (I)" offset="116" visible="True" />
+    <float name="Intertia Tensor Y (J)" offset="120" visible="True" />
+    <float name="Intertia Tensor Y (K)" offset="124" visible="True" />
+    <float name="Intertia Tensor Z (I)" offset="128" visible="True" />
+    <float name="Intertia Tensor Z (J)" offset="132" visible="True" />
+    <float name="Intertia Tensor Z (K)" offset="136" visible="True" />
+    <float name="Bounding Sphere Pad" offset="140" visible="True" />
+  </struct>
+  <struct name="Materials" offset="64" visible="true" size="12" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <stringid name="global material name" offset="4" visible="True" />
+    <short name="phantom type(enum)" offset="8" visible="True" />
+    <bitmask16 name="Flags" offset="10" visible="True">
+      <option name="does_not_collide_with_fixed_bodies" value="0" />
+    </bitmask16>
+  </struct>
+  <struct name="Spheres (shape)" offset="72" visible="true" size="128" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <short name="material" offset="4" visible="True" />
+    <short name="flags (unused)" offset="6" visible="True" />
+    <float name="relative mass scale" offset="8" visible="True" />
+    <float name="Friction" offset="12" visible="True" />
+    <float name="restitution" offset="16" visible="True" />
+    <float name="volume" offset="20" visible="True" />
+    <float name="mass" offset="24" visible="True" />
+    <float name="phantom (enum)" offset="28" visible="True" />
+    <float name="size" offset="32" visible="True" />
+    <float name="count" offset="36" visible="True" />
+    <float name="radius" offset="40" visible="True" />
+    <float name="size" offset="44" visible="True" />
+    <float name="count" offset="48" visible="True" />
+    <float name="radius" offset="52" visible="True" />
+    <float name="size" offset="56" visible="True" />
+    <float name="count" offset="60" visible="True" />
+    <float name="rotation i (i)" offset="64" visible="True" />
+    <float name="rotation i (j)" offset="68" visible="True" />
+    <float name="rotation i (k)" offset="72" visible="True" />
+    <float name="Unused" offset="76" visible="True" />
+    <float name="rotation j (i)" offset="80" visible="True" />
+    <float name="rotation j (j)" offset="84" visible="True" />
+    <float name="rotation j (k)" offset="88" visible="True" />
+    <float name="Unused" offset="92" visible="True" />
+    <float name="rotation k (i)" offset="96" visible="True" />
+    <float name="rotation k (j)" offset="100" visible="True" />
+    <float name="rotation k (k)" offset="104" visible="True" />
+    <float name="Unused" offset="108" visible="True" />
+    <float name="translation i" offset="112" visible="True" />
+    <float name="translation j" offset="116" visible="True" />
+    <float name="translation k" offset="120" visible="True" />
+    <float name="Unused" offset="124" visible="True" />
+  </struct>
+  <struct name="Multi Spheres (shape)" offset="80" visible="true" size="140" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <short name="material" offset="4" visible="True" />
+    <short name="flags (unused)" offset="6" visible="True" />
+    <float name="relative mass scale" offset="8" visible="True" />
+    <float name="Friction" offset="12" visible="True" />
+    <float name="restitution" offset="16" visible="True" />
+    <float name="volume" offset="20" visible="True" />
+    <float name="mass" offset="24" visible="True" />
+    <float name="phantom (enum)" offset="28" visible="True" />
+    <float name="size" offset="32" visible="True" />
+    <float name="num spheres" offset="36" visible="True" />
+    <float name="sphere i" offset="40" visible="True" />
+    <float name="sphere j" offset="44" visible="True" />
+    <float name="sphere k" offset="48" visible="True" />
+    <float name="sphere i" offset="52" visible="True" />
+    <float name="sphere j" offset="56" visible="True" />
+    <float name="sphere k" offset="60" visible="True" />
+    <float name="sphere i" offset="64" visible="True" />
+    <float name="sphere j" offset="68" visible="True" />
+    <float name="sphere k" offset="72" visible="True" />
+    <float name="sphere i" offset="76" visible="True" />
+    <float name="sphere j" offset="80" visible="True" />
+    <float name="sphere k" offset="84" visible="True" />
+    <float name="sphere i" offset="88" visible="True" />
+    <float name="sphere j" offset="92" visible="True" />
+    <float name="sphere k" offset="96" visible="True" />
+    <float name="sphere i" offset="100" visible="True" />
+    <float name="sphere j" offset="104" visible="True" />
+    <float name="sphere k" offset="108" visible="True" />
+    <float name="sphere i" offset="112" visible="True" />
+    <float name="sphere j" offset="116" visible="True" />
+    <float name="sphere k" offset="120" visible="True" />
+    <float name="sphere i" offset="124" visible="True" />
+    <float name="sphere j" offset="128" visible="True" />
+    <float name="sphere k" offset="132" visible="True" />
+    <unused offset="136" size="4" />
+  </struct>
+  <struct name="Pills (shape)" offset="88" visible="true" size="80" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <bitmask32 name="Flags(unused)" offset="4" visible="True">
+    </bitmask32>
+    <float name="relative mass scale" offset="8" visible="True" />
+    <float name="friction" offset="12" visible="True" />
+    <float name="restitution" offset="16" visible="True" />
+    <float name="volume" offset="20" visible="True" />
+    <float name="Mass" offset="24" visible="True" />
+    <float name="phantom enum" offset="28" visible="True" />
+    <float name="size" offset="32" visible="True" />
+    <float name="count" offset="36" visible="True" />
+    <float name="radius" offset="40" visible="True" />
+    <float name="Unknown" offset="44" visible="True" />
+    <float name="bottom i" offset="48" visible="True" />
+    <float name="bottom j" offset="52" visible="True" />
+    <float name="bottom k" offset="56" visible="True" />
+    <float name="unknown" offset="60" visible="True" />
+    <float name="top i" offset="64" visible="True" />
+    <float name="top j" offset="68" visible="True" />
+    <float name="top k" offset="72" visible="True" />
+    <float name="unknown" offset="76" visible="True" />
+  </struct>
+  <struct name="Boxes (shape)" offset="96" visible="true" size="144" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <stringid name="material" offset="4" visible="True" />
+    <float name="relative mass scale" offset="8" visible="True" />
+    <float name="friction" offset="12" visible="True" />
+    <float name="restitution" offset="16" visible="True" />
+    <float name="volume" offset="20" visible="True" />
+    <float name="Mass" offset="24" visible="True" />
+    <float name="phantom enum" offset="28" visible="True" />
+    <short name="size" offset="32" visible="True" />
+    <short name="count" offset="34" visible="True" />
+    <float name="phantom" offset="36" visible="True" />
+    <short name="size" offset="40" visible="True" />
+    <short name="count" offset="42" visible="True" />
+    <float name="radius" offset="44" visible="True" />
+    <float name="half extens i" offset="48" visible="True" />
+    <float name="half extens j scale" offset="52" visible="True" />
+    <float name="half extens k scale" offset="56" visible="True" />
+    <float name="size" offset="60" visible="True" />
+    <float name="count" offset="64" visible="True" />
+    <float name="unused" offset="68" visible="True" />
+    <float name="unused" offset="72" visible="True" />
+    <float name="unused" offset="76" visible="True" />
+    <float name="rotation i (i)" offset="80" visible="True" />
+    <float name="rotation i (j)" offset="84" visible="True" />
+    <float name="rotation i (k)" offset="88" visible="True" />
+    <float name="unused" offset="92" visible="True" />
+    <float name="rotation j (i)" offset="96" visible="True" />
+    <float name="rotation j (j)" offset="100" visible="True" />
+    <float name="rotation j (k)" offset="104" visible="True" />
+    <float name="unused" offset="108" visible="True" />
+    <float name="rotation k (i)" offset="112" visible="True" />
+    <float name="rotation k (j)" offset="116" visible="True" />
+    <float name="rotation k (k)" offset="120" visible="True" />
+    <float name="Unknown" offset="124" visible="True" />
+    <float name="translation i" offset="128" visible="True" />
+    <float name="translation j" offset="132" visible="True" />
+    <float name="translation k" offset="136" visible="True" />
+    <float name="Unused" offset="140" visible="True" />
+  </struct>
+  <struct name="Triangles (shape)" offset="104" visible="true" size="76" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <stringid name="material" offset="4" visible="True" />
+    <float name="relative mass scale" offset="8" visible="True" />
+    <float name="friction" offset="12" visible="True" />
+    <float name="restitution" offset="16" visible="True" />
+    <float name="volume" offset="20" visible="True" />
+    <float name="Mass" offset="24" visible="True" />
+    <float name="phantom enum" offset="28" visible="True" />
+    <short name="size" offset="32" visible="True" />
+    <short name="count" offset="34" visible="True" />
+    <float name="radius" offset="36" visible="True" />
+    <float name="point a i" offset="40" visible="True" />
+    <float name="point a j" offset="44" visible="True" />
+    <float name="point a k" offset="48" visible="True" />
+    <float name="point b i" offset="52" visible="True" />
+    <float name="point b j" offset="56" visible="True" />
+    <float name="point b k" offset="60" visible="True" />
+    <float name="point c i" offset="64" visible="True" />
+    <float name="point c j" offset="68" visible="True" />
+    <float name="point c k" offset="72" visible="True" />
+  </struct>
+  <struct name="Polyhedra or Phmo parts" offset="112" visible="true" size="256" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <int name="material (enum)" offset="4" visible="True" />
+    <float name="flags (unused)" offset="8" visible="True" />
+    <float name="Friction" offset="12" visible="True" />
+    <float name="restitution" offset="16" visible="True" />
+    <float name="volume" offset="20" visible="True" />
+    <float name="mass" offset="24" visible="True" />
+    <float name="phantom " offset="28" visible="True" />
+    <float name="size" offset="32" visible="True" />
+    <float name="count" offset="36" visible="True" />
+    <float name="radius" offset="40" visible="True" />
+    <float name="aabb half entents i" offset="44" visible="True" />
+    <float name="aabb half entents j" offset="48" visible="True" />
+    <float name="aabb half entents k" offset="52" visible="True" />
+    <float name="aabb center i" offset="56" visible="True" />
+    <float name="aabb center j" offset="60" visible="True" />
+    <float name="aabb center k" offset="64" visible="True" />
+    <float name="four vectors size" offset="68" visible="True" />
+    <float name="four vectors capacity" offset="72" visible="True" />
+    <float name="num vertices" offset="76" visible="True" />
+    <float name="Unknown" offset="80" visible="True" />
+    <enum16 name="Phmo part proprieties" offset="84" visible="True">
+      <option name="Unknown" value="0" />
+      <option name="Unknown" value="1" />
+      <option name="unknown" value="2" />
+      <option name="Unknown" value="3" />
+      <option name="Unknown" value="4" />
+      <option name="Static(Unmovable)" value="5" />
+    </enum16>
+    <short name="4" offset="86" visible="True" />
+    <short name="num vertrices count" offset="88" visible="True" />
+    <byte name="6" offset="90" visible="True" />
+    <byte name="7" offset="91" visible="True" />
+    <float name="Unused" offset="92" visible="True" />
+    <float name="four vectors x (i)" offset="96" visible="True" />
+    <float name="four vectors x (j)" offset="100" visible="True" />
+    <float name="four vectors x (k)" offset="104" visible="True" />
+    <float name="four vectors y (i)" offset="108" visible="True" />
+    <float name="four vectors y (j)" offset="112" visible="True" />
+    <float name="four vectors y (k)" offset="116" visible="True" />
+    <float name="four vectors z (i)" offset="120" visible="True" />
+    <float name="four vectors z (j)" offset="124" visible="True" />
+    <float name="four vectors z (k)" offset="128" visible="True" />
+    <float name="four vectors x (i)" offset="132" visible="True" />
+    <float name="four vectors x (j)" offset="136" visible="True" />
+    <float name="four vectors x (k)" offset="140" visible="True" />
+    <float name="four vectors y (i)" offset="144" visible="True" />
+    <float name="four vectors y (j)" offset="148" visible="True" />
+    <float name="four vectors y (k)" offset="152" visible="True" />
+    <float name="four vectors z (i)" offset="156" visible="True" />
+    <float name="four vectors z (j)" offset="160" visible="True" />
+    <float name="four vectors z (k)" offset="164" visible="True" />
+    <float name="four vectors x (i)" offset="168" visible="True" />
+    <float name="four vectors x (j)" offset="172" visible="True" />
+    <float name="four vectors x (k)" offset="176" visible="True" />
+    <float name="four vectors y (i)" offset="180" visible="True" />
+    <float name="four vectors y (j)" offset="184" visible="True" />
+    <float name="four vectors y (k)" offset="188" visible="True" />
+    <float name="four vectors z (i)" offset="192" visible="True" />
+    <float name="four vectors z (j)" offset="196" visible="True" />
+    <float name="four vectors z (k)" offset="200" visible="True" />
+    <float name="four vectors x (i)" offset="204" visible="True" />
+    <float name="four vectors x (j)" offset="208" visible="True" />
+    <float name="four vectors x (k)" offset="212" visible="True" />
+    <float name="four vectors y (i)" offset="216" visible="True" />
+    <float name="four vectors y (j)" offset="220" visible="True" />
+    <float name="four vectors y (k)" offset="224" visible="True" />
+    <float name="four vectors z (i)" offset="228" visible="True" />
+    <float name="four vectors z (j)" offset="232" visible="True" />
+    <float name="four vectors z (k)" offset="236" visible="True" />
+    <short name="plane equation size" offset="240" visible="True" />
+    <short name="2" offset="242" visible="True" />
+    <byte name="3" offset="244" visible="True" />
+    <byte name="Something Count?" offset="245" visible="True" />
+    <short name="3" offset="246" visible="True" />
+    <short name="Planes equation capacity" offset="248" visible="True" />
+    <short name="6" offset="250" visible="True" />
+    <short name="Planes count" offset="252" visible="True" />
+    <short name="3" offset="254" visible="True" />
+  </struct>
+  <struct name="Polyhedron Four Vectors" offset="120" visible="true" size="48" label="">
+    <float name="Length Vector i" offset="0" visible="True" />
+    <float name="Length Vector j" offset="4" visible="True" />
+    <float name="Length Vector k" offset="8" visible="True" />
+    <float name="Length Vector w" offset="12" visible="True" />
+    <float name="Width Vector i" offset="16" visible="True" />
+    <float name="Width Vector j" offset="20" visible="True" />
+    <float name="Width Vector k" offset="24" visible="True" />
+    <float name="Width Vector w" offset="28" visible="True" />
+    <float name="Height Vector i" offset="32" visible="True" />
+    <float name="Height Vector j" offset="36" visible="True" />
+    <float name="Height Vector k" offset="40" visible="True" />
+    <float name="Height Vector w" offset="44" visible="True" />
+  </struct>
+  <struct name="Polyhedron Planes Equations" offset="128" visible="true" size="16" label="">
+    <float name="X" offset="0" visible="True" />
+    <float name="y" offset="4" visible="True" />
+    <float name="z" offset="8" visible="True" />
+    <float name="d" offset="12" visible="True" />
+  </struct>
+  <struct name="Mass Distributions" offset="136" visible="true" size="48" label="">
+    <float name="center of mass i" offset="0" visible="True" />
+    <float name="center of mass j" offset="4" visible="True" />
+    <float name="center of mass k" offset="8" visible="True" />
+    <float name="inertia tensor i (i)" offset="12" visible="True" />
+    <float name="inertia tensor i (j)" offset="16" visible="True" />
+    <float name="inertia tensor i (k)" offset="20" visible="True" />
+    <float name="inertia tensor j (i)" offset="24" visible="True" />
+    <float name="inertia tensor j (j)" offset="28" visible="True" />
+    <float name="inertia tensor j (k)" offset="32" visible="True" />
+    <float name="inertia tensor k (i)" offset="36" visible="True" />
+    <float name="inertia tensor k (j)" offset="40" visible="True" />
+    <float name="inertia tensor k (k)" offset="44" visible="True" />
+  </struct>
+  <struct name="Lists" offset="144" visible="true" size="48" label="">
+    <float name="size" offset="0" visible="True" />
+    <float name="count" offset="4" visible="True" />
+    <float name="child shapes size" offset="8" visible="True" />
+    <float name="child shapes  capacity" offset="12" visible="True" />
+    <short name="shape type" offset="16" visible="True" />
+    <short name="shape" offset="18" visible="True" />
+    <float name="collision filter" offset="20" visible="True" />
+    <short name="shape type" offset="24" visible="True" />
+    <short name="shape" offset="26" visible="True" />
+    <float name="collision filter" offset="28" visible="True" />
+    <short name="shape type" offset="32" visible="True" />
+    <short name="shape" offset="34" visible="True" />
+    <float name="collision filter" offset="36" visible="True" />
+    <short name="shape type" offset="40" visible="True" />
+    <short name="shape" offset="42" visible="True" />
+    <float name="collision filter" offset="44" visible="True" />
+  </struct>
+  <struct name="List shapes" offset="152" visible="true" size="8" label="">
+    <enum16 name="shape type" offset="0" visible="True">
+      <option name="Box" value="0" />
+      <option name="Polyhedron" value="1" />
+    </enum16>
+    <short name="shape" offset="2" visible="True" />
+    <float name="collision filter" offset="4" visible="True" />
+  </struct>
+  <struct name="MOPPS" offset="160" visible="true" size="24" label="">
+    <float name="size" offset="0" visible="True" />
+    <float name="count" offset="4" visible="True" />
+    <float name="list (enum)" offset="8" visible="True" />
+    <float name="code offset" offset="12" visible="True" />
+    <float name="mopp codes bytes" offset="16" visible="True" />
+    <float name="Unknown" offset="20" visible="True" />
+  </struct>
+  <struct name="MOPPS" offset="168" visible="true" size="1" label="">
+    <byte name="mopp codes bytes" offset="0" visible="True" />
+  </struct>
+  <struct name="Hinge Constraints" offset="176" visible="true" size="120" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <float name="node a" offset="4" visible="True" />
+    <float name="node b" offset="8" visible="True" />
+    <float name="a scale" offset="12" visible="True" />
+    <float name="a forward i" offset="16" visible="True" />
+    <float name="a forward j" offset="20" visible="True" />
+    <float name="a forward k" offset="24" visible="True" />
+    <float name="a left i" offset="28" visible="True" />
+    <float name="a left j" offset="32" visible="True" />
+    <float name="a left k" offset="36" visible="True" />
+    <float name="a up i" offset="40" visible="True" />
+    <float name="a up j" offset="44" visible="True" />
+    <float name="a up k" offset="48" visible="True" />
+    <float name="a position x" offset="52" visible="True" />
+    <float name="a position y" offset="56" visible="True" />
+    <float name="a position z" offset="60" visible="True" />
+    <float name="b scale" offset="64" visible="True" />
+    <float name="b forward i" offset="68" visible="True" />
+    <float name="b forward j" offset="72" visible="True" />
+    <float name="b forward k" offset="76" visible="True" />
+    <float name="b left i" offset="80" visible="True" />
+    <float name="b left j" offset="84" visible="True" />
+    <float name="b left k" offset="88" visible="True" />
+    <float name="b up i" offset="92" visible="True" />
+    <float name="b up j" offset="96" visible="True" />
+    <float name="b up k" offset="100" visible="True" />
+    <float name="b position x" offset="104" visible="True" />
+    <float name="b position y" offset="108" visible="True" />
+    <float name="b position z" offset="112" visible="True" />
+    <float name="edge index" offset="116" visible="True" />
+  </struct>
+  <struct name="Ragdoll Constraints" offset="184" visible="true" size="148" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <float name="node a" offset="4" visible="True" />
+    <float name="node b" offset="8" visible="True" />
+    <float name="a scale" offset="12" visible="True" />
+    <float name="a forward i" offset="16" visible="True" />
+    <float name="a forward j" offset="20" visible="True" />
+    <float name="a forward k" offset="24" visible="True" />
+    <float name="a left i" offset="28" visible="True" />
+    <float name="a left j" offset="32" visible="True" />
+    <float name="a left k" offset="36" visible="True" />
+    <float name="a up i" offset="40" visible="True" />
+    <float name="a up j" offset="44" visible="True" />
+    <float name="a up k" offset="48" visible="True" />
+    <float name="a position x" offset="52" visible="True" />
+    <float name="a position y" offset="56" visible="True" />
+    <float name="a position z" offset="60" visible="True" />
+    <float name="b scale" offset="64" visible="True" />
+    <float name="b forward i" offset="68" visible="True" />
+    <float name="b forward j" offset="72" visible="True" />
+    <float name="b forward k" offset="76" visible="True" />
+    <float name="b left i" offset="80" visible="True" />
+    <float name="b left j" offset="84" visible="True" />
+    <float name="b left k" offset="88" visible="True" />
+    <float name="b up i" offset="92" visible="True" />
+    <float name="b up j" offset="96" visible="True" />
+    <float name="b up k" offset="100" visible="True" />
+    <float name="b position x" offset="104" visible="True" />
+    <float name="b position y" offset="108" visible="True" />
+    <float name="b position z" offset="112" visible="True" />
+    <float name="edge index" offset="116" visible="True" />
+    <float name="min twist" offset="120" visible="True" />
+    <float name="max twist" offset="124" visible="True" />
+    <float name="min cone" offset="128" visible="True" />
+    <float name="max cone" offset="132" visible="True" />
+    <float name="min plane" offset="136" visible="True" />
+    <float name="max plane" offset="140" visible="True" />
+    <float name="max friction torque" offset="144" visible="True" />
+  </struct>
+  <struct name="Regions" offset="192" visible="true" size="12" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <struct name="Permutations" offset="4" visible="true" size="12" label="">
+      <stringid name="name" offset="0" visible="True" />
+      <struct name="Rigid Bodies" offset="4" visible="true" size="2" label="">
+        <short name="rigid body " offset="0" visible="True" />
+      </struct>
+    </struct>
+  </struct>
+  <struct name="Nodes" offset="200" visible="true" size="12" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <short name="flag: does not animate" offset="4" visible="True" />
+    <short name="parent" offset="6" visible="True" />
+    <short name="Sibling" offset="8" visible="True" />
+    <short name="child" offset="10" visible="True" />
+  </struct>
+  <int name="errors" offset="208" visible="True" />
+  <int name="errors" offset="212" visible="True" />
+  <int name="errors" offset="216" visible="True" />
+  <int name="errors" offset="220" visible="True" />
+  <int name="errors" offset="224" visible="True" />
+  <int name="errors" offset="228" visible="True" />
+  <struct name="Limited Hinge Constraints" offset="232" visible="true" size="132" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <float name="node a" offset="4" visible="True" />
+    <float name="node b" offset="8" visible="True" />
+    <float name="a scale" offset="12" visible="True" />
+    <float name="a forward i" offset="16" visible="True" />
+    <float name="a forward j" offset="20" visible="True" />
+    <float name="a forward k" offset="24" visible="True" />
+    <float name="a left i" offset="28" visible="True" />
+    <float name="a left j" offset="32" visible="True" />
+    <float name="a left k" offset="36" visible="True" />
+    <float name="a up i" offset="40" visible="True" />
+    <float name="a up j" offset="44" visible="True" />
+    <float name="a up k" offset="48" visible="True" />
+    <float name="a position x" offset="52" visible="True" />
+    <float name="a position y" offset="56" visible="True" />
+    <float name="a position z" offset="60" visible="True" />
+    <float name="b scale" offset="64" visible="True" />
+    <float name="b forward i" offset="68" visible="True" />
+    <float name="b forward j" offset="72" visible="True" />
+    <float name="b forward k" offset="76" visible="True" />
+    <float name="b left i" offset="80" visible="True" />
+    <float name="b left j" offset="84" visible="True" />
+    <float name="b left k" offset="88" visible="True" />
+    <float name="b up i" offset="92" visible="True" />
+    <float name="b up j" offset="96" visible="True" />
+    <float name="b up k" offset="100" visible="True" />
+    <float name="b position x" offset="104" visible="True" />
+    <float name="b position y" offset="108" visible="True" />
+    <float name="b position z" offset="112" visible="True" />
+    <float name="edge index" offset="116" visible="True" />
+    <float name="limit friction" offset="120" visible="True" />
+    <float name="limit min angle" offset="124" visible="True" />
+    <float name="limit max angle" offset="128" visible="True" />
+  </struct>
+  <struct name="Ball And Socket Constraints" offset="240" visible="true" size="120" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <float name="node a" offset="4" visible="True" />
+    <float name="node b" offset="8" visible="True" />
+    <float name="a scale" offset="12" visible="True" />
+    <float name="a forward i" offset="16" visible="True" />
+    <float name="a forward j" offset="20" visible="True" />
+    <float name="a forward k" offset="24" visible="True" />
+    <float name="a left i" offset="28" visible="True" />
+    <float name="a left j" offset="32" visible="True" />
+    <float name="a left k" offset="36" visible="True" />
+    <float name="a up i" offset="40" visible="True" />
+    <float name="a up j" offset="44" visible="True" />
+    <float name="a up k" offset="48" visible="True" />
+    <float name="a position x" offset="52" visible="True" />
+    <float name="a position y" offset="56" visible="True" />
+    <float name="a position z" offset="60" visible="True" />
+    <float name="b scale" offset="64" visible="True" />
+    <float name="b forward i" offset="68" visible="True" />
+    <float name="b forward j" offset="72" visible="True" />
+    <float name="b forward k" offset="76" visible="True" />
+    <float name="b left i" offset="80" visible="True" />
+    <float name="b left j" offset="84" visible="True" />
+    <float name="b left k" offset="88" visible="True" />
+    <float name="b up i" offset="92" visible="True" />
+    <float name="b up j" offset="96" visible="True" />
+    <float name="b up k" offset="100" visible="True" />
+    <float name="b position x" offset="104" visible="True" />
+    <float name="b position y" offset="108" visible="True" />
+    <float name="b position z" offset="112" visible="True" />
+    <float name="edge index" offset="116" visible="True" />
+  </struct>
+  <struct name="Stiff Sprin Constraints" offset="248" visible="true" size="124" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <float name="node a" offset="4" visible="True" />
+    <float name="node b" offset="8" visible="True" />
+    <float name="a scale" offset="12" visible="True" />
+    <float name="a forward i" offset="16" visible="True" />
+    <float name="a forward j" offset="20" visible="True" />
+    <float name="a forward k" offset="24" visible="True" />
+    <float name="a left i" offset="28" visible="True" />
+    <float name="a left j" offset="32" visible="True" />
+    <float name="a left k" offset="36" visible="True" />
+    <float name="a up i" offset="40" visible="True" />
+    <float name="a up j" offset="44" visible="True" />
+    <float name="a up k" offset="48" visible="True" />
+    <float name="a position x" offset="52" visible="True" />
+    <float name="a position y" offset="56" visible="True" />
+    <float name="a position z" offset="60" visible="True" />
+    <float name="b scale" offset="64" visible="True" />
+    <float name="b forward i" offset="68" visible="True" />
+    <float name="b forward j" offset="72" visible="True" />
+    <float name="b forward k" offset="76" visible="True" />
+    <float name="b left i" offset="80" visible="True" />
+    <float name="b left j" offset="84" visible="True" />
+    <float name="b left k" offset="88" visible="True" />
+    <float name="b up i" offset="92" visible="True" />
+    <float name="b up j" offset="96" visible="True" />
+    <float name="b up k" offset="100" visible="True" />
+    <float name="b position x" offset="104" visible="True" />
+    <float name="b position y" offset="108" visible="True" />
+    <float name="b position z" offset="112" visible="True" />
+    <float name="edge index" offset="116" visible="True" />
+    <float name="spring length" offset="120" visible="True" />
+  </struct>
+  <struct name="Prismatic Constraints" offset="256" visible="true" size="132" label="">
+    <stringid name="name" offset="0" visible="True" />
+    <float name="node a" offset="4" visible="True" />
+    <float name="node b" offset="8" visible="True" />
+    <float name="a scale" offset="12" visible="True" />
+    <float name="a forward i" offset="16" visible="True" />
+    <float name="a forward j" offset="20" visible="True" />
+    <float name="a forward k" offset="24" visible="True" />
+    <float name="a left i" offset="28" visible="True" />
+    <float name="a left j" offset="32" visible="True" />
+    <float name="a left k" offset="36" visible="True" />
+    <float name="a up i" offset="40" visible="True" />
+    <float name="a up j" offset="44" visible="True" />
+    <float name="a up k" offset="48" visible="True" />
+    <float name="a position x" offset="52" visible="True" />
+    <float name="a position y" offset="56" visible="True" />
+    <float name="a position z" offset="60" visible="True" />
+    <float name="b scale" offset="64" visible="True" />
+    <float name="b forward i" offset="68" visible="True" />
+    <float name="b forward j" offset="72" visible="True" />
+    <float name="b forward k" offset="76" visible="True" />
+    <float name="b left i" offset="80" visible="True" />
+    <float name="b left j" offset="84" visible="True" />
+    <float name="b left k" offset="88" visible="True" />
+    <float name="b up i" offset="92" visible="True" />
+    <float name="b up j" offset="96" visible="True" />
+    <float name="b up k" offset="100" visible="True" />
+    <float name="b position x" offset="104" visible="True" />
+    <float name="b position y" offset="108" visible="True" />
+    <float name="b position z" offset="112" visible="True" />
+    <float name="edge index" offset="116" visible="True" />
+    <float name="min_limit" offset="120" visible="True" />
+    <float name="max_limit" offset="124" visible="True" />
+    <float name="max_friction_force" offset="128" visible="True" />
+  </struct>
+  <struct name="Phantoms" offset="264" visible="true" size="32" label="">
+    <int name="size" offset="0" visible="True" />
+    <int name="count" offset="4" visible="True" />
+    <int name="size" offset="8" visible="True" />
+    <int name="count" offset="12" visible="True" />
+    <int name="unknown" offset="16" visible="True" />
+    <int name="unknown" offset="20" visible="True" />
+    <int name="unknown" offset="24" visible="True" />
+    <int name="count?" offset="28" visible="True" />
+  </struct>
+</plugin>

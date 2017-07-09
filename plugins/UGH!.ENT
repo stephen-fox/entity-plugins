@@ -1,0 +1,134 @@
+<plugin class="UGH!" author="Grimdoomer" version="0.99" headersize="88">
+  <struct name="Playbacks" offset="0" visible="true" size="56" label="">
+    <float name="Minimum Distance" offset="0" visible="True" />
+    <float name="Maximum Distance" offset="4" visible="True" />
+    <float name="Skip Fraction" offset="8" visible="True" />
+    <float name="Maximum Blend Per Second" offset="12" visible="True" />
+    <float name="Gain Base" offset="16" visible="True" />
+    <float name="Gain Veriance" offset="20" visible="True" />
+    <short name="Random Pitch Bounds" offset="24" visible="True" />
+    <short name="To" offset="26" visible="True" />
+    <float name="Inner Cone Angle" offset="28" visible="True" />
+    <float name="Outer Cone Angle" offset="32" visible="True" />
+    <float name="Outer Cone Gain" offset="36" visible="True" />
+    <bitmask32 name="Flags" offset="40" visible="True">
+      <option name="Override_Azimuth" value="0" />
+      <option name="Override_3D_Gain" value="1" />
+      <option name="Override_Speaker_Gain" value="2" />
+    </bitmask32>
+    <float name="Positional Gain" offset="44" visible="True" />
+    <float name="First Person Gain" offset="48" visible="True" />
+    <unused offset="52" size="4" />
+  </struct>
+  <struct name="Scales" offset="8" visible="true" size="20" label="">
+    <float name="Gain Modifier" offset="0" visible="True" />
+    <float name="To" offset="4" visible="True" />
+    <short name="Pitch Modifier" offset="8" visible="True" />
+    <short name="To" offset="10" visible="True" />
+    <float name="Skip Fraction Modifier" offset="12" visible="True" />
+    <float name="To" offset="16" visible="True" />
+  </struct>
+  <struct name="Import Names" offset="16" visible="true" size="4" label="">
+    <stringid name="Name" offset="0" visible="True" />
+  </struct>
+  <struct name="Pitch Range Parameters" offset="24" visible="true" size="10" label="">
+    <short name="Natural Pitch" offset="0" visible="True" />
+    <short name="Blend Bounds" offset="2" visible="True" />
+    <short name="To" offset="4" visible="True" />
+    <short name="Max Gain Pitch Bounds" offset="6" visible="True" />
+    <short name="To" offset="8" visible="True" />
+  </struct>
+  <struct name="Permutations" offset="32" visible="true" size="12" label="">
+    <short name="Name Index" offset="0" visible="True" />
+    <byte name="Emcoded Skip Fraction" offset="2" visible="True" />
+    <byte name="Encoded Gain" offset="3" visible="True" />
+    <byte name="Permutation Info Index" offset="4" visible="True" />
+    <byte name="Language Neatral Time" offset="5" visible="True" />
+    <short name="Sample Size" offset="6" visible="True" />
+    <short name="Sound Choices Index" offset="8" visible="True" />
+    <short name="Sound Choices Count" offset="10" visible="True" />
+  </struct>
+  <struct name="Sound Choices" offset="40" visible="true" size="16" label="">
+    <uint name="Sound Names Index" offset="0" visible="True" />
+    <int name="Padding?" offset="4" visible="True" />
+    <int name="Total Raw Size" offset="8" visible="True" />
+    <short name="Sound Raw Cache Index" offset="12" visible="True" />
+    <short name="Sound Raw Chunk Count" offset="14" visible="True" />
+  </struct>
+  <struct name="Custom Playbacks" offset="48" visible="true" size="52" label="">
+    <bitmask32 name="FLags" offset="0" visible="True">
+      <option name="Use_3d_Radio_Hack" value="0" />
+    </bitmask32>
+    <unused offset="4" size="16" />
+    <struct name="Filter" offset="20" visible="true" size="72" label="">
+      <enum32 name="One" offset="0" visible="True">
+        <option name="Parametric_EQ" value="0" />
+        <option name="DLS2" value="1" />
+        <option name="Both_(only_valid_for_mono)" value="2" />
+      </enum32>
+      <float name="Filter Width" offset="4" visible="True" />
+      <float name="Left Filter Frequence Scale Bounds" offset="8" visible="True" />
+      <float name="To" offset="12" visible="True" />
+      <float name="Left Filter Frequence Random Base and Variance" offset="16" visible="True" />
+      <float name="To" offset="20" visible="True" />
+      <float name="Left Filter Gain Scale Bounds" offset="24" visible="True" />
+      <float name="To" offset="28" visible="True" />
+      <float name="Left Filter Gain Random Base and Variance" offset="32" visible="True" />
+      <float name="To" offset="36" visible="True" />
+      <float name="Right Filter Frequence Scale Bounds" offset="40" visible="True" />
+      <float name="To" offset="44" visible="True" />
+      <float name="Right Filter Frequence Random Base and Variance" offset="48" visible="True" />
+      <float name="To" offset="52" visible="True" />
+      <float name="Right Filter Gain Scale Bounds" offset="56" visible="True" />
+      <float name="To" offset="60" visible="True" />
+      <float name="Right Filter Gain Random Base and Variance" offset="64" visible="True" />
+      <float name="To" offset="68" visible="True" />
+    </struct>
+    <unused offset="28" size="24" />
+  </struct>
+  <struct name="Runtime Permutation Flags" offset="56" visible="true" size="1" label="">
+    <unused offset="0" size="1" />
+  </struct>
+  <struct name="Sound Raw Cache" offset="64" visible="true" size="12" label="">
+    <int name="Offset" offset="0" visible="True" />
+    <int name="Size" offset="4" visible="True" />
+    <int name="Effect" offset="8" visible="True" />
+  </struct>
+  <struct name="Promotions" offset="72" visible="true" size="28" label="">
+    <struct name="Promotion Rules" offset="0" visible="true" size="16" label="">
+      <short name="Pitch Range Index" offset="0" visible="True" />
+      <short name="Maximum Playing Count" offset="2" visible="True" />
+      <float name="Suppression Time" offset="4" visible="True" />
+      <byte name="" offset="8" visible="True" />
+      <byte name="" offset="9" visible="True" />
+      <short name="" offset="10" visible="True" />
+      <byte name="" offset="12" visible="True" />
+      <byte name="" offset="13" visible="True" />
+      <short name="" offset="14" visible="True" />
+    </struct>
+    <struct name="Unknown81" offset="8" visible="true" size="4" label="">
+      <int name="" offset="0" visible="True" />
+    </struct>
+    <unused offset="16" size="4" />
+    <unused offset="20" size="8" />
+  </struct>
+  <struct name="Extra Infos" offset="80" visible="true" size="44" label="">
+    <struct name="Encoded Permutation Section" offset="0" visible="true" size="0" label="">
+    </struct>
+    <uint name="Offset" offset="8" visible="True" />
+    <uint name="Size" offset="12" visible="True" />
+    <uint name="Header Size" offset="16" visible="True" />
+    <uint name="Data Size" offset="20" visible="True" />
+    <struct name="Resources" offset="24" visible="true" size="16" label="">
+      <short name="" offset="0" visible="True" />
+      <short name="" offset="2" visible="True" />
+      <short name="" offset="4" visible="True" />
+      <short name="" offset="6" visible="True" />
+      <uint name="Size" offset="8" visible="True" />
+      <uint name="Offset" offset="12" visible="True" />
+    </struct>
+    <id name="Owner_Tag_Section_Offset" offset="32" visible="True" />
+    <int name="Constant" offset="36" visible="True" />
+    <int name="Constant" offset="40" visible="True" />
+  </struct>
+</plugin>

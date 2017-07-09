@@ -1,0 +1,278 @@
+<plugin class="HUDG" author="Grimdoomer" version="0.99" headersize="1160">
+  <unused offset="0" size="36" />
+  <enum16 name="Anchor" offset="36" visible="True">
+    <option name="Top_Left" value="0" />
+    <option name="Top_Right" value="1" />
+    <option name="Bottom_Left" value="2" />
+    <option name="Bottom_Right" value="3" />
+    <option name="Center" value="4" />
+  </enum16>
+  <byte name="Anchor Offset (y)" offset="38" visible="True" />
+  <byte name="Anchor Offset (x)" offset="39" visible="True" />
+  <unused offset="40" size="32" />
+  <tag name="obsolete1" offset="72" visible="True" />
+  <id name="obsolete1" offset="76" visible="True" />
+  <tag name="obsolete2" offset="80" visible="True" />
+  <id name="obsolete2" offset="84" visible="True" />
+  <float name="Message Up time" offset="88" visible="True" />
+  <float name="Message Fade time" offset="92" visible="True" />
+  <float name="Icon Color (alpha)" offset="96" visible="True" />
+  <float name="Icon Color (red)" offset="100" visible="True" />
+  <float name="Icon Color (green)" offset="104" visible="True" />
+  <float name="Icon Color (blue)" offset="108" visible="True" />
+  <float name="Text Color (alpha)" offset="112" visible="True" />
+  <float name="Text Color (red)" offset="116" visible="True" />
+  <float name="Text Color (green)" offset="120" visible="True" />
+  <float name="Text Color (blue)" offset="124" visible="True" />
+  <float name="Text Spacing" offset="128" visible="True" />
+  <tag name="Item_message_text" offset="132" visible="True" />
+  <id name="Item_message_text" offset="136" visible="True" />
+  <tag name="Icon_Bitmap" offset="140" visible="True" />
+  <id name="Icon_Bitmap" offset="144" visible="True" />
+  <tag name="Alternate_Icon" offset="148" visible="True" />
+  <id name="Alternate_Icon" offset="152" visible="True" />
+  <struct name="Button Icons" offset="156" visible="true" size="16" label="">
+    <short name="Sequence Index" offset="0" visible="True" />
+    <short name="Width Offset" offset="2" visible="True" />
+    <short name="Offset from Reference Corner (x)" offset="4" visible="True" />
+    <short name="Offset from Reference Corner (y)" offset="6" visible="True" />
+    <byte name="Override Icon Color (alpha)" offset="8" visible="True" />
+    <byte name="Override Icon Color (red)" offset="9" visible="True" />
+    <byte name="Override Icon Color (greeb)" offset="10" visible="True" />
+    <byte name="Override Icon Color (blue)" offset="11" visible="True" />
+    <byte name="Frame Rate (0-30)" offset="12" visible="True" />
+    <bitmask8 name="Flags" offset="13" visible="True">
+      <option name="Use_text_from_string_list_instead" value="0" />
+      <option name="Override_default_color" value="1" />
+      <option name="Width_offset_is_absolute_icon_width" value="2" />
+    </bitmask8>
+    <short name="Text Index" offset="14" visible="True" />
+  </struct>
+  <byte name="Hud Help Default Color (alpha)" offset="164" visible="True" />
+  <byte name="Hud Help Default Color (red)" offset="165" visible="True" />
+  <byte name="Hud Help Default Color (green)" offset="166" visible="True" />
+  <byte name="Hud Help Default Color (blue)" offset="167" visible="True" />
+  <byte name="Hud Help Flashing Color (alpha)" offset="168" visible="True" />
+  <byte name="Hud Help Flashing Color (red)" offset="169" visible="True" />
+  <byte name="Hud Help Flashing Color (green)" offset="170" visible="True" />
+  <byte name="Hud Help Flashing Color (blue)" offset="171" visible="True" />
+  <float name="Hud Help Flash Period" offset="172" visible="True" />
+  <float name="Hud Help Flash Delay" offset="176" visible="True" />
+  <short name="Number of Flashes" offset="180" visible="True" />
+  <bitmask16 name="Hud Help Flash Flags" offset="182" visible="True">
+    <option name="Reverse_Default/Flashing_Colors" value="0" />
+  </bitmask16>
+  <float name="Hud Help Flash Length" offset="184" visible="True" />
+  <byte name="Disabled Color (alpha)" offset="188" visible="True" />
+  <byte name="Disabled Color (red)" offset="189" visible="True" />
+  <byte name="Disabled Color (green)" offset="190" visible="True" />
+  <byte name="Disabled Color (blue)" offset="191" visible="True" />
+  <byte name="Disabled Color (alpha)" offset="192" visible="True" />
+  <byte name="Disabled Color (red)" offset="193" visible="True" />
+  <byte name="Disabled Color (green)" offset="194" visible="True" />
+  <byte name="Disabled Color (blue)" offset="195" visible="True" />
+  <tag name="Hud_messages" offset="196" visible="True" />
+  <id name="Hud_messages" offset="200" visible="True" />
+  <byte name="Objective Default Color (alpha)" offset="204" visible="True" />
+  <byte name="Objective Default (red)" offset="205" visible="True" />
+  <byte name="Objective Default (green)" offset="206" visible="True" />
+  <byte name="Objective Default (blue)" offset="207" visible="True" />
+  <byte name="Objective Flashing (alpha)" offset="208" visible="True" />
+  <byte name="Objective Flashing (red)" offset="209" visible="True" />
+  <byte name="Objective Flashing (green)" offset="210" visible="True" />
+  <byte name="Objective Flashing (blue)" offset="211" visible="True" />
+  <float name="Objective Flash Period" offset="212" visible="True" />
+  <float name="Objective Flash Delay" offset="216" visible="True" />
+  <short name="Number of Flashes" offset="220" visible="True" />
+  <bitmask16 name="Hud Help Flash Flags" offset="222" visible="True">
+    <option name="Reverse_Default/Flashing_Colors" value="0" />
+  </bitmask16>
+  <float name="Objective Flash Length" offset="224" visible="True" />
+  <byte name="Disabled Color (alpha)" offset="228" visible="True" />
+  <byte name="Disabled Color (red)" offset="229" visible="True" />
+  <byte name="Disabled Color (green)" offset="230" visible="True" />
+  <byte name="Disabled Color (blue)" offset="231" visible="True" />
+  <short name="Objective uptime ticks" offset="232" visible="True" />
+  <short name="Objective fade ticks" offset="234" visible="True" />
+  <float name=" Waypoint Top offset" offset="236" visible="True" />
+  <float name="Waypoint Bottom offset" offset="240" visible="True" />
+  <float name="Waypoint Left offset" offset="244" visible="True" />
+  <float name="Waypoint Right offset" offset="248" visible="True" />
+  <unused offset="252" size="32" />
+  <tag name="Arrow_bitmap" offset="284" visible="True" />
+  <id name="Arrow_bitmap" offset="288" visible="True" />
+  <struct name="Waypoints Arrows" offset="292" visible="true" size="104" label="">
+    <string32 name="Name" offset="0" visible="True" />
+    <unused offset="4" size="8" />
+    <byte name="Red" offset="12" visible="True" />
+    <byte name="Green" offset="13" visible="True" />
+    <byte name="Blue" offset="14" visible="True" />
+    <byte name="Opacity" offset="15" visible="True" />
+    <float name="Translucency" offset="16" visible="True" />
+    <unused offset="20" size="4" />
+    <short name="On Screen Sequence Index" offset="24" visible="True" />
+    <short name="Off Screen Sequence Index" offset="26" visible="True" />
+    <short name="Unused Sequence Index" offset="28" visible="True" />
+    <bitmask16 name="Flags" offset="30" visible="True">
+      <option name="Do_not_rotate_when_pointing_offscreen" value="0" />
+    </bitmask16>
+    <unused offset="32" size="44" />
+  </struct>
+  <unused offset="300" size="80" />
+  <float name="Multiplayer Hud Scale" offset="380" visible="True" />
+  <unused offset="384" size="272" />
+  <float name="Motion Sensor Range" offset="656" visible="True" />
+  <float name="Motion Sensor Velocity Sensitivity" offset="660" visible="True" />
+  <float name="Motion Sensor Scale" offset="664" visible="True" />
+  <short name="Default Title Chapter Bounds (top)" offset="668" visible="True" />
+  <short name="Default Title Chapter Bounds (left)" offset="670" visible="True" />
+  <short name="Default Title Chapter Bounds (bottom)" offset="672" visible="True" />
+  <short name="Default Title Chapter Bounds (right)" offset="674" visible="True" />
+  <unused offset="676" size="44" />
+  <short name="Hud Damage Indicator Offset (top)" offset="720" visible="True" />
+  <short name="Hud Damage Indicator Offset (bottom)" offset="722" visible="True" />
+  <short name="Hud Damage Indicator Offset (left)" offset="724" visible="True" />
+  <short name="Hud Damage Indicator Offset (right)" offset="726" visible="True" />
+  <unused offset="728" size="32" />
+  <tag name="Damage_Indicator_Bitmap" offset="760" visible="True" />
+  <id name="Damage_Indicator_Bitmap" offset="764" visible="True" />
+  <short name="Sequence Index" offset="768" visible="True" />
+  <short name="Multiplayer Sequence Index" offset="770" visible="True" />
+  <byte name="Damage Indicator Color (blue)" offset="772" visible="True" />
+  <byte name="Damage Indicator Color (green)" offset="773" visible="True" />
+  <byte name="Damage Indicator Color (red)" offset="774" visible="True" />
+  <byte name="Damage Indicator Color (alpha)" offset="775" visible="True" />
+  <unused offset="776" size="16" />
+  <byte name="Not Much Time Left Default Color (blue)" offset="792" visible="True" />
+  <byte name="Not Much Time Left Default Color (green)" offset="793" visible="True" />
+  <byte name="Not Much Time Left Default Color (red)" offset="794" visible="True" />
+  <byte name="Not Much Time Left Default Color (alpha)" offset="795" visible="True" />
+  <byte name="Not Much Time Left Flash Color (blue)" offset="796" visible="True" />
+  <byte name="Not Much Time Left Flash (green)" offset="797" visible="True" />
+  <byte name="Not Much Time Left Flash (red)" offset="798" visible="True" />
+  <byte name="Not Much Time Left Flash (alpha)" offset="799" visible="True" />
+  <float name="Not Much Time Left Flash Period" offset="800" visible="True" />
+  <float name="Not Much Time Left Flash Delay" offset="804" visible="True" />
+  <short name="Number of Flashes" offset="808" visible="True" />
+  <bitmask16 name="Not Much Time Left Flash Flags" offset="810" visible="True">
+    <option name="Reverse_Default/Flashing_Colors" value="0" />
+  </bitmask16>
+  <float name="Not Much Time Left Flash Length" offset="812" visible="True" />
+  <unused offset="816" size="8" />
+  <byte name="Time Out Default Color (alpha)" offset="824" visible="True" />
+  <byte name="Time Out Default Color (red)" offset="825" visible="True" />
+  <byte name="Time Out Default Color (green)" offset="826" visible="True" />
+  <byte name="Time Out Default Color (blue)" offset="827" visible="True" />
+  <byte name="Time Out Flashing Color (alpha)" offset="828" visible="True" />
+  <byte name="Time Out Flashing Color (red)" offset="829" visible="True" />
+  <byte name="Time Out Flashing Color (green)" offset="830" visible="True" />
+  <byte name="Time Out Flashing Color (blue)" offset="831" visible="True" />
+  <float name="Time Out Flash Period" offset="832" visible="True" />
+  <float name="Time Out Flash Delay" offset="836" visible="True" />
+  <short name="Number of Flashes" offset="840" visible="True" />
+  <bitmask16 name="Time Out Flash Flags" offset="842" visible="True">
+    <option name="Reverse_Default/Flashing_Colors" value="0" />
+  </bitmask16>
+  <float name="Time Out Flash Length" offset="844" visible="True" />
+  <byte name="Disabled Time Out Default Color (alpha)" offset="848" visible="True" />
+  <byte name="Disabled Time Out Default Color (red)" offset="849" visible="True" />
+  <byte name="Disabled Time Out Default Color (green)" offset="850" visible="True" />
+  <byte name="Disabled Time Out Default Color (blue)" offset="851" visible="True" />
+  <unused offset="852" size="44" />
+  <tag name="Carnage_Report_Bitmap" offset="896" visible="True" />
+  <id name="Carnage_Report_Bitmap" offset="900" visible="True" />
+  <short name="Loading Begin Text" offset="904" visible="True" />
+  <short name="Loading End Text" offset="906" visible="True" />
+  <short name="Checkpoint Begin Text" offset="908" visible="True" />
+  <short name="checkpoint End Text" offset="910" visible="True" />
+  <tag name="Checkpoint_Sound" offset="912" visible="True" />
+  <id name="Checkpoint_Sound" offset="916" visible="True" />
+  <unused offset="920" size="96" />
+  <tag name="Hud_text" offset="1016" visible="True" />
+  <id name="Hud_text" offset="1020" visible="True" />
+  <struct name="Dashlights" offset="1024" visible="true" size="28" label="">
+    <tag name="Bitmap" offset="0" visible="True" />
+    <id name="Bitmap" offset="4" visible="True" />
+    <tag name="Shader" offset="8" visible="True" />
+    <id name="Shader" offset="12" visible="True" />
+    <short name="Sequence Index" offset="16" visible="True" />
+    <bitmask16 name="Time Out Flash Flags" offset="18" visible="True">
+      <option name="Don't_scale_when_pulsing" value="0" />
+    </bitmask16>
+    <tag name="Sound" offset="20" visible="True" />
+    <id name="Sound" offset="24" visible="True" />
+  </struct>
+  <struct name="Waypoint Arrows" offset="1032" visible="true" size="36" label="">
+    <tag name="Bitmap" offset="0" visible="True" />
+    <id name="Bitmap" offset="4" visible="True" />
+    <tag name="Shader" offset="8" visible="True" />
+    <id name="Shader" offset="12" visible="True" />
+    <float name="Sequence Index" offset="16" visible="True" />
+    <float name="Smallest Size" offset="20" visible="True" />
+    <float name="Smallest Distance" offset="24" visible="True" />
+    <tag name="Border_Bitmap" offset="28" visible="True" />
+    <id name="Border_Bitmap" offset="32" visible="True" />
+  </struct>
+  <struct name="WayPoints" offset="1040" visible="true" size="24" label="">
+    <tag name="Bitmap" offset="0" visible="True" />
+    <id name="Bitmap" offset="4" visible="True" />
+    <tag name="Sahder" offset="8" visible="True" />
+    <id name="Sahder" offset="12" visible="True" />
+    <short name="Onscreen Sequence Index" offset="16" visible="True" />
+    <short name="Occluded Sequence Index" offset="18" visible="True" />
+    <short name="Offscreen Sequence Index" offset="20" visible="True" />
+    <short name="Unused" offset="22" visible="True" />
+  </struct>
+  <struct name="Hud sounds" offset="1048" visible="true" size="24" label="">
+    <tag name="Chief_sound" offset="0" visible="True" />
+    <id name="Chief_sound" offset="4" visible="True" />
+    <bitmask32 name="Flags" offset="8" visible="True">
+      <option name="Shield_recharging" value="0" />
+      <option name="Shield_damaged" value="1" />
+      <option name="Shield_low" value="2" />
+      <option name="Shield_empty" value="3" />
+      <option name="Health_low" value="4" />
+      <option name="Health_minor_damage" value="5" />
+      <option name="Health_major_damage" value="6" />
+      <option name="Rocket_locking" value="7" />
+      <option name="Rocket_Locked" value="8" />
+    </bitmask32>
+    <float name="Scale" offset="12" visible="True" />
+    <tag name="Devrush_sound" offset="16" visible="True" />
+    <id name="Devrush_sound" offset="20" visible="True" />
+  </struct>
+  <struct name="Player Training Data" offset="1056" visible="true" size="20" label="">
+    <stringid name="Display string" offset="0" visible="True" />
+    <stringid name="Display string2" offset="4" visible="True" />
+    <stringid name="Display string3" offset="8" visible="True" />
+    <float name="max display time" offset="12" visible="True" />
+    <byte name="display count" offset="16" visible="True" />
+    <byte name="disapear delay" offset="17" visible="True" />
+    <byte name="redisplay delay" offset="18" visible="True" />
+    <byte name="display delay (s)" offset="19" visible="True" />
+  </struct>
+  <tag name="Primary_Message_Sound" offset="1064" visible="True" />
+  <id name="Primary_Message_Sound" offset="1068" visible="True" />
+  <tag name="Secondary_Message_Sound" offset="1072" visible="True" />
+  <id name="Secondary_Message_Sound" offset="1076" visible="True" />
+  <stringid name="boot griefer string" offset="1080" visible="True" />
+  <stringid name="cannot boot griefer string" offset="1084" visible="True" />
+  <tag name="Training_Shader" offset="1088" visible="True" />
+  <id name="Training_Shader" offset="1092" visible="True" />
+  <tag name="Human_Training_Top_Right_" offset="1096" visible="True" />
+  <id name="Human_Training_Top_Right_" offset="1100" visible="True" />
+  <tag name="Human_Training_Top_Center_" offset="1104" visible="True" />
+  <id name="Human_Training_Top_Center_" offset="1108" visible="True" />
+  <tag name="Human_Training_Top_Left_" offset="1112" visible="True" />
+  <id name="Human_Training_Top_Left_" offset="1116" visible="True" />
+  <tag name="Human_Training_center_" offset="1120" visible="True" />
+  <id name="Human_Training_center_" offset="1124" visible="True" />
+  <tag name="Elite_Training_Top_Right_" offset="1128" visible="True" />
+  <id name="Elite_Training_Top_Right_" offset="1132" visible="True" />
+  <tag name="Elite_Training_Top_Center_" offset="1136" visible="True" />
+  <id name="Elite_Training_Top_Center_" offset="1140" visible="True" />
+  <tag name="Elite_Training_Top_Left_" offset="1144" visible="True" />
+  <id name="Elite_Training_Top_Left_" offset="1148" visible="True" />
+  <tag name="Elite_Training_Center_" offset="1152" visible="True" />
+  <id name="Elite_Training_Center_" offset="1156" visible="True" />
+</plugin>

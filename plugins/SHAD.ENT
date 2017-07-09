@@ -1,0 +1,107 @@
+<plugin class="SHAD" author="Grimdoomer" version="0.99" headersize="84">
+  <tag name="Shader_Template" offset="0" visible="True" />
+  <id name="Shader_Template" offset="4" visible="True" />
+  <stringid name="Material Type" offset="8" visible="True" />
+  <struct name="Self-Illumination Properties" offset="12" visible="true" size="80" label="">
+    <tag name="Base_Map" offset="0" visible="True" />
+    <id name="Base_Map" offset="4" visible="True" />
+    <tag name="Self-Illumination_Map" offset="8" visible="True" />
+    <id name="Self-Illumination_Map" offset="12" visible="True" />
+    <float name="Primary On Colour: Red" offset="16" visible="True" />
+    <float name="Primary On Colour: Blue" offset="20" visible="True" />
+    <float name="Primary On Colour: Green" offset="24" visible="True" />
+    <float name="Primary On Colour: Brightness" offset="28" visible="True" />
+    <unused offset="32" size="4" />
+    <float name="Unknown" offset="36" visible="True" />
+    <unused offset="40" size="4" />
+    <tag name="Unknown" offset="44" visible="True" />
+    <id name="Unknown" offset="48" visible="True" />
+    <tag name="Secondary_Self-Illumination_Map" offset="52" visible="True" />
+    <id name="Secondary_Self-Illumination_Map" offset="56" visible="True" />
+    <float name="Secondary On Colour: Red" offset="60" visible="True" />
+    <float name="Secondary On Colour: Blue" offset="64" visible="True" />
+    <float name="Secondary On Colour: Green" offset="68" visible="True" />
+    <float name="Secondary On Colour: Brightness" offset="72" visible="True" />
+    <float name="Unknown" offset="76" visible="True" />
+  </struct>
+  <short name="type?" offset="20" visible="True" />
+  <short name="Unknown" offset="22" visible="True" />
+  <unused offset="24" size="8" />
+  <struct name="Shader Properties" offset="32" visible="true" size="124" label="">
+    <id name="Template" offset="0" visible="True" />
+    <struct name="Bitmaps" offset="4" visible="true" size="12" label="">
+      <id name="Bitmap" offset="0" visible="True" />
+      <int name="Unknown" offset="4" visible="True" />
+      <float name="Unknown" offset="8" visible="True" />
+    </struct>
+    <struct name="Unknown" offset="12" visible="true" size="4" label="">
+      <int name="Unknown" offset="0" visible="True" />
+    </struct>
+    <struct name="UVW Properties" offset="20" visible="true" size="16" label="">
+      <float name="U Scale" offset="0" visible="True" />
+      <float name="V Scale" offset="4" visible="True" />
+      <float name="W Scale" offset="8" visible="True" />
+      <float name="Unknown" offset="12" visible="True" />
+    </struct>
+    <struct name="Unknown" offset="28" visible="true" size="6" label="">
+      <int name="Unknown" offset="0" visible="True" />
+      <short name="Unknown" offset="4" visible="True" />
+    </struct>
+    <struct name="Unknown" offset="36" visible="true" size="2" label="">
+      <short name="Unknown" offset="0" visible="True" />
+    </struct>
+    <struct name="Unknown" offset="44" visible="true" size="2" label="">
+      <short name="Unknown" offset="0" visible="True" />
+    </struct>
+    <struct name="Unknown" offset="52" visible="true" size="10" label="">
+      <int name="Unknown" offset="0" visible="True" />
+      <int name="Unknown" offset="4" visible="True" />
+      <short name="Unknown" offset="8" visible="True" />
+    </struct>
+    <struct name="Shader Effects" offset="60" visible="true" size="20" label="">
+      <stringid name="Position?" offset="0" visible="True" />
+      <stringid name="Unknown" offset="4" visible="True" />
+      <float name="Effect Duration (in seconds)" offset="8" visible="True" />
+      <struct name="Unknown" offset="12" visible="true" size="1" label="">
+        <byte name="Effect Type" offset="0" visible="True" />
+      </struct>
+    </struct>
+    <struct name="Unknown" offset="68" visible="true" size="4" label="">
+      <int name="Unknown" offset="0" visible="True" />
+    </struct>
+    <struct name="Unknown" offset="76" visible="true" size="2" label="">
+      <short name="Unknown" offset="0" visible="True" />
+    </struct>
+    <struct name="Unknown" offset="84" visible="true" size="4" label="">
+      <int name="Unknown" offset="0" visible="True" />
+    </struct>
+    <struct name="Unknown" offset="92" visible="true" size="4" label="">
+      <short name="index" offset="0" visible="True" />
+      <short name="index" offset="2" visible="True" />
+    </struct>
+    <struct name="Radiosity Properties: 1st chunk = colour of emitted light, second chunk = tint colour" offset="100" visible="true" size="12" label="">
+      <float name="R" offset="0" visible="True" />
+      <float name="G" offset="4" visible="True" />
+      <float name="B" offset="8" visible="True" />
+    </struct>
+    <struct name="Brightness Levels" offset="108" visible="true" size="4" label="">
+      <float name="Brightness" offset="0" visible="True" />
+    </struct>
+    <unused offset="116" size="8" />
+  </struct>
+  <unused offset="40" size="4" />
+  <struct name="Resources" offset="44" visible="true" size="8" label="">
+    <int name="Unknown" offset="0" visible="True" />
+    <id name="Bitmap Used Ident" offset="4" visible="True" />
+  </struct>
+  <byte name="Unknown" offset="52" visible="True" />
+  <byte name="Unknown" offset="53" visible="True" />
+  <byte name="Unknown" offset="54" visible="True" />
+  <byte name="Unknown" offset="55" visible="True" />
+  <unused offset="56" size="4" />
+  <float name="Saturation" offset="60" visible="True" />
+  <float name="Unknown" offset="64" visible="True" />
+  <float name="Specularity" offset="68" visible="True" />
+  <float name="Diffuse Level" offset="72" visible="True" />
+  <unused offset="76" size="8" />
+</plugin>

@@ -1,0 +1,237 @@
+<plugin class="STYL" author="Grimdoomer" version="0.99" headersize="64">
+  <string32 name="Name" offset="0" visible="True" />
+  <enum32 name="Combat Status Decay Options" offset="4" visible="True">
+    <option name="Latch_at_Idle" value="0" />
+    <option name="Latch_at_Alert" value="1" />
+    <option name="Latch_at_Combat" value="2" />
+  </enum32>
+  <int name="Unknown" offset="8" visible="True" />
+  <enum8 name="Attitude" offset="12" visible="True">
+    <option name="Normal" value="0" />
+    <option name="Timid" value="1" />
+    <option name="Agressive" value="2" />
+  </enum8>
+  <enum8 name="Engaged Attitude" offset="13" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <enum8 name="Evasion Attitude" offset="14" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <enum8 name="Cover Attitude" offset="15" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <enum8 name="Search Attitude" offset="16" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <enum8 name="Presearch Attitude" offset="17" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <enum8 name="Retreat Attitude" offset="18" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <enum8 name="Charge Attitude" offset="19" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <enum8 name="Ready Attitude" offset="20" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <enum8 name="Idle Attitude" offset="21" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <enum8 name="Weapon Attitude" offset="22" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <enum8 name="Swarm Attitude" offset="23" visible="True">
+    <option name="Default" value="0" />
+    <option name="Normal" value="1" />
+    <option name="Timid" value="2" />
+    <option name="Agressive" value="3" />
+  </enum8>
+  <bitmask32 name="Style Control" offset="24" visible="True">
+    <option name="New_Behaviors_Default_to_ON" value="0" />
+  </bitmask32>
+  <bitmask32 name="Behaviors 1" offset="28" visible="True">
+    <option name="----General----" value="0" />
+    <option name="Root" value="1" />
+    <option name="Null" value="2" />
+    <option name="Null_Discrete" value="3" />
+    <option name="Obey" value="4" />
+    <option name="Guard" value="5" />
+    <option name="Follow_Behavior" value="6" />
+    <option name="Ready" value="7" />
+    <option name="Smash_Obstacle" value="8" />
+    <option name="Destroy_Obstacle" value="9" />
+    <option name="Perch" value="10" />
+    <option name="Cover_Friend" value="11" />
+    <option name="Blind_Panic" value="12" />
+    <option name="----Engage----" value="13" />
+    <option name="Engage" value="14" />
+    <option name="Fight" value="15" />
+    <option name="Melee_Charge" value="16" />
+    <option name="Melee_Leaping_Charge" value="17" />
+    <option name="Surprise" value="18" />
+    <option name="Grenade_Impulse" value="19" />
+    <option name="Anti_Vehicle_Grenade" value="20" />
+    <option name="Stalk" value="21" />
+    <option name="Berserk_Wander_Impulse" value="22" />
+    <option name="----Berserk----" value="23" />
+    <option name="Last_Man_Berserk" value="24" />
+    <option name="Stuck_with_Grenade_Berserk" value="25" />
+    <option name="----Presearch----" value="26" />
+    <option name="Presearch" value="27" />
+    <option name="Presearch_Uncover" value="28" />
+    <option name="Destroy_Cover" value="29" />
+    <option name="Suppressing_Fire" value="30" />
+    <option name="Grenade_Uncover" value="31" />
+  </bitmask32>
+  <bitmask32 name="Behaviors 2" offset="32" visible="True">
+    <option name="Leap_on_Cover" value="0" />
+    <option name="----Search----" value="1" />
+    <option name="Search" value="2" />
+    <option name="Uncover" value="3" />
+    <option name="Investigate" value="4" />
+    <option name="Pursuit_Sync" value="5" />
+    <option name="Pursuit" value="6" />
+    <option name="Post_Search" value="7" />
+    <option name="Coverme_Investigate" value="8" />
+    <option name="----Self_Defense----" value="9" />
+    <option name="Self_Preservation" value="10" />
+    <option name="Cover" value="11" />
+    <option name="Cover_Peek" value="12" />
+    <option name="Avoid" value="13" />
+    <option name="Evasion_Impulse" value="14" />
+    <option name="Dive_Impulse" value="15" />
+    <option name="Danger_Cover_Impulse" value="16" />
+    <option name="Danger_Crouch_Impulse" value="17" />
+    <option name="Proximity_Melee" value="18" />
+    <option name="Proximity_Self_Preservation" value="19" />
+    <option name="Unreachable_Enemy_Cover" value="20" />
+    <option name="Scary_Target_Cover" value="21" />
+    <option name="Group_Emerge" value="22" />
+    <option name="----Retreat----" value="23" />
+    <option name="Retreat" value="24" />
+    <option name="Retreat_Grenade" value="25" />
+    <option name="Flee" value="26" />
+    <option name="Cower" value="27" />
+    <option name="Low_Shield_Retreat" value="28" />
+    <option name="Scary_Target_Retreat" value="29" />
+    <option name="Leader_Dead_Retreat" value="30" />
+    <option name="Peer_Dead_Retreat" value="31" />
+  </bitmask32>
+  <bitmask32 name="Behaviors 3" offset="36" visible="True">
+    <option name="Danger_Retreat" value="0" />
+    <option name="Proximity_Retreat" value="1" />
+    <option name="Charge_When_Cornered" value="2" />
+    <option name="Surprise_Retreat" value="3" />
+    <option name="Overheated_Weapon_Retreat" value="4" />
+    <option name="----Ambush----" value="5" />
+    <option name="Ambush" value="6" />
+    <option name="Coordinated_Ambush" value="7" />
+    <option name="Proximity_Ambush" value="8" />
+    <option name="Vulnerable_Enemy_Ambush" value="9" />
+    <option name="No_where_to_RUn_Ambush" value="10" />
+    <option name="----Vehicle----" value="11" />
+    <option name="Vehicle" value="12" />
+    <option name="Enter_Friendly_vehicle" value="13" />
+    <option name="Re-Enter_Flipped_Vehicle" value="14" />
+    <option name="Vehicle_Entry_Engaged_Impulse" value="15" />
+    <option name="Vehicle_Board" value="16" />
+    <option name="Vehicle_Fight" value="17" />
+    <option name="Vehicle_Charge" value="18" />
+    <option name="Vehicle_Ram_Behavior" value="19" />
+    <option name="Vehicle_Cover" value="20" />
+    <option name="Damage_Vehicle_Cover" value="21" />
+    <option name="Exposed_Rear_Cover_Impulse" value="22" />
+    <option name="Player_Endagered_Cover_Impulse" value="23" />
+    <option name="Vehicle_Avoid" value="24" />
+    <option name="Vehicle_Pickup" value="25" />
+    <option name="Vehicle_Player_Pickup" value="26" />
+    <option name="Vehicle_Exit_Impulse" value="27" />
+    <option name="Danger_Vehicle_Exit_Impulse" value="28" />
+    <option name="Vehicle_Flip" value="29" />
+    <option name="Vehicle_Turtle" value="30" />
+    <option name="Vehicle_Engaged_Patrol_Impulse" value="31" />
+  </bitmask32>
+  <bitmask32 name="Behaviors 4" offset="40" visible="True">
+    <option name="Vehicle_Engage_Wander_Impact" value="0" />
+    <option name="----POSTCOMBAT----" value="1" />
+    <option name="Post_Combat" value="2" />
+    <option name="Post_Post_Combat" value="3" />
+    <option name="Check_Friend" value="4" />
+    <option name="Shoot_Corpse" value="5" />
+    <option name="Post_Combat_Approach" value="6" />
+    <option name="----Alert----" value="7" />
+    <option name="Alert" value="8" />
+    <option name="----Idle----" value="9" />
+    <option name="Idle" value="10" />
+    <option name="Wander_Behavior" value="11" />
+    <option name="Flight_Wander" value="12" />
+    <option name="Patrol" value="13" />
+    <option name="Fall_Asleep" value="14" />
+    <option name="----Buggers----" value="15" />
+    <option name="Bugger_Ground_Uncover" value="16" />
+    <option name="----Swarms----" value="17" />
+    <option name="Swarm_Root" value="18" />
+    <option name="Swarm_Attack" value="19" />
+    <option name="Support_Attack" value="20" />
+    <option name="Infect" value="21" />
+    <option name="Scatter" value="22" />
+    <option name="Eject_Parasite" value="23" />
+    <option name="Flood_Self_Preservation" value="24" />
+    <option name="Juggernaunt_Flurry" value="25" />
+    <option name="----Sentinels----" value="26" />
+    <option name="Enforcer_Weapon_Control" value="27" />
+    <option name="Grapple" value="28" />
+    <option name="----Special----" value="29" />
+    <option name="Formation" value="30" />
+    <option name="Grunt_Scared_by_Elite" value="31" />
+  </bitmask32>
+  <bitmask32 name="Behaviors 5" offset="44" visible="True">
+    <option name="Stunned" value="0" />
+    <option name="Cure_Isolation" value="1" />
+    <option name="Deploy_Turrent" value="2" />
+  </bitmask32>
+  <struct name="Special Movement" offset="48" visible="true" size="4" label="">
+    <bitmask32 name="Special Movement 1" offset="0" visible="True">
+      <option name="Jump" value="0" />
+      <option name="Climb" value="1" />
+      <option name="Vault" value="2" />
+      <option name="Mount" value="3" />
+      <option name="Hoist" value="4" />
+      <option name="Wall_Jump" value="5" />
+    </bitmask32>
+  </struct>
+  <struct name="Behavior List" offset="56" visible="true" size="32" label="">
+    <string32 name="Behavior Name" offset="0" visible="True" />
+  </struct>
+</plugin>

@@ -1,0 +1,40 @@
+<plugin class="FOOT" author="Grimdoomer" version="0.99" headersize="8">
+  <struct name="Effects" offset="0" visible="true" size="24" label="">
+    <struct name="Old Materials (Do Not Use)" offset="0" visible="true" size="24" label="">
+      <tag name="Effect" offset="0" visible="True" />
+      <id name="Effect" offset="4" visible="True" />
+      <tag name="Sound" offset="8" visible="True" />
+      <id name="Sound" offset="12" visible="True" />
+      <stringid name="Material Name" offset="16" visible="True" />
+      <enum32 name="Sweetener Mode" offset="20" visible="True">
+        <option name="Default" value="0" />
+        <option name="Enabled" value="1" />
+        <option name="Disabled" value="2" />
+      </enum32>
+    </struct>
+    <struct name="Sounds" offset="8" visible="true" size="24" label="">
+      <tag name="Sound_1" offset="0" visible="True" />
+      <id name="Sound_1" offset="4" visible="True" />
+      <tag name="Sound_2" offset="8" visible="True" />
+      <id name="Sound_2" offset="12" visible="True" />
+      <stringid name="Material Name" offset="16" visible="True" />
+      <enum32 name="Sweetener Mode" offset="20" visible="True">
+        <option name="Default" value="0" />
+        <option name="Enabled" value="1" />
+        <option name="Disabled" value="2" />
+      </enum32>
+    </struct>
+    <struct name="Effects" offset="16" visible="true" size="24" label="">
+      <tag name="Effect_1" offset="0" visible="True" />
+      <id name="Effect_1" offset="4" visible="True" />
+      <tag name="Effect_2" offset="8" visible="True" />
+      <id name="Effect_2" offset="12" visible="True" />
+      <stringid name="Material Name" offset="16" visible="True" />
+      <enum32 name="Sweetener Mode" offset="20" visible="True">
+        <option name="Default" value="0" />
+        <option name="Enabled" value="1" />
+        <option name="Disabled" value="2" />
+      </enum32>
+    </struct>
+  </struct>
+</plugin>

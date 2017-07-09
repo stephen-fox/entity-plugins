@@ -1,0 +1,127 @@
+<plugin class="CONT" author="Grimdoomer" version="0.99" headersize="240">
+  <bitmask16 name="Flags" offset="0" visible="True">
+    <option name="First_point_unfaded" value="0" />
+    <option name="Last_point_unfaded" value="1" />
+    <option name="Points_start_pinned_to_media" value="2" />
+    <option name="Points_start_pinned_to_ground" value="3" />
+    <option name="Points_always_pinned_to_media" value="4" />
+    <option name="Points_always_pinned_to_ground" value="5" />
+    <option name="Edge_effects_fade_slowly" value="6" />
+    <option name="Don't_Inherit_Object_Change_Color" value="7" />
+  </bitmask16>
+  <bitmask16 name="Scale Flags" offset="2" visible="True">
+    <option name="Point_Generation_Rate" value="0" />
+    <option name="Point_Velocity" value="1" />
+    <option name="Point_Velocity_Delta" value="2" />
+    <option name="Point_Velocity_Cone_Angle" value="3" />
+    <option name="Inherited_Velocity_Fraction" value="4" />
+    <option name="Sequence_Animation_Rate" value="5" />
+    <option name="Texture_Scale_U" value="6" />
+    <option name="Texture_Scale_V" value="7" />
+    <option name="Texture_Animation_U" value="8" />
+    <option name="Texture_Animation_V" value="9" />
+  </bitmask16>
+  <float name="Point Generation Rate" offset="4" visible="True" />
+  <float name="Min Point Velocity" offset="8" visible="True" />
+  <float name="Max Point Velocity" offset="12" visible="True" />
+  <float name="Point Velocity Cone Angle" offset="16" visible="True" />
+  <float name="Inherited Velocity Fraction" offset="20" visible="True" />
+  <enum16 name="Render Type" offset="24" visible="True">
+    <option name="Verticle_Orientation" value="0" />
+    <option name="Horizontal_Orientation" value="1" />
+    <option name="Media_Mapped" value="2" />
+    <option name="Ground_Mapped" value="3" />
+    <option name="Viewer_Facing" value="4" />
+    <option name="Double_Marker_Linked" value="5" />
+  </enum16>
+  <unused offset="26" size="2" />
+  <float name="Texture Repeats U" offset="28" visible="True" />
+  <float name="Texture Repeats V" offset="32" visible="True" />
+  <float name="Texture Animation U" offset="36" visible="True" />
+  <float name="Texture Animation V" offset="40" visible="True" />
+  <float name="Texture Animation Rate" offset="44" visible="True" />
+  <tag name="Bitmap" offset="48" visible="True" />
+  <id name="Bitmap" offset="52" visible="True" />
+  <short name="First Sequence Index" offset="56" visible="True" />
+  <short name="Sequence Count" offset="58" visible="True" />
+  <unused offset="60" size="36" />
+  <bitmask16 name="Shader Flags" offset="96" visible="True">
+    <option name="Sort_Bias" value="0" />
+    <option name="Nonlinear_Tint" value="1" />
+    <option name="Don't_Overdraw_FP_Weapon" value="2" />
+  </bitmask16>
+  <enum16 name="Framebuffer Blend Function" offset="98" visible="True">
+    <option name="Alpha_Blend" value="0" />
+    <option name="Multiply" value="1" />
+    <option name="Double_Multiply" value="2" />
+    <option name="Add" value="3" />
+    <option name="Subtract" value="4" />
+    <option name="Component_Min" value="5" />
+    <option name="Component_Max" value="6" />
+    <option name="Alpha-Multiply-Add" value="7" />
+  </enum16>
+  <enum16 name="Framebuffer Fade Mode" offset="100" visible="True">
+    <option name="None" value="0" />
+    <option name="Fade_When_Perpendicular" value="1" />
+    <option name="Fade_When_Parallel" value="2" />
+    <option name="Fade_After_Duration" value="3" />
+  </enum16>
+  <bitmask32 name="Map Flags" offset="102" visible="True">
+    <option name="Unfiltered" value="0" />
+  </bitmask32>
+  <unused offset="106" size="30" />
+  <tag name="Bitmap" offset="136" visible="True" />
+  <id name="Bitmap" offset="140" visible="True" />
+  <unused offset="144" size="30" />
+  <enum16 name="Anchor" offset="174" visible="True">
+    <option name="With_Primary" value="0" />
+    <option name="With_Screen_Space" value="1" />
+    <option name="ZSprite" value="2" />
+  </enum16>
+  <bitmask16 name="Flags" offset="176" visible="True">
+    <option name="Unfiltered" value="0" />
+  </bitmask16>
+  <enum16 name="U-Animation Function" offset="178" visible="True">
+  </enum16>
+  <float name="U-Animation Period" offset="180" visible="True" />
+  <float name="U-Animation Phase" offset="184" visible="True" />
+  <float name="U-Animation Scale" offset="188" visible="True" />
+  <enum16 name="V-Animation Function" offset="192" visible="True">
+  </enum16>
+  <float name="V-Animation Period" offset="194" visible="True" />
+  <float name="V-Animation Phase" offset="198" visible="True" />
+  <float name="V-Animation Scale" offset="202" visible="True" />
+  <enum16 name="Rotation-Animation Function" offset="206" visible="True">
+  </enum16>
+  <float name="Rotation-Animation Period" offset="208" visible="True" />
+  <float name="Rotation-Animation Phase" offset="212" visible="True" />
+  <float name="Rotation-Animation Scale" offset="216" visible="True" />
+  <float name="Rotation-Animation Center X" offset="220" visible="True" />
+  <float name="Rotation-Animation Center Y" offset="224" visible="True" />
+  <float name="ZSprite Radius Sclae" offset="228" visible="True" />
+  <struct name="Point States" offset="232" visible="true" size="64" label="">
+    <float name="Duration Lower" offset="0" visible="True" />
+    <float name="Duration Upper" offset="4" visible="True" />
+    <float name="Transition Lower" offset="8" visible="True" />
+    <float name="Transition Upper" offset="12" visible="True" />
+    <tag name="Physics" offset="16" visible="True" />
+    <id name="Physics" offset="20" visible="True" />
+    <float name="Width" offset="24" visible="True" />
+    <float name="Color Lower Alpha" offset="28" visible="True" />
+    <float name="Color Lower Red" offset="32" visible="True" />
+    <float name="Color Lower Green" offset="36" visible="True" />
+    <float name="Color Lower Blue" offset="40" visible="True" />
+    <float name="Color Upper Alpha" offset="44" visible="True" />
+    <float name="Color Upper Red" offset="48" visible="True" />
+    <float name="Color Upper Green" offset="52" visible="True" />
+    <float name="Color Upper Blue" offset="56" visible="True" />
+    <bitmask32 name="Scale Flags" offset="60" visible="True">
+      <option name="Duration" value="0" />
+      <option name="Duration_Delta" value="1" />
+      <option name="Transition_Duration" value="2" />
+      <option name="Transition_Duration_Delta" value="3" />
+      <option name="Width" value="4" />
+      <option name="Color" value="5" />
+    </bitmask32>
+  </struct>
+</plugin>

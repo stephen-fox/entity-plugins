@@ -1,0 +1,110 @@
+<plugin class="SFX_" author="Grimdoomer" version="0.99" headersize="8">
+  <struct name="Sound Effects" offset="0" visible="true" size="56" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <unused offset="4" size="8" />
+    <bitmask32 name="Flags" offset="12" visible="True">
+      <option name="Use_3D_Radio_Hack" value="0" />
+    </bitmask32>
+    <unused offset="16" size="8" />
+    <struct name="Filter" offset="24" visible="true" size="72" label="">
+      <enum32 name="Filter Type" offset="0" visible="True">
+        <option name="Parametric_EQ" value="0" />
+        <option name="DLS2" value="1" />
+        <option name="Both_(Mono_Only)" value="2" />
+      </enum32>
+      <float name="Filter Width" offset="4" visible="True" />
+      <float name="Left Filter Frequence Scale Bounds" offset="8" visible="True" />
+      <float name="Left Filter Frequence To" offset="12" visible="True" />
+      <float name="Left Filter Frequence Random Base and Variance" offset="16" visible="True" />
+      <float name="Left Filter Frequence To" offset="20" visible="True" />
+      <float name="Left Filter Gain Scale Bounds" offset="24" visible="True" />
+      <float name="Left Filter Gain To" offset="28" visible="True" />
+      <float name="Left Filter Gain Random Base and Variance" offset="32" visible="True" />
+      <float name="Left Filter Gain To" offset="36" visible="True" />
+      <float name="Right Filter Frequence Scale Bounds" offset="40" visible="True" />
+      <float name="Right Filter Frequence To" offset="44" visible="True" />
+      <float name="Right Filter Frequence Random Base and Variance" offset="48" visible="True" />
+      <float name="Right Filter Frequence To" offset="52" visible="True" />
+      <float name="Right Filter Gain Scale Bounds" offset="56" visible="True" />
+      <float name="Right Filter Gain To" offset="60" visible="True" />
+      <float name="Right Filter Gain Random Base and Variance" offset="64" visible="True" />
+      <float name="Right Filter Gain To" offset="68" visible="True" />
+    </struct>
+    <struct name="Pitch LFO" offset="32" visible="true" size="48" label="">
+      <float name="Delay Scale Bounds" offset="0" visible="True" />
+      <float name="Delay Scale To" offset="4" visible="True" />
+      <float name="Delay Random Pitch and Variance" offset="8" visible="True" />
+      <float name="Delay To" offset="12" visible="True" />
+      <float name="Frequence Scale Bounds" offset="16" visible="True" />
+      <float name="Frequence To" offset="20" visible="True" />
+      <float name="Frequence Random Pitch and Variance" offset="24" visible="True" />
+      <float name="Frequence To" offset="28" visible="True" />
+      <float name="Pitch Modulation Scale Bounds" offset="32" visible="True" />
+      <float name="Pitch Modulation To" offset="36" visible="True" />
+      <float name="Pitch Modulation Random Pitch and Variance" offset="40" visible="True" />
+      <float name="Pitch Modulation To" offset="44" visible="True" />
+    </struct>
+    <struct name="Filter LFO" offset="40" visible="true" size="64" label="">
+      <float name="Delay Scale Bounds" offset="0" visible="True" />
+      <float name="Delay Scale To" offset="4" visible="True" />
+      <float name="Delay Random Pitch and Variance" offset="8" visible="True" />
+      <float name="Delay To" offset="12" visible="True" />
+      <float name="Frequence Scale Bounds" offset="16" visible="True" />
+      <float name="Frequence To" offset="20" visible="True" />
+      <float name="Frequence Random Pitch and Variance" offset="24" visible="True" />
+      <float name="Frequence To" offset="28" visible="True" />
+      <float name="Cutoff Modulation Scale Bounds" offset="32" visible="True" />
+      <float name="Cutoff Modulation To" offset="36" visible="True" />
+      <float name="Cutoff Modulation Random Pitch and Variance" offset="40" visible="True" />
+      <float name="Cutoff Modulation To" offset="44" visible="True" />
+      <float name="Gain Modulation Scale Bounds" offset="48" visible="True" />
+      <float name="Gain Modulation To" offset="52" visible="True" />
+      <float name="Gain Modulation Random Pitch and Variance" offset="56" visible="True" />
+      <float name="Gain Modulation To" offset="60" visible="True" />
+    </struct>
+    <struct name="Sound Effect" offset="48" visible="true" size="40" label="">
+      <tag name="Template" offset="0" visible="True" />
+      <id name="Template" offset="4" visible="True" />
+      <struct name="Components" offset="8" visible="true" size="16" label="">
+        <tag name="Sound" offset="0" visible="True" />
+        <id name="Sound" offset="4" visible="True" />
+        <float name="Gain" offset="8" visible="True" />
+        <bitmask32 name="Flags" offset="12" visible="True">
+          <option name="Don't_play_at_start" value="0" />
+          <option name="Play_On_Stop" value="1" />
+          <option name="" value="2" />
+          <option name="Play_Alternate" value="3" />
+          <option name="" value="4" />
+          <option name="Sync_With_Origin_Looping_Sound" value="5" />
+        </bitmask32>
+      </struct>
+      <unused offset="16" size="16" />
+      <struct name="Unknown57" offset="32" visible="true" size="20" label="">
+        <struct name="Unknown58" offset="0" visible="true" size="28" label="">
+          <struct name="Unknown59" offset="0" visible="true" size="16" label="">
+            <int name="Unknown" offset="0" visible="True" />
+            <struct name="Unknown61" offset="4" visible="true" size="1" label="">
+              <byte name="Unknown" offset="0" visible="True" />
+            </struct>
+            <float name="Unknown" offset="12" visible="True" />
+          </struct>
+          <struct name="Unknown66" offset="8" visible="true" size="4" label="">
+            <float name="Unknown" offset="0" visible="True" />
+          </struct>
+          <struct name="Unknown69" offset="16" visible="true" size="4" label="">
+            <int name="Unknown" offset="0" visible="True" />
+          </struct>
+          <int name="Unknown" offset="24" visible="True" />
+        </struct>
+        <struct name="Unknown74" offset="8" visible="true" size="16" label="">
+          <int name="Unknown" offset="0" visible="True" />
+          <struct name="Unknown76" offset="4" visible="true" size="1" label="">
+            <byte name="Unknown" offset="0" visible="True" />
+          </struct>
+          <float name="Unknown" offset="12" visible="True" />
+        </struct>
+        <int name="Unknown" offset="16" visible="True" />
+      </struct>
+    </struct>
+  </struct>
+</plugin>

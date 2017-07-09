@@ -1,0 +1,90 @@
+<plugin class="DECR" author="Grimdoomer" version="0.99" headersize="106">
+  <struct name="Shaders" offset="0" visible="true" size="8" label="">
+    <tag name="Shader" offset="0" visible="True" />
+    <id name="Shader" offset="4" visible="True" />
+  </struct>
+  <float name="Lighting Min Scale" offset="8" visible="True" />
+  <float name="Lighting Max Scale" offset="12" visible="True" />
+  <struct name="Classes" offset="16" visible="true" size="20" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <enum32 name="Type" offset="4" visible="True">
+      <option name="Model" value="0" />
+      <option name="Floating_Decal" value="1" />
+      <option name="Projected_Decal" value="2" />
+      <option name="Screen_Facing_Quad" value="3" />
+      <option name="Axis_Rotating_Quad" value="4" />
+      <option name="Cross_Quad" value="5" />
+    </enum32>
+    <float name="Scale" offset="8" visible="True" />
+    <struct name="Permutations" offset="12" visible="true" size="40" label="">
+      <stringid name="Name" offset="0" visible="True" />
+      <short name="Shader #" offset="4" visible="True" />
+      <bitmask8 name="Flags" offset="6" visible="True">
+        <option name="Align_To_Normal" value="0" />
+        <option name="Only_On_Ground" value="1" />
+        <option name="Upright" value="2" />
+      </bitmask8>
+      <enum8 name="Fade Distance" offset="7" visible="True">
+        <option name="Close" value="0" />
+        <option name="Medium" value="1" />
+        <option name="Far" value="2" />
+      </enum8>
+      <short name="Index" offset="8" visible="True" />
+      <short name="Distribution Weight" offset="10" visible="True" />
+      <float name="Scale" offset="12" visible="True" />
+      <float name="...To" offset="16" visible="True" />
+      <byte name="Tint 1 R" offset="20" visible="True" />
+      <byte name="Tint 1 G" offset="21" visible="True" />
+      <byte name="Tint 1 B" offset="22" visible="True" />
+      <unused offset="23" size="1" />
+      <byte name="Tint 2 R" offset="24" visible="True" />
+      <byte name="Tint 2 G" offset="25" visible="True" />
+      <byte name="Tint 2 B" offset="26" visible="True" />
+      <unused offset="27" size="1" />
+      <float name="Base Map Tint Percentage" offset="28" visible="True" />
+      <float name="Lightmap Tint Percentage" offset="32" visible="True" />
+      <float name="Wind Scale" offset="36" visible="True" />
+    </struct>
+  </struct>
+  <struct name="Models" offset="24" visible="true" size="8" label="">
+    <stringid name="Model Name" offset="0" visible="True" />
+    <short name="Index Start" offset="4" visible="True" />
+    <short name="Index Count" offset="6" visible="True" />
+  </struct>
+  <struct name="Raw Vertices" offset="32" visible="true" size="56" label="">
+    <float name="X" offset="0" visible="True" />
+    <float name="Y" offset="4" visible="True" />
+    <float name="Z" offset="8" visible="True" />
+    <float name="Normal i" offset="12" visible="True" />
+    <float name="Normal j" offset="16" visible="True" />
+    <float name="Normal k" offset="20" visible="True" />
+    <float name="Tangent i" offset="24" visible="True" />
+    <float name="Tangent j" offset="28" visible="True" />
+    <float name="Tangent k" offset="32" visible="True" />
+    <float name="Binormal i" offset="36" visible="True" />
+    <float name="Binormal j" offset="40" visible="True" />
+    <float name="Binormal k" offset="44" visible="True" />
+    <float name="U" offset="48" visible="True" />
+    <float name="V" offset="52" visible="True" />
+  </struct>
+  <struct name="Indices" offset="40" visible="true" size="2" label="">
+    <short name="Index" offset="0" visible="True" />
+  </struct>
+  <struct name="Cached Data" offset="48" visible="true" size="0" label="">
+  </struct>
+  <int name="Offset" offset="56" visible="True" />
+  <int name="Size" offset="60" visible="True" />
+  <int name="Header Size" offset="64" visible="True" />
+  <int name="Data Size" offset="68" visible="True" />
+  <struct name="Resources" offset="72" visible="true" size="16" label="">
+    <enum32 name="Type" offset="0" visible="True">
+    </enum32>
+    <short name="Primary Locator" offset="4" visible="True" />
+    <short name="Secondary Locator" offset="6" visible="True" />
+    <int name="Data Size" offset="8" visible="True" />
+    <int name="Data Offset" offset="12" visible="True" />
+  </struct>
+  <id name="Owner Tag Section Offset" offset="80" visible="True" />
+  <int name="Unused" offset="84" visible="True" />
+  <unused offset="88" size="18" />
+</plugin>

@@ -1,0 +1,12 @@
+<plugin class="MDLG" author="Grimdoomer" version="0.99" headersize="8">
+  <struct name="Lines" offset="0" visible="true" size="16" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <struct name="Variants" offset="4" visible="true" size="16" label="">
+      <stringid name="Name" offset="0" visible="True" />
+      <tag name="Sound" offset="4" visible="True" />
+      <id name="Sound" offset="8" visible="True" />
+      <unused offset="12" size="4" />
+    </struct>
+    <stringid name="Default Sound Effect" offset="12" visible="True" />
+  </struct>
+</plugin>

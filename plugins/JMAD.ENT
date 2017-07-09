@@ -1,0 +1,284 @@
+<plugin class="JMAD" author="Grimdoomer" version="0.99" headersize="188">
+  <tag name="Parent_Animation" offset="0" visible="True" />
+  <id name="Parent_Animation" offset="4" visible="True" />
+  <bitmask8 name="Inheritance flags" offset="8" visible="True">
+    <option name="Inherit_Root_Trans_Scale_Only" value="0" />
+    <option name="Inherit_for_use_on_player" value="1" />
+  </bitmask8>
+  <bitmask8 name="Private FLags" offset="9" visible="True">
+    <option name="Prepared_for_cahce" value="0" />
+    <option name="unused" value="1" />
+    <option name="Imported_with_codec_compressor" value="2" />
+    <option name="unused_smelly_flag" value="3" />
+    <option name="Written_to_Cache" value="4" />
+    <option name="Animation_Data_Recorded" value="5" />
+  </bitmask8>
+  <short name="Codec" offset="10" visible="True" />
+  <struct name="Skeleton Nodes" offset="12" visible="true" size="32" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <short name="Next Sibling Node Index" offset="4" visible="True" />
+    <short name="First Child Node Index" offset="6" visible="True" />
+    <short name="Parent Node Index" offset="8" visible="True" />
+    <bitmask8 name="Model Flags" offset="10" visible="True">
+      <option name="Primary_Model" value="0" />
+      <option name="Secondary_Model" value="1" />
+      <option name="Local_Root" value="2" />
+      <option name="Left_Hand" value="3" />
+      <option name="Right_Hand" value="4" />
+      <option name="Left_Arm_Member" value="5" />
+    </bitmask8>
+    <bitmask8 name="Node Joint Flags" offset="11" visible="True">
+      <option name="Ball_Socket" value="0" />
+      <option name="Hinge" value="1" />
+      <option name="No_Movement" value="2" />
+    </bitmask8>
+    <float name="Base Vector I" offset="12" visible="True" />
+    <float name="Base Vector J" offset="16" visible="True" />
+    <float name="Base Vector K" offset="20" visible="True" />
+    <float name="Vector Range" offset="24" visible="True" />
+    <float name="z_pos" offset="28" visible="True" />
+  </struct>
+  <struct name="Sounds" offset="20" visible="true" size="12" label="">
+    <tag name="Sound" offset="0" visible="True" />
+    <id name="Sound" offset="4" visible="True" />
+    <bitmask32 name="FLags" offset="8" visible="True">
+      <option name="Allow_On_Player" value="0" />
+      <option name="Left_Arm_Only" value="1" />
+      <option name="Right_Arm_Only" value="2" />
+      <option name="First_Person_Only" value="3" />
+      <option name="Foward_Only" value="4" />
+      <option name="Reverse_Only" value="5" />
+    </bitmask32>
+  </struct>
+  <struct name="Effects" offset="28" visible="true" size="12" label="">
+    <tag name="Effect" offset="0" visible="True" />
+    <id name="Effect" offset="4" visible="True" />
+    <bitmask32 name="FLags" offset="8" visible="True">
+      <option name="Allow_On_Player" value="0" />
+      <option name="Left_Arm_Only" value="1" />
+      <option name="Right_Arm_Only" value="2" />
+      <option name="First_Person_Only" value="3" />
+      <option name="Foward_Only" value="4" />
+      <option name="Reverse_Only" value="5" />
+    </bitmask32>
+  </struct>
+  <struct name="Blend Screens" offset="36" visible="true" size="28" label="">
+    <stringid name="label" offset="0" visible="True" />
+    <float name="Right yaw per frame" offset="4" visible="True" />
+    <float name="Left yaw per frame" offset="8" visible="True" />
+    <short name="Right frame count" offset="12" visible="True" />
+    <short name="Left frame count" offset="14" visible="True" />
+    <float name="Down pitch per frame" offset="16" visible="True" />
+    <float name="Up pitch per frame" offset="20" visible="True" />
+    <short name="Down pitch frame count" offset="24" visible="True" />
+    <short name="Up pitch frame count" offset="26" visible="True" />
+  </struct>
+  <struct name="Animations" offset="44" visible="true" size="108" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <int name="Node List Checksum" offset="4" visible="True" />
+    <int name="Production Checksum" offset="8" visible="True" />
+    <int name="Import Checksum" offset="12" visible="True" />
+    <enum8 name="Type Index" offset="16" visible="True">
+      <option name="Base" value="0" />
+    </enum8>
+    <enum8 name="Frame Info Type Index" offset="17" visible="True">
+      <option name="None" value="0" />
+    </enum8>
+    <byte name="Blend Screen Index" offset="18" visible="True" />
+    <byte name="Node Count" offset="19" visible="True" />
+    <short name="Frame Count" offset="20" visible="True" />
+    <bitmask16 name="Internal Flags" offset="22" visible="True">
+      <option name="Unused" value="0" />
+      <option name="World_Relative" value="1" />
+      <option name="Unused" value="2" />
+      <option name="Unused" value="3" />
+      <option name="Unused" value="4" />
+      <option name="Compression_Disabled" value="5" />
+      <option name="Old_Production_Checksum" value="6" />
+      <option name="Valid_Production_Checksum" value="7" />
+    </bitmask16>
+    <bitmask16 name="Production Flags" offset="24" visible="True">
+      <option name="Do_not_monitor_changes" value="0" />
+      <option name="Verify_Sound_Events" value="1" />
+      <option name="Do_not_inherit_for_Player_Graphs" value="2" />
+    </bitmask16>
+    <bitmask16 name="Playback FLags" offset="26" visible="True">
+      <option name="Disable_Interpolation_In" value="0" />
+      <option name="Disable_Interpolation_Out" value="1" />
+      <option name="Disable_Mode_ik" value="2" />
+      <option name="Disable_Weapon_ik" value="3" />
+      <option name="Disable_Weapon_Aim/1st_Person" value="4" />
+      <option name="Disable_Look_Screen" value="5" />
+      <option name="Disable_Transition_Adjustment" value="6" />
+    </bitmask16>
+    <float name="Unknown" offset="28" visible="True" />
+    <unused offset="32" size="4" />
+    <int name="Raw Chunk #" offset="36" visible="True" />
+    <short name="Offset in raw" offset="40" visible="True" />
+    <int name="Unused" offset="42" visible="True" />
+    <bitmask16 name="Doesn't Repeat" offset="46" visible="True">
+      <option name="Doesn't_Repeat" value="0" />
+    </bitmask16>
+    <short name="Unknown" offset="48" visible="True" />
+    <short name="Unknown" offset="50" visible="True" />
+    <unused offset="52" size="8" />
+    <byte name="Unknown" offset="60" visible="True" />
+    <byte name="Unknown" offset="61" visible="True" />
+    <byte name="Unknown" offset="62" visible="True" />
+    <byte name="Unknown" offset="63" visible="True" />
+    <short name="Unknown" offset="64" visible="True" />
+    <short name="Animation Raw Something" offset="66" visible="True" />
+    <float name="Unknown" offset="68" visible="True" />
+    <byte name="Unknown" offset="72" visible="True" />
+    <byte name="Unknown" offset="73" visible="True" />
+    <short name="Loop Frame Index" offset="74" visible="True" />
+    <struct name="Frame Events" offset="76" visible="true" size="4" label="">
+      <enum16 name="Type" offset="0" visible="True">
+      </enum16>
+      <short name="Frame" offset="2" visible="True" />
+    </struct>
+    <struct name="Sounds" offset="84" visible="true" size="8" label="">
+      <short name="Sound Index" offset="0" visible="True" />
+      <short name="Frame" offset="2" visible="True" />
+      <stringid name="Marker Name" offset="4" visible="True" />
+    </struct>
+    <struct name="Effects" offset="92" visible="true" size="4" label="">
+      <short name="Effect Index" offset="0" visible="True" />
+      <short name="Frame" offset="2" visible="True" />
+    </struct>
+    <struct name="Object-Space Parent Nodes" offset="100" visible="true" size="28" label="">
+      <short name="Node Index" offset="0" visible="True" />
+      <bitmask16 name="Component Flags" offset="2" visible="True">
+        <option name="Rotation" value="0" />
+        <option name="Translation" value="1" />
+        <option name="Scale" value="2" />
+      </bitmask16>
+      <short name="Rotation X" offset="4" visible="True" />
+      <short name="Rotation Y" offset="6" visible="True" />
+      <short name="Rotation Z" offset="8" visible="True" />
+      <short name="Rotation W" offset="10" visible="True" />
+      <float name="Default Translation X" offset="12" visible="True" />
+      <float name="Default Translation Y" offset="16" visible="True" />
+      <float name="Default Translation Z" offset="20" visible="True" />
+      <float name="Default Scale" offset="24" visible="True" />
+    </struct>
+  </struct>
+  <struct name="Modes" offset="52" visible="true" size="20" label="">
+    <stringid name="Label" offset="0" visible="True" />
+    <struct name="Weapon Class" offset="4" visible="true" size="20" label="">
+      <stringid name="Label" offset="0" visible="True" />
+      <struct name="Weapon Type" offset="4" visible="true" size="52" label="">
+        <stringid name="Label" offset="0" visible="True" />
+        <struct name="Actions" offset="4" visible="true" size="8" label="">
+          <stringid name="Label" offset="0" visible="True" />
+          <short name="Graph Index" offset="4" visible="True" />
+          <short name="Animation" offset="6" visible="True" />
+        </struct>
+        <struct name="Overlays" offset="12" visible="true" size="8" label="">
+          <stringid name="Label" offset="0" visible="True" />
+          <short name="Graph Index" offset="4" visible="True" />
+          <short name="Animation" offset="6" visible="True" />
+        </struct>
+        <struct name="Death and Damage" offset="20" visible="true" size="12" label="">
+          <stringid name="Label" offset="0" visible="True" />
+          <struct name="Directions" offset="4" visible="true" size="8" label="">
+            <struct name="Regions" offset="0" visible="true" size="4" label="">
+              <short name="Graph Index" offset="0" visible="True" />
+              <short name="Animation Index" offset="2" visible="True" />
+            </struct>
+          </struct>
+        </struct>
+        <struct name="Transitions" offset="28" visible="true" size="20" label="">
+          <stringid name="Full Name" offset="0" visible="True" />
+          <stringid name="State Name" offset="4" visible="True" />
+          <short name="Index A" offset="8" visible="True" />
+          <short name="Index B" offset="10" visible="True" />
+          <struct name="Destinations" offset="12" visible="true" size="20" label="">
+            <stringid name="Full Name" offset="0" visible="True" />
+            <stringid name="mode" offset="4" visible="True" />
+            <stringid name="State Name" offset="8" visible="True" />
+            <short name="Index A" offset="12" visible="True" />
+            <short name="Index B" offset="14" visible="True" />
+            <short name="Graph Index" offset="16" visible="True" />
+            <short name="Animation Index" offset="18" visible="True" />
+          </struct>
+        </struct>
+        <struct name="High PreCache" offset="36" visible="true" size="4" label="">
+          <int name="Cache Block Index" offset="0" visible="True" />
+        </struct>
+        <struct name="Low PreCache" offset="44" visible="true" size="4" label="">
+          <int name="Cahce Block Index" offset="0" visible="True" />
+        </struct>
+      </struct>
+      <struct name="Weapon ik" offset="12" visible="true" size="8" label="">
+        <stringid name="Marker" offset="0" visible="True" />
+        <stringid name="Attach to Marker" offset="4" visible="True" />
+      </struct>
+    </struct>
+    <struct name="Mode ik" offset="12" visible="true" size="8" label="">
+      <stringid name="Marker" offset="0" visible="True" />
+      <stringid name="Attach to Marker" offset="4" visible="True" />
+    </struct>
+  </struct>
+  <struct name="Vehicle Suspension" offset="60" visible="true" size="40" label="">
+    <stringid name="Label" offset="0" visible="True" />
+    <short name="Graph Index" offset="4" visible="True" />
+    <short name="ANimation Index" offset="6" visible="True" />
+    <stringid name="Marker Name" offset="8" visible="True" />
+    <float name="Mass Point Offset (maybe int)" offset="12" visible="True" />
+    <float name="Full Extension Ground Depth (maybe int)" offset="16" visible="True" />
+    <float name="Full COmpresion Ground Depth (maybe int)" offset="20" visible="True" />
+    <stringid name="Region Name" offset="24" visible="True" />
+    <float name="Destroyed Mass Point Offset(maybe int)" offset="28" visible="True" />
+    <float name="Destroyed Full Extension Ground Depth (maybe int)" offset="32" visible="True" />
+    <float name="Destroyed Full COmpression Ground Depth (maybe int)" offset="36" visible="True" />
+  </struct>
+  <struct name="Object Overlays" offset="68" visible="true" size="20" label="">
+    <stringid name="Label" offset="0" visible="True" />
+    <short name="Graph Index" offset="4" visible="True" />
+    <short name="Animation Index" offset="6" visible="True" />
+    <enum16 name="Function COntrols" offset="8" visible="True">
+    </enum16>
+    <unused offset="10" size="2" />
+    <stringid name="Function" offset="12" visible="True" />
+    <unused offset="16" size="4" />
+  </struct>
+  <struct name="Inheritence List" offset="76" visible="true" size="32" label="">
+    <tag name="Inherited_Graph" offset="0" visible="True" />
+    <id name="Inherited_Graph" offset="4" visible="True" />
+    <struct name="Node Map" offset="8" visible="true" size="2" label="">
+      <short name="Local Node" offset="0" visible="True" />
+    </struct>
+    <struct name="Node Map Flags" offset="16" visible="true" size="4" label="">
+      <int name="Local Node Flags" offset="0" visible="True" />
+    </struct>
+    <float name="Root Z Offset" offset="24" visible="True" />
+    <float name="Inheritence Flags" offset="28" visible="True" />
+  </struct>
+  <struct name="Weapon List" offset="84" visible="true" size="8" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <stringid name="Class" offset="4" visible="True" />
+  </struct>
+  <int name="Unknown" offset="92" visible="True" />
+  <int name="Unknown" offset="96" visible="True" />
+  <unused offset="100" size="24" />
+  <int name="Unknown" offset="124" visible="True" />
+  <int name="Unknown" offset="128" visible="True" />
+  <int name="Unknown" offset="132" visible="True" />
+  <unused offset="136" size="36" />
+  <struct name="Raw Blocks" offset="172" visible="true" size="20" label="">
+    <id name="Class ID" offset="0" visible="True" />
+    <int name="Raw Size" offset="4" visible="True" />
+    <int name="Raw Offset" offset="8" visible="True" />
+    <int name="Unknown" offset="12" visible="True" />
+    <int name="Unknown" offset="16" visible="True" />
+  </struct>
+  <struct name="Additional Node Data" offset="180" visible="true" size="24" label="">
+    <float name="Unknown" offset="0" visible="True" />
+    <float name="Unknown" offset="4" visible="True" />
+    <float name="Unknown" offset="8" visible="True" />
+    <float name="Unknown" offset="12" visible="True" />
+    <float name="Unknown" offset="16" visible="True" />
+    <float name="Default Scale" offset="20" visible="True" />
+  </struct>
+</plugin>

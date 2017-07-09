@@ -1,0 +1,7 @@
+<plugin class="SPK!" author="Grimdoomer" version="0.99" headersize="40">
+  <float name="Almost Never" offset="0" visible="True" />
+  <float name="Rarely" offset="4" visible="True" />
+  <float name="Somewhat" offset="8" visible="True" />
+  <float name="Often" offset="12" visible="True" />
+  <unused offset="16" size="24" />
+</plugin>

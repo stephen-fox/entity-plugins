@@ -1,0 +1,45 @@
+<plugin class="FOG_" author="Grimdoomer" version="0.99" headersize="96">
+  <bitmask16 name="Flags" offset="0" visible="True">
+    <option name="Render_Only_Submerged_Geometry" value="0" />
+    <option name="Extend_Infinitely_While_Visible" value="1" />
+    <option name="Don't_Flood_Fill" value="2" />
+    <option name="Aggressive_Flood_Fill" value="3" />
+    <option name="Do_Not_Render" value="4" />
+    <option name="Do_Not_Render_Unless_Submerged" value="5" />
+  </bitmask16>
+  <short name="Priority" offset="2" visible="True" />
+  <stringid name="Global Material Name" offset="4" visible="True" />
+  <unused offset="8" size="4" />
+  <float name="Maximum Density" offset="12" visible="True" />
+  <float name="Opaque Distance" offset="16" visible="True" />
+  <float name="Opaque Depth" offset="20" visible="True" />
+  <float name="Atmospheric Planar Depth Lower" offset="24" visible="True" />
+  <float name="Atmospheric Planar Depth Upper" offset="28" visible="True" />
+  <float name="Eye Offset Scale" offset="32" visible="True" />
+  <float name="Color R" offset="36" visible="True" />
+  <float name="Color G" offset="40" visible="True" />
+  <float name="Color B" offset="44" visible="True" />
+  <struct name="Patchy Fog" offset="48" visible="true" size="52" label="">
+    <float name="Color R" offset="0" visible="True" />
+    <float name="Color G" offset="4" visible="True" />
+    <float name="Color B" offset="8" visible="True" />
+    <unused offset="12" size="12" />
+    <float name="Density Lower" offset="24" visible="True" />
+    <float name="Density Upper" offset="28" visible="True" />
+    <float name="Distance Lower" offset="32" visible="True" />
+    <float name="Distance Upper" offset="36" visible="True" />
+    <float name="Min Depth Fraction" offset="40" visible="True" />
+    <tag name="Patchy_Fog" offset="44" visible="True" />
+    <id name="Patchy_Fog" offset="48" visible="True" />
+  </struct>
+  <tag name="Background_Sound" offset="56" visible="True" />
+  <id name="Background_Sound" offset="60" visible="True" />
+  <tag name="Sound_Enviroment" offset="64" visible="True" />
+  <id name="Sound_Enviroment" offset="68" visible="True" />
+  <float name="Environment Damping Factor" offset="72" visible="True" />
+  <float name="Background Sound Gain" offset="76" visible="True" />
+  <tag name="Enter_Sound" offset="80" visible="True" />
+  <id name="Enter_Sound" offset="84" visible="True" />
+  <tag name="Exit_Sound" offset="88" visible="True" />
+  <id name="Exit_Sound" offset="92" visible="True" />
+</plugin>

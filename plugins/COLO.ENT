@@ -1,0 +1,9 @@
+<plugin class="COLO" author="Grimdoomer" version="0.99" headersize="8">
+  <struct name="Colors" offset="0" visible="true" size="48" label="">
+    <string32 name="Name" offset="0" visible="True" />
+    <float name="Alpha" offset="4" visible="True" />
+    <float name="Red" offset="8" visible="True" />
+    <float name="Green" offset="12" visible="True" />
+    <float name="Blue" offset="16" visible="True" />
+  </struct>
+</plugin>

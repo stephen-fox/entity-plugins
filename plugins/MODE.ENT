@@ -1,0 +1,238 @@
+<plugin class="MODE" author="Grimdoomer" version="0.99" headersize="132">
+  <stringid name="Model Name" offset="0" visible="True" />
+  <bitmask32 name="Flags" offset="4" visible="True">
+    <option name="Force_Third_Person" value="0" />
+    <option name="Force_Carmack_Reverse" value="1" />
+    <option name="Force_Node_Maps" value="2" />
+  </bitmask32>
+  <int name="Unknown" offset="8" visible="True" />
+  <unused offset="12" size="8" />
+  <struct name="Compression Info" offset="20" visible="true" size="56" label="">
+    <float name="X (min)" offset="0" visible="True" />
+    <float name="X (max)" offset="4" visible="True" />
+    <float name="Y (min)" offset="8" visible="True" />
+    <float name="Y (max)" offset="12" visible="True" />
+    <float name="Z (min)" offset="16" visible="True" />
+    <float name="Z (max)" offset="20" visible="True" />
+    <float name="U (min)" offset="24" visible="True" />
+    <float name="U (max)" offset="28" visible="True" />
+    <float name="V (min)" offset="32" visible="True" />
+    <float name="V (max)" offset="36" visible="True" />
+    <float name="Secondary U (Min)" offset="40" visible="True" />
+    <float name="Secondary U (max)" offset="44" visible="True" />
+    <float name="Secondary V (min)" offset="48" visible="True" />
+    <float name="Secondary V (max)" offset="52" visible="True" />
+  </struct>
+  <struct name="Regions" offset="28" visible="true" size="16" label="">
+    <stringid name="Part Name" offset="0" visible="True" />
+    <short name="Node Map Offset" offset="4" visible="True" />
+    <short name="Node Map Size" offset="6" visible="True" />
+    <struct name="Permutation" offset="8" visible="true" size="16" label="">
+      <stringid name="Permutation Name" offset="0" visible="True" />
+      <short name="Lowest Piece (Index)" offset="4" visible="True" />
+      <short name="Low Piece (Index)" offset="6" visible="True" />
+      <short name="Medium-Low Piece (Index)" offset="8" visible="True" />
+      <short name="Medium-High Piece (Index)" offset="10" visible="True" />
+      <short name="High Piece (Index)" offset="12" visible="True" />
+      <short name="Highest Piece (Index)" offset="14" visible="True" />
+    </struct>
+  </struct>
+  <struct name="Sections" offset="36" visible="true" size="92" label="">
+    <enum32 name="Global Geometry Classification" offset="0" visible="True">
+      <option name="Rigid" value="0" />
+      <option name="Rigid_Boned" value="1" />
+      <option name="Skinned" value="2" />
+    </enum32>
+    <short name="Vertex Count" offset="4" visible="True" />
+    <short name="Triangle Count" offset="6" visible="True" />
+    <short name="Part Count" offset="8" visible="True" />
+    <short name="Shadow Casting Triangle Cour" offset="10" visible="True" />
+    <short name="Shadow Casting Part Count" offset="12" visible="True" />
+    <short name="Opaque Point Count" offset="14" visible="True" />
+    <short name="Opaque Vertex Count" offset="16" visible="True" />
+    <short name="Opaque Part Count" offset="18" visible="True" />
+    <byte name="Opaque Max Nodes/Verte" offset="20" visible="True" />
+    <byte name="Transparent Max Nodes/Verte" offset="21" visible="True" />
+    <short name="Shadow Casting Rigid Triangle Count" offset="22" visible="True" />
+    <enum16 name="Geometry Classification" offset="24" visible="True">
+      <option name="Rigid" value="0" />
+      <option name="Rigid_Boned" value="1" />
+      <option name="Skinned" value="2" />
+    </enum16>
+    <bitmask32 name="Unknown" offset="26" visible="True">
+      <option name="Compressed_Position" value="0" />
+      <option name="Compressed_Texcoord" value="1" />
+      <option name="Compressed_Secondary_Texcoord" value="2" />
+    </bitmask32>
+    <byte name="Hardware Node Count" offset="30" visible="True" />
+    <byte name="Node Map Size" offset="31" visible="True" />
+    <byte name="Software Plane Count" offset="32" visible="True" />
+    <unused offset="33" size="3" />
+    <short name="Unknown" offset="36" visible="True" />
+    <unused offset="38" size="2" />
+    <int name="Total SubPart Count" offset="40" visible="True" />
+    <bitmask8 name="Section Lighting FLags" offset="44" visible="True">
+      <option name="Has_Im_Texcoords" value="0" />
+      <option name="Has_Im_inc._rad." value="1" />
+      <option name="Has_Im_Colors" value="2" />
+      <option name="Has_Im_prt" value="3" />
+    </bitmask8>
+    <byte name="Rigid Node Index" offset="45" visible="True" />
+    <byte name="" offset="46" visible="True" />
+    <bitmask8 name="Flags" offset="47" visible="True">
+      <option name="Geometry_Postprocessed" value="0" />
+    </bitmask8>
+    <struct name="Section Data" offset="48" visible="true" size="88" label="">
+      <unused offset="0" size="88" />
+    </struct>
+    <int name="Raw Offset" offset="56" visible="True" />
+    <int name="Raw Size" offset="60" visible="True" />
+    <int name="Raw Header Size" offset="64" visible="True" />
+    <int name="Raw Data Size" offset="68" visible="True" />
+    <struct name="Resource" offset="72" visible="true" size="16" label="">
+      <int name="Unknown" offset="0" visible="True" />
+      <short name="Primary Locator" offset="4" visible="True" />
+      <short name="Secondary Locator" offset="6" visible="True" />
+      <int name="Size" offset="8" visible="True" />
+      <int name="Offset" offset="12" visible="True" />
+    </struct>
+    <id name="Owner_Tag_Section_Offset" offset="80" visible="True" />
+    <int name="Unknown" offset="84" visible="True" />
+    <int name="Unused" offset="88" visible="True" />
+  </struct>
+  <struct name="Invalid Section Pair Bits" offset="44" visible="true" size="4" label="">
+    <int name="Bits" offset="0" visible="True" />
+  </struct>
+  <struct name="Section Groups" offset="52" visible="true" size="12" label="">
+    <bitmask32 name="Detail Levels" offset="0" visible="True">
+      <option name="L1_(super_Low)" value="0" />
+      <option name="L2_(low" value="1" />
+      <option name="L3_(medium)" value="2" />
+      <option name="L4_(high)" value="3" />
+      <option name="L5_(super_high)" value="4" />
+      <option name="L6_(hollywood)" value="5" />
+    </bitmask32>
+    <struct name="Compount Nodes" offset="4" visible="true" size="16" label="">
+      <byte name="Node Index" offset="0" visible="True" />
+      <byte name="Node Index" offset="1" visible="True" />
+      <byte name="Node Index" offset="2" visible="True" />
+      <byte name="Node Index" offset="3" visible="True" />
+      <float name="Node Weight" offset="4" visible="True" />
+      <float name="Node Weight" offset="8" visible="True" />
+      <float name="Node Weight" offset="12" visible="True" />
+    </struct>
+  </struct>
+  <short name="L1 Section Group Index" offset="60" visible="True" />
+  <short name="L2 Section Group Index" offset="62" visible="True" />
+  <short name="L3 Section Group Index" offset="64" visible="True" />
+  <short name="L4 Section Group Index" offset="66" visible="True" />
+  <short name="L5 Section Group Index" offset="68" visible="True" />
+  <short name="L6 Section Group Index" offset="70" visible="True" />
+  <struct name="Nodes" offset="72" visible="true" size="96" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <short name="Parent Node Index" offset="4" visible="True" />
+    <short name="First Child Node Index" offset="6" visible="True" />
+    <short name="Next Sibling Node Index" offset="8" visible="True" />
+    <short name="Import Node Index" offset="10" visible="True" />
+    <float name="Default Translation X" offset="12" visible="True" />
+    <float name="Default Translation Y" offset="16" visible="True" />
+    <float name="Default Translation Z" offset="20" visible="True" />
+    <float name="Default Rotation i" offset="24" visible="True" />
+    <float name="Default Rotation j" offset="28" visible="True" />
+    <float name="Default Rotation k" offset="32" visible="True" />
+    <float name="Default Rotation w" offset="36" visible="True" />
+    <float name="Inverse Foward i" offset="40" visible="True" />
+    <float name="Inverse Foward j" offset="44" visible="True" />
+    <float name="Inverse Foward k" offset="48" visible="True" />
+    <float name="Inverse Left i" offset="52" visible="True" />
+    <float name="Inverse Left j" offset="56" visible="True" />
+    <float name="Inverse Left k" offset="60" visible="True" />
+    <float name="Inverse Up i" offset="64" visible="True" />
+    <float name="Inverse Up j" offset="68" visible="True" />
+    <float name="Inverse Up k" offset="72" visible="True" />
+    <float name="Inverse Position i" offset="76" visible="True" />
+    <float name="Inverse Position j" offset="80" visible="True" />
+    <float name="Inverse Position k" offset="84" visible="True" />
+    <float name="Inverse Scale" offset="88" visible="True" />
+    <float name="Distance from Parent" offset="92" visible="True" />
+  </struct>
+  <unused offset="80" size="8" />
+  <struct name="Marker Groups" offset="88" visible="true" size="12" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <struct name="Markers" offset="4" visible="true" size="36" label="">
+      <byte name="Region index" offset="0" visible="True" />
+      <byte name="Permutation Index" offset="1" visible="True" />
+      <short name="Node Index" offset="2" visible="True" />
+      <float name="Translation X" offset="4" visible="True" />
+      <float name="Translation Y" offset="8" visible="True" />
+      <float name="Tranlsation Z" offset="12" visible="True" />
+      <float name="Rotation i" offset="16" visible="True" />
+      <float name="Rotation j" offset="20" visible="True" />
+      <float name="Rotation k" offset="24" visible="True" />
+      <float name="Rotation w" offset="28" visible="True" />
+      <float name="Scale" offset="32" visible="True" />
+    </struct>
+  </struct>
+  <struct name="Materials" offset="96" visible="true" size="32" label="">
+    <tag name="Old_Shader" offset="0" visible="True" />
+    <id name="Old_Shader" offset="4" visible="True" />
+    <tag name="Shader" offset="8" visible="True" />
+    <id name="Shader" offset="12" visible="True" />
+    <struct name="Propeties" offset="16" visible="true" size="8" label="">
+      <int name="Int Value" offset="0" visible="True" />
+      <float name="Real Value" offset="4" visible="True" />
+    </struct>
+    <int name="Brakable Surface Index" offset="24" visible="True" />
+    <unused offset="28" size="4" />
+  </struct>
+  <unused offset="104" size="8" />
+  <float name="Unknown" offset="112" visible="True" />
+  <struct name="Prt Info" offset="116" visible="true" size="88" label="">
+    <short name="SH Order" offset="0" visible="True" />
+    <short name="Clustor Number" offset="2" visible="True" />
+    <short name="PCA Vectors Per Clustor" offset="4" visible="True" />
+    <short name="Number of Rays" offset="6" visible="True" />
+    <short name="Number of Bounces" offset="8" visible="True" />
+    <short name="Mat Index for sbsfc Scattering" offset="10" visible="True" />
+    <float name="Length Scale" offset="12" visible="True" />
+    <int name="Number of LODs" offset="16" visible="True" />
+    <struct name="Lod Info" offset="20" visible="true" size="12" label="">
+      <int name="Clustor Offset" offset="0" visible="True" />
+      <struct name="Section Info" offset="4" visible="true" size="8" label="">
+        <int name="Section Index" offset="0" visible="True" />
+        <int name="PCA Data Offset" offset="4" visible="True" />
+      </struct>
+    </struct>
+    <struct name="Clustor Basis" offset="28" visible="true" size="4" label="">
+      <int name="Basis Data" offset="0" visible="True" />
+    </struct>
+    <unused offset="36" size="16" />
+    <int name="Raw Offset" offset="52" visible="True" />
+    <int name="Raw Size" offset="56" visible="True" />
+    <int name="Raw Header Size" offset="60" visible="True" />
+    <int name="Raw Data Size" offset="64" visible="True" />
+    <struct name="Resource" offset="68" visible="true" size="16" label="">
+      <int name="Unknown" offset="0" visible="True" />
+      <float name="Unknown" offset="4" visible="True" />
+      <uint name="Size" offset="8" visible="True" />
+      <uint name="Offset" offset="12" visible="True" />
+    </struct>
+    <id name="Owner_Section_Data_Offset" offset="76" visible="True" />
+    <int name="Unknown" offset="80" visible="True" />
+    <int name="Unused" offset="84" visible="True" />
+  </struct>
+  <struct name="Section Render Leaves" offset="124" visible="true" size="8" label="">
+    <struct name="Node Render Leaves" offset="0" visible="true" size="16" label="">
+      <struct name="Collision Leaves" offset="0" visible="true" size="8" label="">
+        <short name="Clustor" offset="0" visible="True" />
+        <short name="Surface Reference Count" offset="2" visible="True" />
+        <int name="First Surface Reference Index" offset="4" visible="True" />
+      </struct>
+      <struct name="Serface References" offset="8" visible="true" size="8" label="">
+        <short name="Strip Index" offset="0" visible="True" />
+        <short name="Lightmap Triangle Index" offset="2" visible="True" />
+        <int name="BSP Node Index" offset="4" visible="True" />
+      </struct>
+    </struct>
+  </struct>
+</plugin>

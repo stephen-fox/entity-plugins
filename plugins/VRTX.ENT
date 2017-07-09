@@ -1,0 +1,16 @@
+<plugin class="VRTX" author="Grimdoomer" version="0.99" headersize="12">
+  <enum32 name="Platform" offset="0" visible="True">
+    <option name="PC" value="0" />
+    <option name="Xbox" value="1" />
+  </enum32>
+  <struct name="Geometry Classifications" offset="4" visible="true" size="28" label="">
+    <unused offset="0" size="4" />
+    <struct name="Compiled Shader" offset="4" visible="true" size="2" label="">
+      <short name="Data" offset="0" visible="True" />
+    </struct>
+    <struct name="Code" offset="12" visible="true" size="1" label="">
+      <byte name="Data" offset="0" visible="True" />
+    </struct>
+    <unused offset="20" size="8" />
+  </struct>
+</plugin>

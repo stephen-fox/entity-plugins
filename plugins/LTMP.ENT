@@ -1,0 +1,739 @@
+<plugin class="LTMP" author="Grimdoomer" version="0.99" headersize="260">
+  <float name="Search Distance Lower Bound" offset="0" visible="True" />
+  <float name="Search Distance Upper Bound" offset="4" visible="True" />
+  <float name="Luminels Per World Unit" offset="8" visible="True" />
+  <float name="Output White Reference" offset="12" visible="True" />
+  <float name="Output Black Reference" offset="16" visible="True" />
+  <float name="Output Schlick Reference" offset="20" visible="True" />
+  <float name="Diffuse Map Scale" offset="24" visible="True" />
+  <float name="Sun Scale" offset="28" visible="True" />
+  <float name="Sky Scale" offset="32" visible="True" />
+  <float name="Indirect Scale" offset="36" visible="True" />
+  <float name="Prt Scale" offset="40" visible="True" />
+  <float name="Surface Light Scale" offset="44" visible="True" />
+  <float name="Scenario Light Scale" offset="48" visible="True" />
+  <float name="Lightprobe Interpolation Override" offset="52" visible="True" />
+  <unused offset="56" size="72" />
+  <struct name="Lightmap Groups" offset="128" visible="true" size="104" label="">
+    <enum16 name="Type" offset="0" visible="True">
+      <option name="Normal" value="0" />
+    </enum16>
+    <bitmask16 name="Flags" offset="2" visible="True">
+      <option name="Unused" value="0" />
+    </bitmask16>
+    <int name="Structure Checksum" offset="4" visible="True" />
+    <struct name="Section Palette" offset="8" visible="true" size="1024" label="">
+      <int name="Palette Color" offset="0" visible="True" />
+      <int name="Palette Color" offset="4" visible="True" />
+      <int name="Palette Color" offset="8" visible="True" />
+      <int name="Palette Color" offset="12" visible="True" />
+      <int name="Palette Color" offset="16" visible="True" />
+      <int name="Palette Color" offset="20" visible="True" />
+      <int name="Palette Color" offset="24" visible="True" />
+      <int name="Palette Color" offset="28" visible="True" />
+      <int name="Palette Color" offset="32" visible="True" />
+      <int name="Palette Color" offset="36" visible="True" />
+      <int name="Palette Color" offset="40" visible="True" />
+      <int name="Palette Color" offset="44" visible="True" />
+      <int name="Palette Color" offset="48" visible="True" />
+      <int name="Palette Color" offset="52" visible="True" />
+      <int name="Palette Color" offset="56" visible="True" />
+      <int name="Palette Color" offset="60" visible="True" />
+      <int name="Palette Color" offset="64" visible="True" />
+      <int name="Palette Color" offset="68" visible="True" />
+      <int name="Palette Color" offset="72" visible="True" />
+      <int name="Palette Color" offset="76" visible="True" />
+      <int name="Palette Color" offset="80" visible="True" />
+      <int name="Palette Color" offset="84" visible="True" />
+      <int name="Palette Color" offset="88" visible="True" />
+      <int name="Palette Color" offset="92" visible="True" />
+      <int name="Palette Color" offset="96" visible="True" />
+      <int name="Palette Color" offset="100" visible="True" />
+      <int name="Palette Color" offset="104" visible="True" />
+      <int name="Palette Color" offset="108" visible="True" />
+      <int name="Palette Color" offset="112" visible="True" />
+      <int name="Palette Color" offset="116" visible="True" />
+      <int name="Palette Color" offset="120" visible="True" />
+      <int name="Palette Color" offset="124" visible="True" />
+      <int name="Palette Color" offset="128" visible="True" />
+      <int name="Palette Color" offset="132" visible="True" />
+      <int name="Palette Color" offset="136" visible="True" />
+      <int name="Palette Color" offset="140" visible="True" />
+      <int name="Palette Color" offset="144" visible="True" />
+      <int name="Palette Color" offset="148" visible="True" />
+      <int name="Palette Color" offset="152" visible="True" />
+      <int name="Palette Color" offset="156" visible="True" />
+      <int name="Palette Color" offset="160" visible="True" />
+      <int name="Palette Color" offset="164" visible="True" />
+      <int name="Palette Color" offset="168" visible="True" />
+      <int name="Palette Color" offset="172" visible="True" />
+      <int name="Palette Color" offset="176" visible="True" />
+      <int name="Palette Color" offset="180" visible="True" />
+      <int name="Palette Color" offset="184" visible="True" />
+      <int name="Palette Color" offset="188" visible="True" />
+      <int name="Palette Color" offset="192" visible="True" />
+      <int name="Palette Color" offset="196" visible="True" />
+      <int name="Palette Color" offset="200" visible="True" />
+      <int name="Palette Color" offset="204" visible="True" />
+      <int name="Palette Color" offset="208" visible="True" />
+      <int name="Palette Color" offset="212" visible="True" />
+      <int name="Palette Color" offset="216" visible="True" />
+      <int name="Palette Color" offset="220" visible="True" />
+      <int name="Palette Color" offset="224" visible="True" />
+      <int name="Palette Color" offset="228" visible="True" />
+      <int name="Palette Color" offset="232" visible="True" />
+      <int name="Palette Color" offset="236" visible="True" />
+      <int name="Palette Color" offset="240" visible="True" />
+      <int name="Palette Color" offset="244" visible="True" />
+      <int name="Palette Color" offset="248" visible="True" />
+      <int name="Palette Color" offset="252" visible="True" />
+      <int name="Palette Color" offset="256" visible="True" />
+      <int name="Palette Color" offset="260" visible="True" />
+      <int name="Palette Color" offset="264" visible="True" />
+      <int name="Palette Color" offset="268" visible="True" />
+      <int name="Palette Color" offset="272" visible="True" />
+      <int name="Palette Color" offset="276" visible="True" />
+      <int name="Palette Color" offset="280" visible="True" />
+      <int name="Palette Color" offset="284" visible="True" />
+      <int name="Palette Color" offset="288" visible="True" />
+      <int name="Palette Color" offset="292" visible="True" />
+      <int name="Palette Color" offset="296" visible="True" />
+      <int name="Palette Color" offset="300" visible="True" />
+      <int name="Palette Color" offset="304" visible="True" />
+      <int name="Palette Color" offset="308" visible="True" />
+      <int name="Palette Color" offset="312" visible="True" />
+      <int name="Palette Color" offset="316" visible="True" />
+      <int name="Palette Color" offset="320" visible="True" />
+      <int name="Palette Color" offset="324" visible="True" />
+      <int name="Palette Color" offset="328" visible="True" />
+      <int name="Palette Color" offset="332" visible="True" />
+      <int name="Palette Color" offset="336" visible="True" />
+      <int name="Palette Color" offset="340" visible="True" />
+      <int name="Palette Color" offset="344" visible="True" />
+      <int name="Palette Color" offset="348" visible="True" />
+      <int name="Palette Color" offset="352" visible="True" />
+      <int name="Palette Color" offset="356" visible="True" />
+      <int name="Palette Color" offset="360" visible="True" />
+      <int name="Palette Color" offset="364" visible="True" />
+      <int name="Palette Color" offset="368" visible="True" />
+      <int name="Palette Color" offset="372" visible="True" />
+      <int name="Palette Color" offset="376" visible="True" />
+      <int name="Palette Color" offset="380" visible="True" />
+      <int name="Palette Color" offset="384" visible="True" />
+      <int name="Palette Color" offset="388" visible="True" />
+      <int name="Palette Color" offset="392" visible="True" />
+      <int name="Palette Color" offset="396" visible="True" />
+      <int name="Palette Color" offset="400" visible="True" />
+      <int name="Palette Color" offset="404" visible="True" />
+      <int name="Palette Color" offset="408" visible="True" />
+      <int name="Palette Color" offset="412" visible="True" />
+      <int name="Palette Color" offset="416" visible="True" />
+      <int name="Palette Color" offset="420" visible="True" />
+      <int name="Palette Color" offset="424" visible="True" />
+      <int name="Palette Color" offset="428" visible="True" />
+      <int name="Palette Color" offset="432" visible="True" />
+      <int name="Palette Color" offset="436" visible="True" />
+      <int name="Palette Color" offset="440" visible="True" />
+      <int name="Palette Color" offset="444" visible="True" />
+      <int name="Palette Color" offset="448" visible="True" />
+      <int name="Palette Color" offset="452" visible="True" />
+      <int name="Palette Color" offset="456" visible="True" />
+      <int name="Palette Color" offset="460" visible="True" />
+      <int name="Palette Color" offset="464" visible="True" />
+      <int name="Palette Color" offset="468" visible="True" />
+      <int name="Palette Color" offset="472" visible="True" />
+      <int name="Palette Color" offset="476" visible="True" />
+      <int name="Palette Color" offset="480" visible="True" />
+      <int name="Palette Color" offset="484" visible="True" />
+      <int name="Palette Color" offset="488" visible="True" />
+      <int name="Palette Color" offset="492" visible="True" />
+      <int name="Palette Color" offset="496" visible="True" />
+      <int name="Palette Color" offset="500" visible="True" />
+      <int name="Palette Color" offset="504" visible="True" />
+      <int name="Palette Color" offset="508" visible="True" />
+      <int name="Palette Color" offset="512" visible="True" />
+      <int name="Palette Color" offset="516" visible="True" />
+      <int name="Palette Color" offset="520" visible="True" />
+      <int name="Palette Color" offset="524" visible="True" />
+      <int name="Palette Color" offset="528" visible="True" />
+      <int name="Palette Color" offset="532" visible="True" />
+      <int name="Palette Color" offset="536" visible="True" />
+      <int name="Palette Color" offset="540" visible="True" />
+      <int name="Palette Color" offset="544" visible="True" />
+      <int name="Palette Color" offset="548" visible="True" />
+      <int name="Palette Color" offset="552" visible="True" />
+      <int name="Palette Color" offset="556" visible="True" />
+      <int name="Palette Color" offset="560" visible="True" />
+      <int name="Palette Color" offset="564" visible="True" />
+      <int name="Palette Color" offset="568" visible="True" />
+      <int name="Palette Color" offset="572" visible="True" />
+      <int name="Palette Color" offset="576" visible="True" />
+      <int name="Palette Color" offset="580" visible="True" />
+      <int name="Palette Color" offset="584" visible="True" />
+      <int name="Palette Color" offset="588" visible="True" />
+      <int name="Palette Color" offset="592" visible="True" />
+      <int name="Palette Color" offset="596" visible="True" />
+      <int name="Palette Color" offset="600" visible="True" />
+      <int name="Palette Color" offset="604" visible="True" />
+      <int name="Palette Color" offset="608" visible="True" />
+      <int name="Palette Color" offset="612" visible="True" />
+      <int name="Palette Color" offset="616" visible="True" />
+      <int name="Palette Color" offset="620" visible="True" />
+      <int name="Palette Color" offset="624" visible="True" />
+      <int name="Palette Color" offset="628" visible="True" />
+      <int name="Palette Color" offset="632" visible="True" />
+      <int name="Palette Color" offset="636" visible="True" />
+      <int name="Palette Color" offset="640" visible="True" />
+      <int name="Palette Color" offset="644" visible="True" />
+      <int name="Palette Color" offset="648" visible="True" />
+      <int name="Palette Color" offset="652" visible="True" />
+      <int name="Palette Color" offset="656" visible="True" />
+      <int name="Palette Color" offset="660" visible="True" />
+      <int name="Palette Color" offset="664" visible="True" />
+      <int name="Palette Color" offset="668" visible="True" />
+      <int name="Palette Color" offset="672" visible="True" />
+      <int name="Palette Color" offset="676" visible="True" />
+      <int name="Palette Color" offset="680" visible="True" />
+      <int name="Palette Color" offset="684" visible="True" />
+      <int name="Palette Color" offset="688" visible="True" />
+      <int name="Palette Color" offset="692" visible="True" />
+      <int name="Palette Color" offset="696" visible="True" />
+      <int name="Palette Color" offset="700" visible="True" />
+      <int name="Palette Color" offset="704" visible="True" />
+      <int name="Palette Color" offset="708" visible="True" />
+      <int name="Palette Color" offset="712" visible="True" />
+      <int name="Palette Color" offset="716" visible="True" />
+      <int name="Palette Color" offset="720" visible="True" />
+      <int name="Palette Color" offset="724" visible="True" />
+      <int name="Palette Color" offset="728" visible="True" />
+      <int name="Palette Color" offset="732" visible="True" />
+      <int name="Palette Color" offset="736" visible="True" />
+      <int name="Palette Color" offset="740" visible="True" />
+      <int name="Palette Color" offset="744" visible="True" />
+      <int name="Palette Color" offset="748" visible="True" />
+      <int name="Palette Color" offset="752" visible="True" />
+      <int name="Palette Color" offset="756" visible="True" />
+      <int name="Palette Color" offset="760" visible="True" />
+      <int name="Palette Color" offset="764" visible="True" />
+      <int name="Palette Color" offset="768" visible="True" />
+      <int name="Palette Color" offset="772" visible="True" />
+      <int name="Palette Color" offset="776" visible="True" />
+      <int name="Palette Color" offset="780" visible="True" />
+      <int name="Palette Color" offset="784" visible="True" />
+      <int name="Palette Color" offset="788" visible="True" />
+      <int name="Palette Color" offset="792" visible="True" />
+      <int name="Palette Color" offset="796" visible="True" />
+      <int name="Palette Color" offset="800" visible="True" />
+      <int name="Palette Color" offset="804" visible="True" />
+      <int name="Palette Color" offset="808" visible="True" />
+      <int name="Palette Color" offset="812" visible="True" />
+      <int name="Palette Color" offset="816" visible="True" />
+      <int name="Palette Color" offset="820" visible="True" />
+      <int name="Palette Color" offset="824" visible="True" />
+      <int name="Palette Color" offset="828" visible="True" />
+      <int name="Palette Color" offset="832" visible="True" />
+      <int name="Palette Color" offset="836" visible="True" />
+      <int name="Palette Color" offset="840" visible="True" />
+      <int name="Palette Color" offset="844" visible="True" />
+      <int name="Palette Color" offset="848" visible="True" />
+      <int name="Palette Color" offset="852" visible="True" />
+      <int name="Palette Color" offset="856" visible="True" />
+      <int name="Palette Color" offset="860" visible="True" />
+      <int name="Palette Color" offset="864" visible="True" />
+      <int name="Palette Color" offset="868" visible="True" />
+      <int name="Palette Color" offset="872" visible="True" />
+      <int name="Palette Color" offset="876" visible="True" />
+      <int name="Palette Color" offset="880" visible="True" />
+      <int name="Palette Color" offset="884" visible="True" />
+      <int name="Palette Color" offset="888" visible="True" />
+      <int name="Palette Color" offset="892" visible="True" />
+      <int name="Palette Color" offset="896" visible="True" />
+      <int name="Palette Color" offset="900" visible="True" />
+      <int name="Palette Color" offset="904" visible="True" />
+      <int name="Palette Color" offset="908" visible="True" />
+      <int name="Palette Color" offset="912" visible="True" />
+      <int name="Palette Color" offset="916" visible="True" />
+      <int name="Palette Color" offset="920" visible="True" />
+      <int name="Palette Color" offset="924" visible="True" />
+      <int name="Palette Color" offset="928" visible="True" />
+      <int name="Palette Color" offset="932" visible="True" />
+      <int name="Palette Color" offset="936" visible="True" />
+      <int name="Palette Color" offset="940" visible="True" />
+      <int name="Palette Color" offset="944" visible="True" />
+      <int name="Palette Color" offset="948" visible="True" />
+      <int name="Palette Color" offset="952" visible="True" />
+      <int name="Palette Color" offset="956" visible="True" />
+      <int name="Palette Color" offset="960" visible="True" />
+      <int name="Palette Color" offset="964" visible="True" />
+      <int name="Palette Color" offset="968" visible="True" />
+      <int name="Palette Color" offset="972" visible="True" />
+      <int name="Palette Color" offset="976" visible="True" />
+      <int name="Palette Color" offset="980" visible="True" />
+      <int name="Palette Color" offset="984" visible="True" />
+      <int name="Palette Color" offset="988" visible="True" />
+      <int name="Palette Color" offset="992" visible="True" />
+      <int name="Palette Color" offset="996" visible="True" />
+      <int name="Palette Color" offset="1000" visible="True" />
+      <int name="Palette Color" offset="1004" visible="True" />
+      <int name="Palette Color" offset="1008" visible="True" />
+      <int name="Palette Color" offset="1012" visible="True" />
+      <int name="Palette Color" offset="1016" visible="True" />
+      <int name="Palette Color" offset="1020" visible="True" />
+    </struct>
+    <struct name="Writable Palettes" offset="16" visible="true" size="1024" label="">
+      <int name="Palette Color" offset="0" visible="True" />
+      <int name="Palette Color" offset="4" visible="True" />
+      <int name="Palette Color" offset="8" visible="True" />
+      <int name="Palette Color" offset="12" visible="True" />
+      <int name="Palette Color" offset="16" visible="True" />
+      <int name="Palette Color" offset="20" visible="True" />
+      <int name="Palette Color" offset="24" visible="True" />
+      <int name="Palette Color" offset="28" visible="True" />
+      <int name="Palette Color" offset="32" visible="True" />
+      <int name="Palette Color" offset="36" visible="True" />
+      <int name="Palette Color" offset="40" visible="True" />
+      <int name="Palette Color" offset="44" visible="True" />
+      <int name="Palette Color" offset="48" visible="True" />
+      <int name="Palette Color" offset="52" visible="True" />
+      <int name="Palette Color" offset="56" visible="True" />
+      <int name="Palette Color" offset="60" visible="True" />
+      <int name="Palette Color" offset="64" visible="True" />
+      <int name="Palette Color" offset="68" visible="True" />
+      <int name="Palette Color" offset="72" visible="True" />
+      <int name="Palette Color" offset="76" visible="True" />
+      <int name="Palette Color" offset="80" visible="True" />
+      <int name="Palette Color" offset="84" visible="True" />
+      <int name="Palette Color" offset="88" visible="True" />
+      <int name="Palette Color" offset="92" visible="True" />
+      <int name="Palette Color" offset="96" visible="True" />
+      <int name="Palette Color" offset="100" visible="True" />
+      <int name="Palette Color" offset="104" visible="True" />
+      <int name="Palette Color" offset="108" visible="True" />
+      <int name="Palette Color" offset="112" visible="True" />
+      <int name="Palette Color" offset="116" visible="True" />
+      <int name="Palette Color" offset="120" visible="True" />
+      <int name="Palette Color" offset="124" visible="True" />
+      <int name="Palette Color" offset="128" visible="True" />
+      <int name="Palette Color" offset="132" visible="True" />
+      <int name="Palette Color" offset="136" visible="True" />
+      <int name="Palette Color" offset="140" visible="True" />
+      <int name="Palette Color" offset="144" visible="True" />
+      <int name="Palette Color" offset="148" visible="True" />
+      <int name="Palette Color" offset="152" visible="True" />
+      <int name="Palette Color" offset="156" visible="True" />
+      <int name="Palette Color" offset="160" visible="True" />
+      <int name="Palette Color" offset="164" visible="True" />
+      <int name="Palette Color" offset="168" visible="True" />
+      <int name="Palette Color" offset="172" visible="True" />
+      <int name="Palette Color" offset="176" visible="True" />
+      <int name="Palette Color" offset="180" visible="True" />
+      <int name="Palette Color" offset="184" visible="True" />
+      <int name="Palette Color" offset="188" visible="True" />
+      <int name="Palette Color" offset="192" visible="True" />
+      <int name="Palette Color" offset="196" visible="True" />
+      <int name="Palette Color" offset="200" visible="True" />
+      <int name="Palette Color" offset="204" visible="True" />
+      <int name="Palette Color" offset="208" visible="True" />
+      <int name="Palette Color" offset="212" visible="True" />
+      <int name="Palette Color" offset="216" visible="True" />
+      <int name="Palette Color" offset="220" visible="True" />
+      <int name="Palette Color" offset="224" visible="True" />
+      <int name="Palette Color" offset="228" visible="True" />
+      <int name="Palette Color" offset="232" visible="True" />
+      <int name="Palette Color" offset="236" visible="True" />
+      <int name="Palette Color" offset="240" visible="True" />
+      <int name="Palette Color" offset="244" visible="True" />
+      <int name="Palette Color" offset="248" visible="True" />
+      <int name="Palette Color" offset="252" visible="True" />
+      <int name="Palette Color" offset="256" visible="True" />
+      <int name="Palette Color" offset="260" visible="True" />
+      <int name="Palette Color" offset="264" visible="True" />
+      <int name="Palette Color" offset="268" visible="True" />
+      <int name="Palette Color" offset="272" visible="True" />
+      <int name="Palette Color" offset="276" visible="True" />
+      <int name="Palette Color" offset="280" visible="True" />
+      <int name="Palette Color" offset="284" visible="True" />
+      <int name="Palette Color" offset="288" visible="True" />
+      <int name="Palette Color" offset="292" visible="True" />
+      <int name="Palette Color" offset="296" visible="True" />
+      <int name="Palette Color" offset="300" visible="True" />
+      <int name="Palette Color" offset="304" visible="True" />
+      <int name="Palette Color" offset="308" visible="True" />
+      <int name="Palette Color" offset="312" visible="True" />
+      <int name="Palette Color" offset="316" visible="True" />
+      <int name="Palette Color" offset="320" visible="True" />
+      <int name="Palette Color" offset="324" visible="True" />
+      <int name="Palette Color" offset="328" visible="True" />
+      <int name="Palette Color" offset="332" visible="True" />
+      <int name="Palette Color" offset="336" visible="True" />
+      <int name="Palette Color" offset="340" visible="True" />
+      <int name="Palette Color" offset="344" visible="True" />
+      <int name="Palette Color" offset="348" visible="True" />
+      <int name="Palette Color" offset="352" visible="True" />
+      <int name="Palette Color" offset="356" visible="True" />
+      <int name="Palette Color" offset="360" visible="True" />
+      <int name="Palette Color" offset="364" visible="True" />
+      <int name="Palette Color" offset="368" visible="True" />
+      <int name="Palette Color" offset="372" visible="True" />
+      <int name="Palette Color" offset="376" visible="True" />
+      <int name="Palette Color" offset="380" visible="True" />
+      <int name="Palette Color" offset="384" visible="True" />
+      <int name="Palette Color" offset="388" visible="True" />
+      <int name="Palette Color" offset="392" visible="True" />
+      <int name="Palette Color" offset="396" visible="True" />
+      <int name="Palette Color" offset="400" visible="True" />
+      <int name="Palette Color" offset="404" visible="True" />
+      <int name="Palette Color" offset="408" visible="True" />
+      <int name="Palette Color" offset="412" visible="True" />
+      <int name="Palette Color" offset="416" visible="True" />
+      <int name="Palette Color" offset="420" visible="True" />
+      <int name="Palette Color" offset="424" visible="True" />
+      <int name="Palette Color" offset="428" visible="True" />
+      <int name="Palette Color" offset="432" visible="True" />
+      <int name="Palette Color" offset="436" visible="True" />
+      <int name="Palette Color" offset="440" visible="True" />
+      <int name="Palette Color" offset="444" visible="True" />
+      <int name="Palette Color" offset="448" visible="True" />
+      <int name="Palette Color" offset="452" visible="True" />
+      <int name="Palette Color" offset="456" visible="True" />
+      <int name="Palette Color" offset="460" visible="True" />
+      <int name="Palette Color" offset="464" visible="True" />
+      <int name="Palette Color" offset="468" visible="True" />
+      <int name="Palette Color" offset="472" visible="True" />
+      <int name="Palette Color" offset="476" visible="True" />
+      <int name="Palette Color" offset="480" visible="True" />
+      <int name="Palette Color" offset="484" visible="True" />
+      <int name="Palette Color" offset="488" visible="True" />
+      <int name="Palette Color" offset="492" visible="True" />
+      <int name="Palette Color" offset="496" visible="True" />
+      <int name="Palette Color" offset="500" visible="True" />
+      <int name="Palette Color" offset="504" visible="True" />
+      <int name="Palette Color" offset="508" visible="True" />
+      <int name="Palette Color" offset="512" visible="True" />
+      <int name="Palette Color" offset="516" visible="True" />
+      <int name="Palette Color" offset="520" visible="True" />
+      <int name="Palette Color" offset="524" visible="True" />
+      <int name="Palette Color" offset="528" visible="True" />
+      <int name="Palette Color" offset="532" visible="True" />
+      <int name="Palette Color" offset="536" visible="True" />
+      <int name="Palette Color" offset="540" visible="True" />
+      <int name="Palette Color" offset="544" visible="True" />
+      <int name="Palette Color" offset="548" visible="True" />
+      <int name="Palette Color" offset="552" visible="True" />
+      <int name="Palette Color" offset="556" visible="True" />
+      <int name="Palette Color" offset="560" visible="True" />
+      <int name="Palette Color" offset="564" visible="True" />
+      <int name="Palette Color" offset="568" visible="True" />
+      <int name="Palette Color" offset="572" visible="True" />
+      <int name="Palette Color" offset="576" visible="True" />
+      <int name="Palette Color" offset="580" visible="True" />
+      <int name="Palette Color" offset="584" visible="True" />
+      <int name="Palette Color" offset="588" visible="True" />
+      <int name="Palette Color" offset="592" visible="True" />
+      <int name="Palette Color" offset="596" visible="True" />
+      <int name="Palette Color" offset="600" visible="True" />
+      <int name="Palette Color" offset="604" visible="True" />
+      <int name="Palette Color" offset="608" visible="True" />
+      <int name="Palette Color" offset="612" visible="True" />
+      <int name="Palette Color" offset="616" visible="True" />
+      <int name="Palette Color" offset="620" visible="True" />
+      <int name="Palette Color" offset="624" visible="True" />
+      <int name="Palette Color" offset="628" visible="True" />
+      <int name="Palette Color" offset="632" visible="True" />
+      <int name="Palette Color" offset="636" visible="True" />
+      <int name="Palette Color" offset="640" visible="True" />
+      <int name="Palette Color" offset="644" visible="True" />
+      <int name="Palette Color" offset="648" visible="True" />
+      <int name="Palette Color" offset="652" visible="True" />
+      <int name="Palette Color" offset="656" visible="True" />
+      <int name="Palette Color" offset="660" visible="True" />
+      <int name="Palette Color" offset="664" visible="True" />
+      <int name="Palette Color" offset="668" visible="True" />
+      <int name="Palette Color" offset="672" visible="True" />
+      <int name="Palette Color" offset="676" visible="True" />
+      <int name="Palette Color" offset="680" visible="True" />
+      <int name="Palette Color" offset="684" visible="True" />
+      <int name="Palette Color" offset="688" visible="True" />
+      <int name="Palette Color" offset="692" visible="True" />
+      <int name="Palette Color" offset="696" visible="True" />
+      <int name="Palette Color" offset="700" visible="True" />
+      <int name="Palette Color" offset="704" visible="True" />
+      <int name="Palette Color" offset="708" visible="True" />
+      <int name="Palette Color" offset="712" visible="True" />
+      <int name="Palette Color" offset="716" visible="True" />
+      <int name="Palette Color" offset="720" visible="True" />
+      <int name="Palette Color" offset="724" visible="True" />
+      <int name="Palette Color" offset="728" visible="True" />
+      <int name="Palette Color" offset="732" visible="True" />
+      <int name="Palette Color" offset="736" visible="True" />
+      <int name="Palette Color" offset="740" visible="True" />
+      <int name="Palette Color" offset="744" visible="True" />
+      <int name="Palette Color" offset="748" visible="True" />
+      <int name="Palette Color" offset="752" visible="True" />
+      <int name="Palette Color" offset="756" visible="True" />
+      <int name="Palette Color" offset="760" visible="True" />
+      <int name="Palette Color" offset="764" visible="True" />
+      <int name="Palette Color" offset="768" visible="True" />
+      <int name="Palette Color" offset="772" visible="True" />
+      <int name="Palette Color" offset="776" visible="True" />
+      <int name="Palette Color" offset="780" visible="True" />
+      <int name="Palette Color" offset="784" visible="True" />
+      <int name="Palette Color" offset="788" visible="True" />
+      <int name="Palette Color" offset="792" visible="True" />
+      <int name="Palette Color" offset="796" visible="True" />
+      <int name="Palette Color" offset="800" visible="True" />
+      <int name="Palette Color" offset="804" visible="True" />
+      <int name="Palette Color" offset="808" visible="True" />
+      <int name="Palette Color" offset="812" visible="True" />
+      <int name="Palette Color" offset="816" visible="True" />
+      <int name="Palette Color" offset="820" visible="True" />
+      <int name="Palette Color" offset="824" visible="True" />
+      <int name="Palette Color" offset="828" visible="True" />
+      <int name="Palette Color" offset="832" visible="True" />
+      <int name="Palette Color" offset="836" visible="True" />
+      <int name="Palette Color" offset="840" visible="True" />
+      <int name="Palette Color" offset="844" visible="True" />
+      <int name="Palette Color" offset="848" visible="True" />
+      <int name="Palette Color" offset="852" visible="True" />
+      <int name="Palette Color" offset="856" visible="True" />
+      <int name="Palette Color" offset="860" visible="True" />
+      <int name="Palette Color" offset="864" visible="True" />
+      <int name="Palette Color" offset="868" visible="True" />
+      <int name="Palette Color" offset="872" visible="True" />
+      <int name="Palette Color" offset="876" visible="True" />
+      <int name="Palette Color" offset="880" visible="True" />
+      <int name="Palette Color" offset="884" visible="True" />
+      <int name="Palette Color" offset="888" visible="True" />
+      <int name="Palette Color" offset="892" visible="True" />
+      <int name="Palette Color" offset="896" visible="True" />
+      <int name="Palette Color" offset="900" visible="True" />
+      <int name="Palette Color" offset="904" visible="True" />
+      <int name="Palette Color" offset="908" visible="True" />
+      <int name="Palette Color" offset="912" visible="True" />
+      <int name="Palette Color" offset="916" visible="True" />
+      <int name="Palette Color" offset="920" visible="True" />
+      <int name="Palette Color" offset="924" visible="True" />
+      <int name="Palette Color" offset="928" visible="True" />
+      <int name="Palette Color" offset="932" visible="True" />
+      <int name="Palette Color" offset="936" visible="True" />
+      <int name="Palette Color" offset="940" visible="True" />
+      <int name="Palette Color" offset="944" visible="True" />
+      <int name="Palette Color" offset="948" visible="True" />
+      <int name="Palette Color" offset="952" visible="True" />
+      <int name="Palette Color" offset="956" visible="True" />
+      <int name="Palette Color" offset="960" visible="True" />
+      <int name="Palette Color" offset="964" visible="True" />
+      <int name="Palette Color" offset="968" visible="True" />
+      <int name="Palette Color" offset="972" visible="True" />
+      <int name="Palette Color" offset="976" visible="True" />
+      <int name="Palette Color" offset="980" visible="True" />
+      <int name="Palette Color" offset="984" visible="True" />
+      <int name="Palette Color" offset="988" visible="True" />
+      <int name="Palette Color" offset="992" visible="True" />
+      <int name="Palette Color" offset="996" visible="True" />
+      <int name="Palette Color" offset="1000" visible="True" />
+      <int name="Palette Color" offset="1004" visible="True" />
+      <int name="Palette Color" offset="1008" visible="True" />
+      <int name="Palette Color" offset="1012" visible="True" />
+      <int name="Palette Color" offset="1016" visible="True" />
+      <int name="Palette Color" offset="1020" visible="True" />
+    </struct>
+    <tag name="Bitmap_Group" offset="24" visible="True" />
+    <id name="Bitmap_Group" offset="28" visible="True" />
+    <struct name="Clusters" offset="32" visible="true" size="84" label="">
+      <short name="Total Vertex Count" offset="0" visible="True" />
+      <short name="Total Triangle Count" offset="2" visible="True" />
+      <short name="Total Part Count" offset="4" visible="True" />
+      <short name="Shadow-Casting Triangle Count" offset="6" visible="True" />
+      <short name="Shadow-Casting Part Count" offset="8" visible="True" />
+      <short name="Opaque Point Count" offset="10" visible="True" />
+      <short name="Opaque Vertex Count" offset="12" visible="True" />
+      <short name="Opaque Part Count" offset="14" visible="True" />
+      <short name="Opague Max Nodes/Vertex" offset="16" visible="True" />
+      <short name="Transparent Max Nodes/Vertex" offset="18" visible="True" />
+      <short name="Shadow-Casting Rigid Triangle" offset="20" visible="True" />
+      <enum32 name="Geometry Classification" offset="22" visible="True">
+        <option name="World_Space" value="0" />
+      </enum32>
+      <bitmask16 name="Geometry Compression Flags" offset="26" visible="True">
+        <option name="Compressed_Position" value="0" />
+        <option name="Compressed_Texcoord" value="1" />
+        <option name="Compressed_Secondary_Texcoord" value="2" />
+      </bitmask16>
+      <short name="Hardware Node Count" offset="28" visible="True" />
+      <short name="Node Map Size" offset="30" visible="True" />
+      <short name="Software Plane Count" offset="32" visible="True" />
+      <short name="Total Subpart Count" offset="34" visible="True" />
+      <bitmask32 name="Section Lighting Flags" offset="36" visible="True">
+        <option name="Has_LM_Texcoords" value="0" />
+        <option name="Has_LM_Inc._Rad." value="1" />
+        <option name="Has_LM_Colors" value="2" />
+        <option name="Has_LM_Prt" value="3" />
+      </bitmask32>
+      <int name="Block Offset" offset="40" visible="True" />
+      <int name="Block Size" offset="44" visible="True" />
+      <int name="Section Data Size" offset="48" visible="True" />
+      <int name="Resource Data Size" offset="52" visible="True" />
+      <unused offset="56" size="8" />
+      <id name="Owner Tag Section Offset" offset="64" visible="True" />
+      <int name="Unused" offset="68" visible="True" />
+      <int name="Unused" offset="72" visible="True" />
+      <int name="Unused" offset="76" visible="True" />
+      <unused offset="80" size="4" />
+    </struct>
+    <struct name="Cluster Render Info" offset="40" visible="true" size="4" label="">
+      <short name="Bitmap Index" offset="0" visible="True" />
+      <short name="Palette Index" offset="2" visible="True" />
+    </struct>
+    <struct name="Poop Definitions" offset="48" visible="true" size="84" label="">
+      <short name="Total Vertex Count" offset="0" visible="True" />
+      <short name="Total Triangle Count" offset="2" visible="True" />
+      <short name="Total Part Count" offset="4" visible="True" />
+      <short name="Shadow-Casting Triangle Count" offset="6" visible="True" />
+      <short name="Shadow-Casting Part Count" offset="8" visible="True" />
+      <short name="Opaque Point Count" offset="10" visible="True" />
+      <short name="Opaque Vertex Count" offset="12" visible="True" />
+      <short name="Opaque Part Count" offset="14" visible="True" />
+      <short name="Opague Max Nodes/Vertex" offset="16" visible="True" />
+      <short name="Transparent Max Nodes/Vertex" offset="18" visible="True" />
+      <short name="Shadow-Casting Rigid Triangle" offset="20" visible="True" />
+      <enum32 name="Geometry Classification" offset="22" visible="True">
+        <option name="World_Space" value="0" />
+      </enum32>
+      <bitmask16 name="Geometry Compression Flags" offset="26" visible="True">
+        <option name="Compressed_Position" value="0" />
+        <option name="Compressed_Texcoord" value="1" />
+        <option name="Compressed_Secondary_Texcoord" value="2" />
+      </bitmask16>
+      <short name="Hardware Node Count" offset="28" visible="True" />
+      <short name="Node Map Size" offset="30" visible="True" />
+      <short name="Software Plane Count" offset="32" visible="True" />
+      <short name="Total Subpart Count" offset="34" visible="True" />
+      <bitmask32 name="Section Lighting Flags" offset="36" visible="True">
+        <option name="Has_LM_Texcoords" value="0" />
+        <option name="Has_LM_Inc._Rad." value="1" />
+        <option name="Has_LM_Colors" value="2" />
+        <option name="Has_LM_Prt" value="3" />
+      </bitmask32>
+      <int name="Block Offset" offset="40" visible="True" />
+      <int name="Block Size" offset="44" visible="True" />
+      <int name="Section Data Size" offset="48" visible="True" />
+      <int name="Resource Data Size" offset="52" visible="True" />
+      <unused offset="56" size="8" />
+      <id name="Owner Tag Section Offset" offset="64" visible="True" />
+      <int name="Unused" offset="68" visible="True" />
+      <int name="Unused" offset="72" visible="True" />
+      <int name="Unused" offset="76" visible="True" />
+      <unused offset="80" size="4" />
+    </struct>
+    <struct name="Lighting Environments" offset="56" visible="true" size="220" label="">
+      <float name="Sample Point X" offset="0" visible="True" />
+      <float name="Sample Point Y" offset="4" visible="True" />
+      <float name="Sample Point Z" offset="8" visible="True" />
+      <float name="Red Coefficient" offset="12" visible="True" />
+      <float name="Red Coefficient" offset="16" visible="True" />
+      <float name="Red Coefficient" offset="20" visible="True" />
+      <float name="Red Coefficient" offset="24" visible="True" />
+      <float name="Red Coefficient" offset="28" visible="True" />
+      <float name="Red Coefficient" offset="32" visible="True" />
+      <float name="Red Coefficient" offset="36" visible="True" />
+      <float name="Red Coefficient" offset="40" visible="True" />
+      <float name="Red Coefficient" offset="44" visible="True" />
+      <float name="Green Coefficient" offset="48" visible="True" />
+      <float name="Green Coefficient" offset="52" visible="True" />
+      <float name="Green Coefficient" offset="56" visible="True" />
+      <float name="Green Coefficient" offset="60" visible="True" />
+      <float name="Green Coefficient" offset="64" visible="True" />
+      <float name="Green Coefficient" offset="68" visible="True" />
+      <float name="Green Coefficient" offset="72" visible="True" />
+      <float name="Green Coefficient" offset="76" visible="True" />
+      <float name="Green Coefficient" offset="80" visible="True" />
+      <float name="Green Coefficient" offset="84" visible="True" />
+      <float name="Blue Coefficient" offset="88" visible="True" />
+      <float name="Blue Coefficient" offset="92" visible="True" />
+      <float name="Blue Coefficient" offset="96" visible="True" />
+      <float name="Blue Coefficient" offset="100" visible="True" />
+      <float name="Blue Coefficient" offset="104" visible="True" />
+      <float name="Blue Coefficient" offset="108" visible="True" />
+      <float name="Blue Coefficient" offset="112" visible="True" />
+      <float name="Blue Coefficient" offset="116" visible="True" />
+      <float name="Blue Coefficient" offset="120" visible="True" />
+      <float name="Mean Incoming Light Direction i" offset="124" visible="True" />
+      <float name="Mean Incoming Light Direction j" offset="128" visible="True" />
+      <float name="Mean Incoming Light Direction k" offset="132" visible="True" />
+      <float name="Incoming Light Intensity X" offset="136" visible="True" />
+      <float name="Incoming Light Intensity Y" offset="140" visible="True" />
+      <float name="Incoming Light Intensity Z" offset="144" visible="True" />
+      <int name="Specular Bitmap Index" offset="148" visible="True" />
+      <float name="Rotation Axis i" offset="152" visible="True" />
+      <float name="Rotation Axis j" offset="156" visible="True" />
+      <float name="Rotation Axis k" offset="160" visible="True" />
+      <float name="Rotation Speed" offset="164" visible="True" />
+      <float name="Bump Direction i" offset="168" visible="True" />
+      <float name="Bump Direction j" offset="172" visible="True" />
+      <float name="Bump Direction k" offset="176" visible="True" />
+      <float name="Color Tint" offset="180" visible="True" />
+      <enum32 name="Procedural Overide" offset="184" visible="True">
+      </enum32>
+      <bitmask32 name="Flags" offset="188" visible="True">
+        <option name="Leave_Me_Alone_Please" value="0" />
+      </bitmask32>
+      <float name="Procedural Param0 i" offset="192" visible="True" />
+      <float name="Procedural Param0 j" offset="196" visible="True" />
+      <float name="Procedural Param0 k" offset="200" visible="True" />
+      <float name="Procedural Param1.XYZ i" offset="204" visible="True" />
+      <float name="Procedural Param1.XYZ j" offset="208" visible="True" />
+      <float name="Procedural Param1.XYZ k" offset="212" visible="True" />
+      <float name="Procedural Param1.w" offset="216" visible="True" />
+    </struct>
+    <struct name="Geometry Buckets" offset="64" visible="true" size="56" label="">
+      <bitmask32 name="Flags" offset="0" visible="True">
+        <option name="Incident_Direction" value="0" />
+        <option name="Color" value="1" />
+      </bitmask32>
+      <unused offset="4" size="8" />
+      <int name="Raw Offset" offset="12" visible="True" />
+      <int name="Raw Size" offset="16" visible="True" />
+      <int name="Section Data Size" offset="20" visible="True" />
+      <int name="Resource Data Size" offset="24" visible="True" />
+      <struct name="Resources" offset="28" visible="true" size="16" label="">
+        <enum32 name="Type" offset="0" visible="True">
+        </enum32>
+        <short name="Primary Locator" offset="4" visible="True" />
+        <short name="Secondary Locator" offset="6" visible="True" />
+        <int name="Resource Data Size" offset="8" visible="True" />
+        <int name="Resource Data Offset" offset="12" visible="True" />
+      </struct>
+      <id name="Owner Tag Section Offset" offset="36" visible="True" />
+      <int name="Unused" offset="40" visible="True" />
+      <int name="Unused" offset="44" visible="True" />
+      <unused offset="48" size="8" />
+    </struct>
+    <struct name="Instance Render Info" offset="72" visible="true" size="4" label="">
+      <short name="Bitmap Index" offset="0" visible="True" />
+      <short name="Palette Index" offset="2" visible="True" />
+    </struct>
+    <struct name="Instance Bucket Refs" offset="80" visible="true" size="12" label="">
+      <short name="Flags" offset="0" visible="True" />
+      <short name="Bucket Index" offset="2" visible="True" />
+      <struct name="Section Offsets" offset="4" visible="true" size="4" label="">
+        <id name="Section Offset" offset="0" visible="True" />
+      </struct>
+    </struct>
+    <struct name="Scenary Object Info" offset="88" visible="true" size="12" label="">
+      <int name="Unique ID" offset="0" visible="True" />
+      <short name="Origin BSP Index" offset="4" visible="True" />
+      <byte name="Type" offset="6" visible="True" />
+      <byte name="Source" offset="7" visible="True" />
+      <int name="Render Model Checksum" offset="8" visible="True" />
+    </struct>
+    <struct name="Scenary Object Bucket Refs" offset="96" visible="true" size="12" label="">
+      <short name="Flags" offset="0" visible="True" />
+      <short name="Bucket Index" offset="2" visible="True" />
+      <struct name="Section Offsets" offset="4" visible="true" size="4" label="">
+        <id name="Section Offset" offset="0" visible="True" />
+      </struct>
+    </struct>
+  </struct>
+  <unused offset="136" size="124" />
+</plugin>

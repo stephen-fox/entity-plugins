@@ -1,0 +1,30 @@
+<plugin class="SND!" author="Grimdoomer" version="0.99" headersize="20">
+  <bitmask16 name="Flags" offset="0" visible="True">
+    <option name="Fit_To_ADPMC_BlockSize" value="0" />
+    <option name="Split_Long_Sound_Into_Permutations" value="1" />
+    <option name="Always_Spatialize" value="2" />
+    <option name="Never_Obstruct" value="3" />
+    <option name="Internal_Dont_Touch" value="4" />
+    <option name="Used_Huge_Sound_Transmission" value="5" />
+    <option name="Link_Count_to_Owner_Unit" value="6" />
+    <option name="Pitch_Range_is_Language" value="7" />
+    <option name="Don't_use_Sound_Class_Speaker_Flag" value="8" />
+    <option name="Don't_use_Lipsync_Data" value="9" />
+  </bitmask16>
+  <short name="Sound Class" offset="2" visible="True" />
+  <enum8 name="Compression" offset="4" visible="True">
+    <option name="None" value="0" />
+    <option name="XBox_ADPCM" value="1" />
+    <option name="WMA" value="2" />
+  </enum8>
+  <enum8 name="Compression" offset="5" visible="True">
+    <option name="None_(big_Endian)" value="0" />
+  </enum8>
+  <short name="Playback Index" offset="6" visible="True" />
+  <short name="First Pitch Range Index" offset="8" visible="True" />
+  <byte name="Pitch Range Count" offset="10" visible="True" />
+  <byte name="Scale Index" offset="11" visible="True" />
+  <short name="Promotion Index" offset="12" visible="True" />
+  <short name="Custom Playback Index" offset="14" visible="True" />
+  <int name="Extra Info Index" offset="16" visible="True" />
+</plugin>

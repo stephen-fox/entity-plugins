@@ -1,0 +1,181 @@
+<plugin class="ADLG" author="Grimdoomer" version="0.99" headersize="44">
+  <struct name="Vocalizations" offset="0" visible="true" size="96" label="">
+    <stringid name="Vocalization" offset="0" visible="True" />
+    <stringid name="Parent Vocalization" offset="4" visible="True" />
+    <short name="Parent Index" offset="8" visible="True" />
+    <enum16 name="Priority" offset="10" visible="True">
+      <option name="None" value="0" />
+      <option name="Recall" value="1" />
+      <option name="Idle" value="2" />
+      <option name="Comment" value="3" />
+      <option name="Idle-Response" value="4" />
+      <option name="Post_Combat" value="5" />
+      <option name="Combat" value="6" />
+      <option name="Status" value="7" />
+      <option name="Respond" value="8" />
+      <option name="Warn" value="9" />
+      <option name="Act" value="10" />
+      <option name="React" value="11" />
+      <option name="Involentary" value="12" />
+      <option name="Scream" value="13" />
+      <option name="Scripted" value="14" />
+      <option name="Death" value="15" />
+    </enum16>
+    <bitmask32 name="FLags" offset="12" visible="True">
+      <option name="Immediate" value="0" />
+      <option name="Interupt" value="1" />
+      <option name="Cancel_Low_Priority" value="2" />
+    </bitmask32>
+    <enum16 name="Glance Behavior" offset="16" visible="True">
+      <option name="Subject_Short" value="0" />
+      <option name="Subject_Long" value="1" />
+      <option name="Cause_Short" value="2" />
+      <option name="Cause_Long" value="3" />
+      <option name="Friend_Short" value="4" />
+      <option name="Friend_Long" value="5" />
+    </enum16>
+    <enum16 name="Glance Recipiant Behavior" offset="18" visible="True">
+      <option name="Subject_Short" value="0" />
+      <option name="Subject_Long" value="1" />
+      <option name="Cause_Short" value="2" />
+      <option name="Cause_Long" value="3" />
+      <option name="Friend_Short" value="4" />
+      <option name="Friend_Long" value="5" />
+    </enum16>
+    <enum16 name="Perception Type" offset="20" visible="True">
+      <option name="None" value="0" />
+      <option name="Speaker" value="1" />
+      <option name="Listener" value="2" />
+    </enum16>
+    <enum16 name="Max Combat Status" offset="22" visible="True">
+      <option name="Asleep" value="0" />
+      <option name="Idle" value="1" />
+      <option name="Alert" value="2" />
+      <option name="Active" value="3" />
+      <option name="Uninspected" value="4" />
+      <option name="Definite" value="5" />
+      <option name="Certain" value="6" />
+      <option name="Visible" value="7" />
+      <option name="Clear_Los" value="8" />
+      <option name="Dangerous" value="9" />
+    </enum16>
+    <enum16 name="Animation Impulse" offset="24" visible="True">
+      <option name="None" value="0" />
+      <option name="Shake-Fist" value="1" />
+      <option name="Cheer" value="2" />
+      <option name="Surprise-Front" value="3" />
+      <option name="Surprise-Back" value="4" />
+      <option name="Taunt" value="5" />
+      <option name="Brace" value="6" />
+      <option name="Point" value="7" />
+      <option name="Hold" value="8" />
+      <option name="Wave" value="9" />
+      <option name="Advance" value="10" />
+      <option name="Fallback" value="11" />
+    </enum16>
+    <enum16 name="Overlap Priority" offset="26" visible="True">
+      <option name="None" value="0" />
+      <option name="Recall" value="1" />
+      <option name="Idle" value="2" />
+      <option name="Comment" value="3" />
+      <option name="Idle-Response" value="4" />
+      <option name="Post_Combat" value="5" />
+      <option name="Combat" value="6" />
+      <option name="Status" value="7" />
+      <option name="Respond" value="8" />
+      <option name="Warn" value="9" />
+      <option name="Act" value="10" />
+      <option name="React" value="11" />
+      <option name="Involentary" value="12" />
+      <option name="Scream" value="13" />
+      <option name="Scripted" value="14" />
+      <option name="Death" value="15" />
+    </enum16>
+    <float name="Sound Repetition Delay [Seconds]" offset="28" visible="True" />
+    <float name="Allowable Quenue Delay [Seconds]" offset="32" visible="True" />
+    <float name="Pre Voc. Delay [Seconds]" offset="36" visible="True" />
+    <float name="Notification Delay [Seconds]" offset="40" visible="True" />
+    <float name="Post Voc. Delay [Seconds]" offset="44" visible="True" />
+    <float name="Repeat Delay [Seconds]" offset="48" visible="True" />
+    <float name="Weight" offset="52" visible="True" />
+    <float name="Speaker Freeze Time" offset="56" visible="True" />
+    <float name="Listener Freeze Time" offset="60" visible="True" />
+    <enum16 name="Speaker Emotion" offset="64" visible="True">
+      <option name="None" value="0" />
+      <option name="Asleep" value="1" />
+      <option name="Amorous" value="2" />
+      <option name="Happy" value="3" />
+      <option name="Inquisitive" value="4" />
+      <option name="Repulsed" value="5" />
+      <option name="Dissapointed" value="6" />
+      <option name="Shocked" value="7" />
+      <option name="Scared" value="8" />
+      <option name="Arrogant" value="9" />
+      <option name="Annoyed" value="10" />
+      <option name="Angry" value="11" />
+      <option name="Pensive" value="12" />
+      <option name="Pain" value="13" />
+    </enum16>
+    <enum16 name="Listener Emotion" offset="66" visible="True">
+      <option name="None" value="0" />
+      <option name="Asleep" value="1" />
+      <option name="Amorous" value="2" />
+      <option name="Happy" value="3" />
+      <option name="Inquisitive" value="4" />
+      <option name="Repulsed" value="5" />
+      <option name="Dissapointed" value="6" />
+      <option name="Shocked" value="7" />
+      <option name="Scared" value="8" />
+      <option name="Arrogant" value="9" />
+      <option name="Annoyed" value="10" />
+      <option name="Angry" value="11" />
+      <option name="Pensive" value="12" />
+      <option name="Pain" value="13" />
+    </enum16>
+    <float name="Player Skip Fraction" offset="68" visible="True" />
+    <float name="Skip Fraction" offset="72" visible="True" />
+    <stringid name="Sample Line" offset="76" visible="True" />
+    <struct name="Responses" offset="80" visible="true" size="12" label="">
+      <stringid name="Vocalization Name" offset="0" visible="True" />
+      <bitmask32 name="Flags" offset="4" visible="True">
+        <option name="Non-Exclusive" value="0" />
+        <option name="Trigger_Response" value="1" />
+      </bitmask32>
+      <byte name="Vocalization Index (Post Process)" offset="8" visible="True" />
+      <enum16 name="Reponse Type" offset="9" visible="True">
+        <option name="Friend" value="0" />
+        <option name="Enemy" value="1" />
+        <option name="Listener" value="2" />
+        <option name="Point" value="3" />
+        <option name="Peer" value="4" />
+      </enum16>
+      <unused offset="11" size="1" />
+    </struct>
+    <unused offset="88" size="8" />
+  </struct>
+  <struct name="Killing/Cautious Dialog" offset="8" visible="true" size="64" label="">
+    <int name="Unknown" offset="0" visible="True" />
+    <stringid name="Situation" offset="4" visible="True" />
+    <int name="Unknown" offset="8" visible="True" />
+    <int name="Unknown" offset="12" visible="True" />
+    <unused offset="16" size="4" />
+    <int name="Unknown" offset="20" visible="True" />
+    <int name="Unknown" offset="24" visible="True" />
+    <unused offset="28" size="4" />
+    <int name="Unknown" offset="32" visible="True" />
+    <int name="Unknown" offset="36" visible="True" />
+    <stringid name="Unknown" offset="40" visible="True" />
+    <int name="Unknown" offset="44" visible="True" />
+    <stringid name="Unknown" offset="48" visible="True" />
+    <unused offset="52" size="8" />
+    <int name="Unknown" offset="60" visible="True" />
+  </struct>
+  <unused offset="16" size="12" />
+  <struct name="Dialogue Data" offset="28" visible="true" size="4" label="">
+    <short name="Start Index" offset="0" visible="True" />
+    <short name="Length" offset="2" visible="True" />
+  </struct>
+  <struct name="Involuntary Data" offset="36" visible="true" size="4" label="">
+    <int name="Involuntary Localization Index" offset="0" visible="True" />
+  </struct>
+</plugin>

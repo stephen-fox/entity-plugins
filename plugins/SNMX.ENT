@@ -1,0 +1,24 @@
+<plugin class="SNMX" author="Grimdoomer" version="0.99" headersize="88">
+  <float name="First Person Left Side Left Stereo Gain" offset="0" visible="True" />
+  <float name="First Person Left Side Right Stereo Gain" offset="4" visible="True" />
+  <float name="First Person Middle Side Left Stereo Gain" offset="8" visible="True" />
+  <float name="First Person Middle Side Right Stereo Gain" offset="12" visible="True" />
+  <float name="First Person Right Side Left Stereo Gain" offset="16" visible="True" />
+  <float name="First Person Right Side Right Stereo Gain" offset="20" visible="True" />
+  <float name="First Person Stereo Front Speaker Gain dB" offset="24" visible="True" />
+  <float name="First Person Stereo Rear Speaker Gain dB" offset="28" visible="True" />
+  <float name="Ambient Stereo Front Speaker Gain dB" offset="32" visible="True" />
+  <float name="Ambient Stereo Rear Speaker Gain dB" offset="36" visible="True" />
+  <float name="Global Mono Unspatialized Gain dB" offset="40" visible="True" />
+  <float name="Global Stereo To 3D Gain dB" offset="44" visible="True" />
+  <float name="Global Rear Surround To Front Stereo Gain dB" offset="48" visible="True" />
+  <float name="Surround Center Speaker Gain dB" offset="52" visible="True" />
+  <float name="Surround Center Speaker Gain dB" offset="56" visible="True" />
+  <float name="Stereo Front Speaker Gain dB" offset="60" visible="True" />
+  <float name="Stereo Center Speaker Gain dB" offset="64" visible="True" />
+  <float name="Stereo Unspatialized Gain dB" offset="68" visible="True" />
+  <float name="Solo Player Fade Out Delay" offset="72" visible="True" />
+  <float name="Solo Player Fade Out Time Sec" offset="76" visible="True" />
+  <float name="Solo Player Fade In Time Sec" offset="80" visible="True" />
+  <float name="Game Music Fade Out Time Sec" offset="84" visible="True" />
+</plugin>

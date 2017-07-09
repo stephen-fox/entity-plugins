@@ -1,0 +1,121 @@
+<plugin class="SKIN" author="Grimdoomer" version="0.99" headersize="60">
+  <bitmask32 name="Flags" offset="0" visible="True">
+    <option name="Unused" value="0" />
+  </bitmask32>
+  <tag name="Arrow_bitmap" offset="4" visible="True" />
+  <id name="Arrow_bitmap" offset="8" visible="True" />
+  <short name="Up-Arrows Offset X" offset="12" visible="True" />
+  <short name="Up-Arrows Offset Y" offset="14" visible="True" />
+  <short name="Down-Arrows Offset X" offset="16" visible="True" />
+  <short name="Down-Arrows Offset Y" offset="18" visible="True" />
+  <struct name="Item Animations" offset="20" visible="true" size="16" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="Unused" value="0" />
+    </bitmask32>
+    <float name="Animation Period" offset="4" visible="True" />
+    <struct name="Keyframes" offset="8" visible="true" size="20" label="">
+      <float name="Alpha" offset="0" visible="True" />
+      <float name="Bitmap Flashing speed" offset="4" visible="True" />
+      <float name="X" offset="8" visible="True" />
+      <float name="Y" offset="12" visible="True" />
+      <float name="X" offset="16" visible="True" />
+    </struct>
+  </struct>
+  <struct name="Text Blocks" offset="28" visible="true" size="44" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="Left_Justify_Text" value="0" />
+      <option name="Right_Justify_Text" value="1" />
+      <option name="Pulsating_Text" value="2" />
+      <option name="Callout_text" value="3" />
+      <option name="Smal_(31_char)_Buffer" value="4" />
+    </bitmask32>
+    <int name="Animation Index (0 = None, Max = 63)" offset="4" visible="True" />
+    <short name="Intro Animation Delay Milliseconds" offset="8" visible="True" />
+    <enum16 name="Custom Font" offset="10" visible="True">
+      <option name="Terminal" value="0" />
+      <option name="Body_Text" value="1" />
+      <option name="Title" value="2" />
+      <option name="Super_Large_Font" value="3" />
+      <option name="Large_Body_Text" value="4" />
+      <option name="Split_Screen_HUD_Message" value="5" />
+      <option name="Full_Screen_HUD_Message" value="6" />
+      <option name="English_Body_Text" value="7" />
+      <option name="HUD_Number_Text" value="8" />
+      <option name="Subtitle_Font" value="9" />
+      <option name="Main_Menu_Font" value="10" />
+      <option name="Text_Char_Font" value="11" />
+    </enum16>
+    <float name="Text Color Alpha" offset="12" visible="True" />
+    <float name="Text Color AColor Red" offset="16" visible="True" />
+    <float name="Text Color AColor Green" offset="20" visible="True" />
+    <float name="Text Color AColor Blue" offset="24" visible="True" />
+    <short name="Text Bounds Top" offset="28" visible="True" />
+    <short name="Text Bounds Left" offset="30" visible="True" />
+    <short name="Text Bounds Bottom" offset="32" visible="True" />
+    <short name="Text Bounds Right" offset="34" visible="True" />
+    <stringid name="String name" offset="36" visible="True" />
+    <int name="Render Depth Bias" offset="40" visible="True" />
+  </struct>
+  <struct name="Bitmap Blocks" offset="36" visible="true" size="56" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="Ignore_For_the_List_Skin_Size_Calculator" value="0" />
+      <option name="Swap_on_Relative_List_Position" value="1" />
+      <option name="Render_As_Progress_Bar" value="2" />
+    </bitmask32>
+    <int name="Animation Index (0 = None, Max = 63)" offset="4" visible="True" />
+    <short name="Into Animation Delay Milliseconds" offset="8" visible="True" />
+    <enum16 name="Blend Bitmap Method" offset="10" visible="True">
+      <option name="Standard" value="0" />
+      <option name="Multiply" value="1" />
+      <option name="Unused" value="2" />
+    </enum16>
+    <short name="Bitmap Placement coord X" offset="12" visible="True" />
+    <short name="Bitmap Placement coord Y" offset="14" visible="True" />
+    <float name="Horizontal Texture Wraps/Second" offset="16" visible="True" />
+    <float name="Vertical Texture Wraps/Second" offset="20" visible="True" />
+    <tag name="Bitmap" offset="24" visible="True" />
+    <id name="Bitmap" offset="28" visible="True" />
+    <short name="Render Depth Bias" offset="32" visible="True" />
+    <short name="Unused" offset="34" visible="True" />
+    <float name="Sprite Animation Speed FPS" offset="36" visible="True" />
+    <short name="Progress Bottom Left X" offset="40" visible="True" />
+    <short name="Progress Bottom Left Y" offset="42" visible="True" />
+    <stringid name="Bitmap color variation fuction" offset="44" visible="True" />
+    <float name="Progress Scale i" offset="48" visible="True" />
+    <float name="Progress Scale j" offset="52" visible="True" />
+  </struct>
+  <struct name="HUD Blocks" offset="44" visible="true" size="36" label="">
+    <bitmask16 name="Flags" offset="0" visible="True">
+      <option name="Ignore_for_List_Skin_Size" value="0" />
+      <option name="Needs_Valid_Rank" value="1" />
+    </bitmask16>
+    <int name="Animation Index (0 = None, Max = 63)" offset="2" visible="True" />
+    <short name="Intro Animation Delay Milliseconds" offset="6" visible="True" />
+    <short name="Render Depth Bias" offset="8" visible="True" />
+    <short name="Starting Bitmap Sequence Index" offset="10" visible="True" />
+    <tag name="Bitmap" offset="12" visible="True" />
+    <id name="Bitmap" offset="16" visible="True" />
+    <tag name="Shader" offset="20" visible="True" />
+    <id name="Shader" offset="24" visible="True" />
+    <short name="Bounds Top" offset="28" visible="True" />
+    <short name="Bounds Left" offset="30" visible="True" />
+    <short name="Bounds Bottom" offset="32" visible="True" />
+    <short name="Bounds Right" offset="34" visible="True" />
+  </struct>
+  <struct name="Players Block" offset="52" visible="true" size="24" label="">
+    <unused offset="0" size="4" />
+    <tag name="Skin_tag" offset="4" visible="True" />
+    <id name="Skin_tag" offset="8" visible="True" />
+    <short name="Bottom Left X" offset="12" visible="True" />
+    <short name="Bottom Left Y" offset="14" visible="True" />
+    <enum8 name="Table Order" offset="16" visible="True">
+      <option name="Table_Major" value="0" />
+      <option name="Column_Major" value="1" />
+    </enum8>
+    <byte name="Max Player Count" offset="17" visible="True" />
+    <byte name="Raw Count" offset="18" visible="True" />
+    <byte name="Column Count" offset="19" visible="True" />
+    <short name="Row Height" offset="20" visible="True" />
+    <short name="Column Width" offset="22" visible="True" />
+  </struct>
+</plugin>

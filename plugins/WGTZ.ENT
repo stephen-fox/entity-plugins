@@ -1,0 +1,12 @@
+<plugin class="WGTZ" author="Grimdoomer" version="0.99" headersize="32">
+  <tag name="Globals" offset="0" visible="True" />
+  <id name="Globals" offset="4" visible="True" />
+  <struct name="Collection" offset="8" visible="true" size="8" label="">
+    <tag name="Game_Shell" offset="0" visible="True" />
+    <id name="Game_Shell" offset="4" visible="True" />
+  </struct>
+  <tag name="Gametype_Collection" offset="16" visible="True" />
+  <id name="Gametype_Collection" offset="20" visible="True" />
+  <tag name="Unicode_Strings" offset="24" visible="True" />
+  <id name="Unicode_Strings" offset="28" visible="True" />
+</plugin>

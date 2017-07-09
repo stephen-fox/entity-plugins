@@ -1,0 +1,532 @@
+<plugin class="CHAR" author="Grimdoomer" version="0.99" headersize="236">
+  <bitmask32 name="Character Flags" offset="0" visible="True">
+    <option name="Flag1" value="0" />
+  </bitmask32>
+  <tag name="Parent_Character" offset="4" visible="True" />
+  <id name="Parent_Character" offset="8" visible="True" />
+  <tag name="Unit" offset="12" visible="True" />
+  <id name="Unit" offset="16" visible="True" />
+  <tag name="Creature" offset="20" visible="True" />
+  <id name="Creature" offset="24" visible="True" />
+  <tag name="Style" offset="28" visible="True" />
+  <id name="Style" offset="32" visible="True" />
+  <tag name="Major_Character" offset="36" visible="True" />
+  <id name="Major_Character" offset="40" visible="True" />
+  <struct name="Variants" offset="44" visible="true" size="12" label="">
+    <stringid name="Name" offset="0" visible="True" />
+    <int name="Variant Index" offset="4" visible="True" />
+    <stringid name="Variant Designator" offset="8" visible="True" />
+  </struct>
+  <struct name="General Properties" offset="52" visible="true" size="12" label="">
+    <bitmask32 name="General Flags" offset="0" visible="True">
+      <option name="Swarm" value="0" />
+      <option name="Flying" value="1" />
+      <option name="Dual_Wields" value="2" />
+      <option name="Uses_Gravemind" value="3" />
+    </bitmask32>
+    <enum32 name="Type" offset="4" visible="True">
+      <option name="Elite" value="0" />
+      <option name="Jackal" value="1" />
+      <option name="Grunt" value="2" />
+      <option name="Hunter" value="3" />
+      <option name="Engineer" value="4" />
+      <option name="Assassin" value="5" />
+      <option name="Player" value="6" />
+      <option name="Marien" value="7" />
+      <option name="Crew" value="8" />
+      <option name="Combat_Form" value="9" />
+      <option name="Infection_Form" value="10" />
+      <option name="Carrier_Form" value="11" />
+      <option name="Monitor" value="12" />
+      <option name="Sentinal" value="13" />
+      <option name="None" value="14" />
+      <option name="Mounted_Weapon" value="15" />
+      <option name="Brute" value="16" />
+      <option name="Prophet" value="17" />
+      <option name="Bugger" value="18" />
+      <option name="Juggernaunt" value="19" />
+    </enum32>
+    <float name="Scariness" offset="8" visible="True" />
+  </struct>
+  <struct name="Vitality Properties" offset="60" visible="true" size="112" label="">
+    <bitmask32 name="Vitality Flags" offset="0" visible="True">
+      <option name="Unused" value="0" />
+    </bitmask32>
+    <float name="Health on easy" offset="4" visible="True" />
+    <float name="Shields on easy" offset="8" visible="True" />
+    <float name="Health on legendary" offset="12" visible="True" />
+    <float name="Shields on legendary" offset="16" visible="True" />
+    <float name="Health Recharge Fraction" offset="20" visible="True" />
+    <float name="Soft Ping Threshold With Shields" offset="24" visible="True" />
+    <float name="Soft Ping Threshold No Shields" offset="28" visible="True" />
+    <float name="Soft Ping Min Interupt Time" offset="32" visible="True" />
+    <float name="Hard Ping Threshold With Shields" offset="36" visible="True" />
+    <float name="Hard Ping Threshold No Shields" offset="40" visible="True" />
+    <float name="Hard Ping Min Interupt Time" offset="44" visible="True" />
+    <float name="Current Damage Decay Delay" offset="48" visible="True" />
+    <float name="Current Damage Decay Time" offset="52" visible="True" />
+    <float name="Recent Damage Decay Delay" offset="56" visible="True" />
+    <float name="Recent Damage Decay Time" offset="60" visible="True" />
+    <float name="Health Recharge Delay Time" offset="64" visible="True" />
+    <float name="Health Recharge Time" offset="68" visible="True" />
+    <float name="Shield Recharge Delay Time" offset="72" visible="True" />
+    <float name="Shield Recharge Time" offset="76" visible="True" />
+    <float name="Stun Threshold" offset="80" visible="True" />
+    <float name="Stun Time Bounds" offset="84" visible="True" />
+    <float name="To" offset="88" visible="True" />
+    <float name="Extended Shield Damage Threshold %" offset="92" visible="True" />
+    <float name="Extended Health Damage Threshold %" offset="96" visible="True" />
+    <unused offset="100" size="8" />
+    <float name="Suicide Radius" offset="108" visible="True" />
+  </struct>
+  <struct name="Placement Properties" offset="68" visible="true" size="52" label="">
+    <float name="Few Upgrade Chance (Easy)" offset="0" visible="True" />
+    <float name="Few Upgrade Chance (Normal)" offset="4" visible="True" />
+    <float name="Few Upgrade Chance (Heroic)" offset="8" visible="True" />
+    <float name="Few Upgrade Chance (Legendary)" offset="12" visible="True" />
+    <float name="Normal Upgrade Chance (Easy)" offset="16" visible="True" />
+    <float name="Normal Upgrade Chance (Normal)" offset="20" visible="True" />
+    <float name="Normal Upgrade Chance (Heroic)" offset="24" visible="True" />
+    <float name="Normal Upgrade Chance (Legendary)" offset="28" visible="True" />
+    <float name="Many Upgrade Chance (Easy)" offset="32" visible="True" />
+    <float name="Many Upgrade Chance (Normal)" offset="36" visible="True" />
+    <float name="Many Upgrade Chance (Heroic)" offset="40" visible="True" />
+    <float name="Many Upgrade Chance (Legendary)" offset="44" visible="True" />
+    <unused offset="48" size="4" />
+  </struct>
+  <struct name="Perception Properties" offset="76" visible="true" size="52" label="">
+    <bitmask32 name="Perception FLags" offset="0" visible="True">
+      <option name="Flag1" value="0" />
+    </bitmask32>
+    <float name="Max Vision Distance (World Units)" offset="4" visible="True" />
+    <float name="Central Vision Angle (Degrees)" offset="8" visible="True" />
+    <float name="Max Vision Angle (Degrees)" offset="12" visible="True" />
+    <float name="Peripheral Vision Angle (Degrees)" offset="16" visible="True" />
+    <float name="Peripheral Distance (World Units)" offset="20" visible="True" />
+    <float name="Hearing Distance (World Units)" offset="24" visible="True" />
+    <float name="Notice Project Chance" offset="28" visible="True" />
+    <float name="Notice Vehicle Chance" offset="32" visible="True" />
+    <float name="Combat Perception Time" offset="36" visible="True" />
+    <float name="Guard Perception Time" offset="40" visible="True" />
+    <float name="Non-Combat Perception Time" offset="44" visible="True" />
+    <float name="First Ack. Surprise Distance (World Units)" offset="48" visible="True" />
+  </struct>
+  <struct name="Look Properties" offset="84" visible="true" size="80" label="">
+    <float name="Maximum Aiming Deviation Y" offset="0" visible="True" />
+    <float name="Maximum Aiming Deviation P" offset="4" visible="True" />
+    <float name="Maximum Looking Deviation Y" offset="8" visible="True" />
+    <float name="Maximum Looking Deviation P" offset="12" visible="True" />
+    <float name="Non-Combat Look Delta L" offset="16" visible="True" />
+    <float name="Non-Combat Look Delta R" offset="20" visible="True" />
+    <float name="Combat Look Delta L" offset="24" visible="True" />
+    <float name="Combat Look Delta R" offset="28" visible="True" />
+    <float name="Non-Combat Idle Looking (Seconds)" offset="32" visible="True" />
+    <float name="To (Seconds)" offset="36" visible="True" />
+    <float name="Non-Combat Idle Aiming (Seconds)" offset="40" visible="True" />
+    <float name="To (Seconds)" offset="44" visible="True" />
+    <float name="Combat Idle Looking (Seconds)" offset="48" visible="True" />
+    <float name="To (Seconds)" offset="52" visible="True" />
+    <float name="Combat Idle Aiming (Seconds)" offset="56" visible="True" />
+    <float name="To (Seconds)" offset="60" visible="True" />
+    <float name="Unknown" offset="64" visible="True" />
+    <float name="Unknown" offset="68" visible="True" />
+    <float name="Unknown" offset="72" visible="True" />
+    <float name="Unknown" offset="76" visible="True" />
+  </struct>
+  <struct name="Movement Properties" offset="92" visible="true" size="36" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="Danger_Crouch_Allow_Movement" value="0" />
+      <option name="No_Side_Step" value="1" />
+      <option name="Prefer_To_Combat_Near_Friends" value="2" />
+      <option name="Hop_(To_Cover_Path_Segment)" value="3" />
+      <option name="Perch" value="4" />
+      <option name="Has_Flying_Mode" value="5" />
+      <option name="Disallow_Crouch" value="6" />
+    </bitmask32>
+    <float name="Pathfinding Radius" offset="4" visible="True" />
+    <float name="Destination Radius" offset="8" visible="True" />
+    <float name="Dive Grenade Chance" offset="12" visible="True" />
+    <enum16 name="Obstacle Leap Min Size" offset="16" visible="True">
+      <option name="None" value="0" />
+      <option name="Tiny" value="1" />
+      <option name="Small" value="2" />
+      <option name="Medium" value="3" />
+      <option name="Large" value="4" />
+      <option name="Huge" value="5" />
+      <option name="Immobile" value="6" />
+    </enum16>
+    <enum16 name="Obstacle Leap Max Size" offset="18" visible="True">
+      <option name="None" value="0" />
+      <option name="Tiny" value="1" />
+      <option name="Small" value="2" />
+      <option name="Medium" value="3" />
+      <option name="Large" value="4" />
+      <option name="Huge" value="5" />
+      <option name="Immobile" value="6" />
+    </enum16>
+    <enum16 name="Obstacle Ignore Size" offset="20" visible="True">
+      <option name="None" value="0" />
+      <option name="Tiny" value="1" />
+      <option name="Small" value="2" />
+      <option name="Medium" value="3" />
+      <option name="Large" value="4" />
+      <option name="Huge" value="5" />
+      <option name="Immobile" value="6" />
+    </enum16>
+    <enum16 name="Obstacle Smashable Size" offset="22" visible="True">
+      <option name="None" value="0" />
+      <option name="Tiny" value="1" />
+      <option name="Small" value="2" />
+      <option name="Medium" value="3" />
+      <option name="Large" value="4" />
+      <option name="Huge" value="5" />
+      <option name="Immobile" value="6" />
+    </enum16>
+    <enum32 name="Jump Height" offset="24" visible="True">
+      <option name="NONE" value="0" />
+      <option name="Down" value="1" />
+      <option name="Step" value="2" />
+      <option name="Crouch" value="3" />
+      <option name="Stand" value="4" />
+      <option name="Storey" value="5" />
+      <option name="Tower" value="6" />
+      <option name="Infinte" value="7" />
+    </enum32>
+    <bitmask32 name="Movement Hints" offset="28" visible="True">
+      <option name="Vault_Step" value="0" />
+      <option name="Vault_Crouch" value="1" />
+      <option name="" value="2" />
+      <option name="" value="3" />
+      <option name="" value="4" />
+      <option name="Mount_Step" value="5" />
+      <option name="Mount_Crouch" value="6" />
+      <option name="Mount_Stand" value="7" />
+      <option name="" value="8" />
+      <option name="" value="9" />
+      <option name="" value="10" />
+      <option name="Hoist_Crouch" value="11" />
+      <option name="Hoist_Stand" value="12" />
+      <option name="" value="13" />
+      <option name="" value="14" />
+      <option name="" value="15" />
+    </bitmask32>
+    <float name="Throttle Scale" offset="32" visible="True" />
+  </struct>
+  <struct name="Swarm Properties" offset="100" visible="true" size="40" label="">
+    <int name="Scatter Killed Count" offset="0" visible="True" />
+    <float name="Scatter Radius" offset="4" visible="True" />
+    <float name="Scatter Time" offset="8" visible="True" />
+    <float name="Hound Min Distance" offset="12" visible="True" />
+    <float name="Hound Max Distance" offset="16" visible="True" />
+    <float name="Perlin Offset Scale" offset="20" visible="True" />
+    <float name="Offset Period" offset="24" visible="True" />
+    <float name="To" offset="28" visible="True" />
+    <float name="Perlin Idle Movement Threshold" offset="32" visible="True" />
+    <float name="Perlin Combat Movement Threshold" offset="36" visible="True" />
+  </struct>
+  <struct name="Ready Properties" offset="108" visible="true" size="8" label="">
+    <float name="Ready Time Bounds" offset="0" visible="True" />
+    <float name="To" offset="4" visible="True" />
+  </struct>
+  <struct name="Engage Properties" offset="116" visible="true" size="16" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="Engage_Perch" value="0" />
+      <option name="Fight_Constant_Movement" value="1" />
+      <option name="Flight_Fight_Constant_Movement" value="2" />
+    </bitmask32>
+    <float name="Crouch Danger Threshold" offset="4" visible="True" />
+    <float name="Stand Danger Threshold" offset="8" visible="True" />
+    <float name="Fight Danger Move Threshold" offset="12" visible="True" />
+  </struct>
+  <struct name="Charge Properties" offset="124" visible="true" size="64" label="">
+    <bitmask32 name="Charge Flags" offset="0" visible="True">
+      <option name="Offhand_Melee_Allowed" value="0" />
+      <option name="Berserk_Whenever_Charged" value="1" />
+    </bitmask32>
+    <float name="Melee Consider Range" offset="4" visible="True" />
+    <float name="Melee Chance" offset="8" visible="True" />
+    <float name="Melee Atack Range" offset="12" visible="True" />
+    <float name="Melee Abort Range" offset="16" visible="True" />
+    <float name="Melee Attack Timeout" offset="20" visible="True" />
+    <float name="Melee Attack Delay Timer" offset="24" visible="True" />
+    <float name="Melee Leap Range" offset="28" visible="True" />
+    <float name="To" offset="32" visible="True" />
+    <float name="Melee Leap Chance" offset="36" visible="True" />
+    <float name="Ideal Leap Velocity" offset="40" visible="True" />
+    <float name="Max Leap Velocity" offset="44" visible="True" />
+    <float name="Melee Leap Ballistic" offset="48" visible="True" />
+    <float name="Melee Delay Timer" offset="52" visible="True" />
+    <tag name="Berserk_Weapon" offset="56" visible="True" />
+    <id name="Berserk_Weapon" offset="60" visible="True" />
+  </struct>
+  <struct name="Evasion Properties" offset="132" visible="true" size="20" label="">
+    <float name="Evasion Danger Threshold" offset="0" visible="True" />
+    <float name="Evasion Delay Timer" offset="4" visible="True" />
+    <float name="Evasion Chance" offset="8" visible="True" />
+    <float name="Evasion Proximity Threshold" offset="12" visible="True" />
+    <float name="Dive Retreat Chance" offset="16" visible="True" />
+  </struct>
+  <struct name="Cover Properties" offset="140" visible="true" size="64" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="Flag1" value="0" />
+    </bitmask32>
+    <float name="Hide Behind Cover Time" offset="4" visible="True" />
+    <float name="To" offset="8" visible="True" />
+    <float name="Cover Vitality Threshold" offset="12" visible="True" />
+    <float name="Cover Shield Fraction" offset="16" visible="True" />
+    <float name="Cover Check Delay" offset="20" visible="True" />
+    <float name="Emerge From Cover When Shielded" offset="24" visible="True" />
+    <float name="Cover Danger Threshold" offset="28" visible="True" />
+    <float name="Danger Upper Threshold" offset="32" visible="True" />
+    <float name="Cover Chance" offset="36" visible="True" />
+    <float name="To" offset="40" visible="True" />
+    <float name="Proximity Self Preserve" offset="44" visible="True" />
+    <float name="Disallow Cover Distance" offset="48" visible="True" />
+    <float name="Proximity Melee Distance" offset="52" visible="True" />
+    <float name="Unreachable Enemy Danger Threshold" offset="56" visible="True" />
+    <float name="Scary Target Threshold" offset="60" visible="True" />
+  </struct>
+  <struct name="Retreat Properties" offset="148" visible="true" size="76" label="">
+    <bitmask32 name="Retreat Flags" offset="0" visible="True">
+      <option name="Zig-Zag_when_Fleeing" value="0" />
+      <option name="Unused1" value="1" />
+    </bitmask32>
+    <float name="Shield Threshold" offset="4" visible="True" />
+    <float name="Scary Target Threshold" offset="8" visible="True" />
+    <float name="Danger Threshold" offset="12" visible="True" />
+    <float name="Proximity Threshold" offset="16" visible="True" />
+    <float name="Min/Max Forced Cower Time Bounds" offset="20" visible="True" />
+    <float name="To" offset="24" visible="True" />
+    <float name="Min/Max Cower Time Bounds" offset="28" visible="True" />
+    <float name="To" offset="32" visible="True" />
+    <float name="Proximity ambush Threshold" offset="36" visible="True" />
+    <float name="Awareness Ambush Threshold" offset="40" visible="True" />
+    <float name="Leader Dead Retreat Chance" offset="44" visible="True" />
+    <float name="Peer Dead Retreat Chance" offset="48" visible="True" />
+    <float name="Second Peer Dead Retreat Chance" offset="52" visible="True" />
+    <float name="ZigZag Angle" offset="56" visible="True" />
+    <float name="ZigZag Period" offset="60" visible="True" />
+    <float name="Retreat Grenade Chance" offset="64" visible="True" />
+    <tag name="Backup_Weapon" offset="68" visible="True" />
+    <id name="Backup_Weapon" offset="72" visible="True" />
+  </struct>
+  <struct name="Search Properties" offset="156" visible="true" size="20" label="">
+    <bitmask32 name="Search Flags" offset="0" visible="True">
+      <option name="Crouch_on_Investigation" value="0" />
+      <option name="Walk_on_Pursuit" value="1" />
+    </bitmask32>
+    <float name="Search Time" offset="4" visible="True" />
+    <float name="To" offset="8" visible="True" />
+    <float name="Uncover Distance Bounds" offset="12" visible="True" />
+    <float name="To" offset="16" visible="True" />
+  </struct>
+  <struct name="Pre-Search Properties" offset="164" visible="true" size="36" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="Flag1" value="0" />
+    </bitmask32>
+    <float name="Min Presearch Time" offset="4" visible="True" />
+    <float name="To" offset="8" visible="True" />
+    <float name="Max Presearch Time" offset="12" visible="True" />
+    <float name="To" offset="16" visible="True" />
+    <float name="Min Certainty Radius" offset="20" visible="True" />
+    <float name="DEPRECATED" offset="24" visible="True" />
+    <float name="Min Suppressing Time" offset="28" visible="True" />
+    <float name="To" offset="32" visible="True" />
+  </struct>
+  <struct name="Idle Properties" offset="172" visible="true" size="12" label="">
+    <unused offset="0" size="4" />
+    <float name="Idle Pose Delay Time" offset="4" visible="True" />
+    <float name="To" offset="8" visible="True" />
+  </struct>
+  <struct name="Vocalization Properties" offset="180" visible="true" size="8" label="">
+    <float name="Look Comment Time" offset="0" visible="True" />
+    <float name="Look Long Comment Time" offset="4" visible="True" />
+  </struct>
+  <struct name="Boarding Properties" offset="188" visible="true" size="16" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="Airborne_Boarding" value="0" />
+    </bitmask32>
+    <float name="Max Distance" offset="4" visible="True" />
+    <float name="Abort Distance" offset="8" visible="True" />
+    <float name="Max Speed" offset="12" visible="True" />
+  </struct>
+  <struct name="Boss Properties" offset="196" visible="true" size="12" label="">
+    <unused offset="0" size="4" />
+    <float name="Flurry Damage Threshold" offset="4" visible="True" />
+    <float name="Flurry Time" offset="8" visible="True" />
+  </struct>
+  <struct name="Weapons Properties" offset="204" visible="true" size="204" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="Bursting_Inhibits_Movement" value="0" />
+      <option name="Must_Crouch_To_Shoot" value="1" />
+      <option name="Use_Extended_Safe_to_Save_Range" value="2" />
+    </bitmask32>
+    <tag name="Weapon" offset="4" visible="True" />
+    <id name="Weapon" offset="8" visible="True" />
+    <float name="Maximum Firing Range" offset="12" visible="True" />
+    <float name="Minimum Firing Range" offset="16" visible="True" />
+    <float name="Normal Combat Range" offset="20" visible="True" />
+    <float name="To" offset="24" visible="True" />
+    <float name="Bombardment Range" offset="28" visible="True" />
+    <float name="Max Special Target Distance" offset="32" visible="True" />
+    <float name="Timid Combat Range" offset="36" visible="True" />
+    <float name="To" offset="40" visible="True" />
+    <float name="Aggressive Combat Range" offset="44" visible="True" />
+    <float name="To" offset="48" visible="True" />
+    <float name="Super Ballistic Range" offset="52" visible="True" />
+    <float name="Ballistic Firing Bounds" offset="56" visible="True" />
+    <float name="To" offset="60" visible="True" />
+    <float name="Ballistic Fraction Bounds" offset="64" visible="True" />
+    <float name="To" offset="68" visible="True" />
+    <float name="First Burst Delay Time" offset="72" visible="True" />
+    <float name="To" offset="76" visible="True" />
+    <float name="Surprise Delay Time" offset="80" visible="True" />
+    <float name="Surprise Fire-Wildly Time" offset="84" visible="True" />
+    <float name="Death Fire-Wildly Chance" offset="88" visible="True" />
+    <float name="Death Fire-Wildly Time" offset="92" visible="True" />
+    <float name="Custom Stand Gun Offset i" offset="96" visible="True" />
+    <float name="Custom Stand Gun Offset j" offset="100" visible="True" />
+    <float name="Custom Stand Gun Offset k" offset="104" visible="True" />
+    <float name="Custom Crouch Gun Offset i" offset="108" visible="True" />
+    <float name="Custom Crouch Gun Offset j" offset="112" visible="True" />
+    <float name="Custom Crouch Gun Offset k" offset="116" visible="True" />
+    <enum32 name="Special Fire Mode" offset="120" visible="True">
+      <option name="None" value="0" />
+      <option name="Overcharge" value="1" />
+      <option name="Secondary_Trigger" value="2" />
+    </enum32>
+    <enum32 name="Special Fire Situation" offset="124" visible="True">
+      <option name="Never" value="0" />
+      <option name="Enemy_Visible" value="1" />
+      <option name="Enemy_out_of_Sight" value="2" />
+      <option name="Strafing" value="3" />
+    </enum32>
+    <float name="Special Fire Chance" offset="128" visible="True" />
+    <float name="Special Fire Delay" offset="132" visible="True" />
+    <float name="Special Damage Modifier" offset="136" visible="True" />
+    <float name="Special Projectile error" offset="140" visible="True" />
+    <float name="Drop Weapon Loaded" offset="144" visible="True" />
+    <float name="To" offset="148" visible="True" />
+    <short name="Drop Weapon Ammo" offset="152" visible="True" />
+    <short name="To" offset="154" visible="True" />
+    <float name="Normal Accuracy Bounds" offset="156" visible="True" />
+    <float name="To" offset="160" visible="True" />
+    <float name="Normal Accuracy TIme" offset="164" visible="True" />
+    <float name="Heroic Accuracy Bounds" offset="168" visible="True" />
+    <float name="To" offset="172" visible="True" />
+    <float name="Heroic Accuracy Time" offset="176" visible="True" />
+    <float name="Legendary Accuracy Bounds" offset="180" visible="True" />
+    <float name="To" offset="184" visible="True" />
+    <float name="Legendary Accuracy Time" offset="188" visible="True" />
+    <unused offset="192" size="4" />
+    <tag name="Weapon_Melee_Damage" offset="196" visible="True" />
+    <id name="Weapon_Melee_Damage" offset="200" visible="True" />
+  </struct>
+  <struct name="Firing Pattern Properties" offset="212" visible="true" size="16" label="">
+    <tag name="Weapon" offset="0" visible="True" />
+    <id name="Weapon" offset="4" visible="True" />
+    <struct name="Firing Patterns" offset="8" visible="true" size="64" label="">
+      <float name="Rate of Fire" offset="0" visible="True" />
+      <float name="Target Tracking" offset="4" visible="True" />
+      <float name="Target Leading" offset="8" visible="True" />
+      <float name="Burst Origin Radius" offset="12" visible="True" />
+      <float name="Burst Origin Angle" offset="16" visible="True" />
+      <float name="Burst Return Length" offset="20" visible="True" />
+      <float name="To" offset="24" visible="True" />
+      <float name="Burst Return Angle" offset="28" visible="True" />
+      <float name="Burst Duration" offset="32" visible="True" />
+      <float name="To" offset="36" visible="True" />
+      <float name="Burst Separation" offset="40" visible="True" />
+      <float name="To" offset="44" visible="True" />
+      <float name="Weapon Damage Modifier" offset="48" visible="True" />
+      <float name="Projectile Error" offset="52" visible="True" />
+      <float name="Burst Angular Velocity" offset="56" visible="True" />
+      <float name="Maximum Error Angle" offset="60" visible="True" />
+    </struct>
+  </struct>
+  <struct name="Grenade Properties" offset="220" visible="true" size="60" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="Flag1" value="0" />
+    </bitmask32>
+    <enum32 name="Grenade Type" offset="4" visible="True">
+      <option name="Human_Fragmentation" value="0" />
+      <option name="Covenant_Plasma" value="1" />
+    </enum32>
+    <enum16 name="Trajectory Type" offset="8" visible="True">
+      <option name="Toss" value="0" />
+      <option name="Lob" value="1" />
+      <option name="Bounce" value="2" />
+    </enum16>
+    <short name="Minimum Enemy Count" offset="10" visible="True" />
+    <float name="Enemy Radius" offset="12" visible="True" />
+    <float name="Grenade Ideal Velocity" offset="16" visible="True" />
+    <float name="Grenade Velocity" offset="20" visible="True" />
+    <float name="Grenade Ranges" offset="24" visible="True" />
+    <float name="To" offset="28" visible="True" />
+    <float name="Collateral Damage Radius" offset="32" visible="True" />
+    <float name="Grenade Chance" offset="36" visible="True" />
+    <float name="Grenade Throw Delay" offset="40" visible="True" />
+    <float name="Grenade Uncover Chance" offset="44" visible="True" />
+    <float name="Anti-Vehicle Grenade Chance" offset="48" visible="True" />
+    <short name="Grenade Count" offset="52" visible="True" />
+    <short name="To" offset="54" visible="True" />
+    <float name="Don't Drop Grenades Chance" offset="56" visible="True" />
+  </struct>
+  <struct name="Vehicle Properties" offset="228" visible="true" size="180" label="">
+    <tag name="Vehicle" offset="0" visible="True" />
+    <id name="Vehicle" offset="4" visible="True" />
+    <tag name="Style" offset="8" visible="True" />
+    <id name="Style" offset="12" visible="True" />
+    <bitmask32 name="Flags" offset="16" visible="True">
+      <option name="Passengers_Adopt_Original_Squad" value="0" />
+    </bitmask32>
+    <float name="AI Pathfinding Radius" offset="20" visible="True" />
+    <float name="AI Destination Radius" offset="24" visible="True" />
+    <float name="AI Deceleration Distance" offset="28" visible="True" />
+    <float name="AI Turning Radius" offset="32" visible="True" />
+    <float name="AI Inner Turning Radius" offset="36" visible="True" />
+    <float name="AI Ideal Turning Radius" offset="40" visible="True" />
+    <float name="AI Banshee Steering Maximum" offset="44" visible="True" />
+    <float name="AI Max Steering Angle" offset="48" visible="True" />
+    <float name="AI Max Steering Delta" offset="52" visible="True" />
+    <float name="AI Oversteering Scale" offset="56" visible="True" />
+    <float name="AI Oversteering Bounds" offset="60" visible="True" />
+    <float name="To" offset="64" visible="True" />
+    <float name="AI Side Slip Distance" offset="68" visible="True" />
+    <float name="AI Avoidance Distance" offset="72" visible="True" />
+    <float name="AI Min Urgency" offset="76" visible="True" />
+    <float name="AI Throttle Maximum" offset="80" visible="True" />
+    <float name="AI Goal Min Throttle Scale" offset="84" visible="True" />
+    <float name="AI Turn Min Throttle Scale" offset="88" visible="True" />
+    <float name="AI Direction Min Throttle Scale" offset="92" visible="True" />
+    <float name="AI Acceleration Scale" offset="96" visible="True" />
+    <float name="AI Throttle Blend" offset="100" visible="True" />
+    <float name="Theoretical Max Speed" offset="104" visible="True" />
+    <float name="Error Scale" offset="108" visible="True" />
+    <float name="AI Allowable Aim Deviation Angle" offset="112" visible="True" />
+    <float name="AI Charge Tight Angle Distance" offset="116" visible="True" />
+    <float name="AI Charge Tight Angle" offset="120" visible="True" />
+    <float name="AI Charge Repeat Timeout" offset="124" visible="True" />
+    <float name="AI Charge Look-Ahead Time" offset="128" visible="True" />
+    <float name="AI Consider Distance" offset="132" visible="True" />
+    <float name="AI Charge Abort Distance" offset="136" visible="True" />
+    <float name="Vehicle Ram Timeout" offset="140" visible="True" />
+    <float name="Ram Paralysis Time" offset="144" visible="True" />
+    <float name="AI Cover Damage Threshold" offset="148" visible="True" />
+    <float name="AI Cover Min Distance" offset="152" visible="True" />
+    <float name="AI Cover Time" offset="156" visible="True" />
+    <float name="AI Cover Min Boost Distance" offset="160" visible="True" />
+    <float name="Turtling Recent Damage Threshold" offset="164" visible="True" />
+    <float name="Turtling Min Time" offset="168" visible="True" />
+    <float name="Turtling Timeout" offset="172" visible="True" />
+    <enum32 name="Obstacle Ignore Size" offset="176" visible="True">
+      <option name="None" value="0" />
+      <option name="Tiny" value="1" />
+      <option name="Small" value="2" />
+      <option name="Medium" value="3" />
+      <option name="Large" value="4" />
+      <option name="Huge" value="5" />
+      <option name="Inmobile" value="6" />
+    </enum32>
+  </struct>
+</plugin>

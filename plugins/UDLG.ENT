@@ -1,0 +1,16 @@
+<plugin class="UDLG" author="Grimdoomer" version="0.99" headersize="24">
+  <tag name="Global_Dialogue_Info" offset="0" visible="True" />
+  <id name="Global_Dialogue_Info" offset="4" visible="True" />
+  <enum32 name="Flags" offset="8" visible="True">
+    <option name="Female" value="0" />
+  </enum32>
+  <struct name="Vocalizations" offset="12" visible="true" size="16" label="">
+    <bitmask32 name="Flags" offset="0" visible="True">
+      <option name="New_Vocalization" value="0" />
+    </bitmask32>
+    <stringid name="Vocalization" offset="4" visible="True" />
+    <tag name="Sound" offset="8" visible="True" />
+    <id name="Sound" offset="12" visible="True" />
+  </struct>
+  <stringid name="Mission Dialogue Designator" offset="20" visible="True" />
+</plugin>
